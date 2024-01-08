@@ -1,5 +1,6 @@
 ---
-title: Element.ariaSelected
+title: "Element: ariaSelected property"
+short-title: ariaSelected
 slug: Web/API/Element/ariaSelected
 page-type: web-api-instance-property
 browser-compat: api.Element.ariaSelected
@@ -18,7 +19,7 @@ A string with one of the following values:
 - `"false"`
   - : The item is not selected.
 - `"undefined"`
-  - : The item is not
+  - : The item is not selectable.
 
 ## Examples
 

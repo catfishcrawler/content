@@ -1,5 +1,6 @@
 ---
-title: Window.screenY
+title: "Window: screenY property"
+short-title: screenY
 slug: Web/API/Window/screenY
 page-type: web-api-instance-property
 browser-compat: api.Window.screenY
@@ -40,7 +41,7 @@ function positionElem() {
     50,
     degToRad(0),
     degToRad(360),
-    false
+    false,
   );
   ctx.fill();
 

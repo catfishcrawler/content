@@ -1,5 +1,6 @@
 ---
-title: WindowClient.navigate()
+title: "WindowClient: navigate() method"
+short-title: navigate()
 slug: Web/API/WindowClient/navigate
 page-type: web-api-instance-method
 browser-compat: api.WindowClient.navigate
@@ -24,7 +25,7 @@ navigate(url)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}}.
+A {{jsxref("Promise")}} that resolves to the existing {{domxref("WindowClient")}} if the URL is from the same origin as the service worker, or {{jsxref("Operators/null", "null")}} otherwise.
 
 ## Specifications
 

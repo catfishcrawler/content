@@ -2,12 +2,10 @@
 title: ArrayBuffer.prototype.resize()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.ArrayBuffer.resize
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`resize()`** method of {{jsxref("ArrayBuffer")}} instances resizes the `ArrayBuffer` to the specified size, in bytes.
 
@@ -26,7 +24,7 @@ resize(newLength)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

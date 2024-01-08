@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.transformFeedbackVaryings()
+title: "WebGL2RenderingContext: transformFeedbackVaryings() method"
+short-title: transformFeedbackVaryings()
 slug: Web/API/WebGL2RenderingContext/transformFeedbackVaryings
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.transformFeedbackVaryings
@@ -43,7 +44,7 @@ const transformFeedbackOutputs = ["gl_Position", "anotherOutput"];
 gl.transformFeedbackVaryings(
   shaderProg,
   transformFeedbackOutputs,
-  gl.INTERLEAVED_ATTRIBS
+  gl.INTERLEAVED_ATTRIBS,
 );
 gl.linkProgram(shaderProg);
 ```

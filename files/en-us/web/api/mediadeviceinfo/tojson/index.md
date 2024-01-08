@@ -1,11 +1,12 @@
 ---
-title: MediaDeviceInfo.toJSON()
+title: "MediaDeviceInfo: toJSON() method"
+short-title: toJSON()
 slug: Web/API/MediaDeviceInfo/toJSON
 page-type: web-api-instance-method
 browser-compat: api.MediaDeviceInfo.toJSON
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
 The **`toJSON()`** method of the {{domxref("MediaDeviceInfo")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("MediaDeviceInfo")}} object.
 

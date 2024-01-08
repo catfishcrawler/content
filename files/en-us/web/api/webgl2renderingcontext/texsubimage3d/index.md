@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.texSubImage3D()
+title: "WebGL2RenderingContext: texSubImage3D() method"
+short-title: texSubImage3D()
 slug: Web/API/WebGL2RenderingContext/texSubImage3D
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texSubImage3D
@@ -148,7 +149,7 @@ gl.texSubImage3D(
   1,
   gl.RGBA,
   gl.UNSIGNED_BYTE,
-  image
+  image,
 );
 ```
 

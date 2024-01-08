@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: pause event"
+short-title: pause
 slug: Web/API/HTMLMediaElement/pause_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.pause_event
@@ -38,7 +39,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("pause", (event) => {
   console.log(
-    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled."
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
   );
 });
 ```
@@ -50,7 +51,7 @@ const video = document.querySelector("video");
 
 video.onpause = (event) => {
   console.log(
-    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled."
+    "The Boolean paused property is now 'true'. Either the pause() method was called or the autoplay attribute was toggled.",
   );
 };
 ```

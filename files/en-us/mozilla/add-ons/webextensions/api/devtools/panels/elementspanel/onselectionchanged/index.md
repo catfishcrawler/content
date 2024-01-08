@@ -1,7 +1,6 @@
 ---
 title: onSelectionChanged
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.onSelectionChanged
 ---
@@ -31,8 +30,8 @@ Events have three functions:
 
 ### Parameters
 
-- `callback`
-  - : Function that will be called when this event occurs. The function will be passed no arguments.
+- `listener`
+  - : The function called when this event occurs. The function is passed no arguments.
 
 ## Browser compatibility
 
@@ -44,13 +43,14 @@ Listen for selection changed events, and log the text content of the newly selec
 
 ```js
 function handleSelectedElement() {
-  browser.devtools.inspectedWindow.eval("$0.textContent")
-    .then((result) => {
-      console.log(result[0]);
-    });
+  browser.devtools.inspectedWindow.eval("$0.textContent").then((result) => {
+    console.log(result[0]);
+  });
 }
 
-browser.devtools.panels.elements.onSelectionChanged.addListener(handleSelectedElement);
+browser.devtools.panels.elements.onSelectionChanged.addListener(
+  handleSelectedElement,
+);
 ```
 
 {{WebExtExamples}}

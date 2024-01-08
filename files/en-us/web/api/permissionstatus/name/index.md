@@ -1,5 +1,6 @@
 ---
-title: PermissionStatus.name
+title: "PermissionStatus: name property"
+short-title: name
 slug: Web/API/PermissionStatus/name
 page-type: web-api-instance-property
 browser-compat: api.PermissionStatus.name
@@ -24,7 +25,7 @@ function queryAndTrackPermission(permissionName) {
     .query({ name: permissionName })
     .then((permissionStatus) => {
       console.log(
-        `${permissionName} permission state is ${permissionStatus.state}`
+        `${permissionName} permission state is ${permissionStatus.state}`,
       );
       permissionStatus.onchange = stateChangeListener;
     });

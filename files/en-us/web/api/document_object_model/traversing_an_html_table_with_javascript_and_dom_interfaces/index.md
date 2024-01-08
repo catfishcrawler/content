@@ -1,7 +1,6 @@
 ---
 title: Traversing an HTML table with JavaScript and DOM Interfaces
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 page-type: guide
 ---
 
@@ -300,7 +299,7 @@ The basic steps to create the table in sample1.html are:
             const myCurrentCell = document.createElement("td");
             // creates a Text Node
             const currentText = document.createTextNode(
-              `cell is row ${j}, column ${i}`
+              `cell is row ${j}, column ${i}`,
             );
             // appends the Text Node we created into the cell <td>
             myCurrentCell.appendChild(currentText);

@@ -11,6 +11,11 @@ The **`SpeechSynthesisErrorEvent`** interface of the [Web Speech API](/en-US/doc
 
 {{InheritanceDiagram}}
 
+## Constructor
+
+- {{domxref("SpeechSynthesisErrorEvent.SpeechSynthesisErrorEvent", "SpeechSynthesisErrorEvent()")}}
+  - : Creates a new `SpeechSynthesisErrorEvent`.
+
 ## Instance properties
 
 _`SpeechSynthesisErrorEvent` extends the {{domxref("SpeechSynthesisEvent")}} interface, which inherits properties from its parent interface, {{domxref("Event")}}._
@@ -51,7 +56,7 @@ inputForm.onsubmit = (event) => {
 
   utterThis.onerror = (event) => {
     console.log(
-      `An error has occurred with the speech synthesis: ${event.error}`
+      `An error has occurred with the speech synthesis: ${event.error}`,
     );
   };
 

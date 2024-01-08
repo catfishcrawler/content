@@ -1,6 +1,7 @@
 ---
 title: aria-valuemin
 slug: Web/Accessibility/ARIA/Attributes/aria-valuemin
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuemin
 ---
 
@@ -23,7 +24,7 @@ The maximum value is defined with [`aria-valuemax`](/en-US/docs/Web/Accessibilit
 - `<number>`
   - : A decimal number, below the maximum value.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueMin")}}
   - : The [`ariaValueMin`](/en-US/docs/Web/API/Element/ariaValueMin) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuemin` attribute.

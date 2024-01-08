@@ -1,5 +1,6 @@
 ---
-title: CookieStore.get()
+title: "CookieStore: get() method"
+short-title: get()
 slug: Web/API/CookieStore/get
 page-type: web-api-instance-method
 status:
@@ -10,6 +11,8 @@ browser-compat: api.CookieStore.get
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`get()`** method of the {{domxref("CookieStore")}} interface returns a single cookie with the given name or options object. The method will return the first matching cookie for the passed parameters.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -22,12 +25,12 @@ get(options)
 
 This method requires one of the following:
 
-- `name`
+- `name` {{optional_inline}}
   - : A string with the name of a cookie.
 
 Or
 
-- `options`
+- `options` {{optional_inline}}
 
   - : An object containing:
 
@@ -64,7 +67,7 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values (see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) for more information):
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -87,10 +90,11 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 ## Examples
 
-In this example we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
+In this example, we return a cookie named "cookie1". If the cookie is found the result of the Promise is an object containing the details of a single cookie.
 
 ```js
-let cookie = cookieStore.get("cookie1");
+const cookie = await cookieStore.get("cookie1");
+
 if (cookie) {
   console.log(cookie);
 } else {

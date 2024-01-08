@@ -1,5 +1,6 @@
 ---
-title: WEBGL_draw_buffers
+title: WEBGL_draw_buffers extension
+short-title: WEBGL_draw_buffers
 slug: Web/API/WEBGL_draw_buffers
 page-type: webgl-extension
 browser-compat: api.WEBGL_draw_buffers
@@ -51,28 +52,28 @@ gl.framebufferTexture2D(
   ext.COLOR_ATTACHMENT0_WEBGL,
   gl.TEXTURE_2D,
   tx[0],
-  0
+  0,
 );
 gl.framebufferTexture2D(
   gl.FRAMEBUFFER,
   ext.COLOR_ATTACHMENT1_WEBGL,
   gl.TEXTURE_2D,
   tx[1],
-  0
+  0,
 );
 gl.framebufferTexture2D(
   gl.FRAMEBUFFER,
   ext.COLOR_ATTACHMENT2_WEBGL,
   gl.TEXTURE_2D,
   tx[2],
-  0
+  0,
 );
 gl.framebufferTexture2D(
   gl.FRAMEBUFFER,
   ext.COLOR_ATTACHMENT3_WEBGL,
   gl.TEXTURE_2D,
   tx[3],
-  0
+  0,
 );
 ```
 

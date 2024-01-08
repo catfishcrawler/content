@@ -1,5 +1,6 @@
 ---
-title: Keyboard.getLayoutMap()
+title: "Keyboard: getLayoutMap() method"
+short-title: getLayoutMap()
 slug: Web/API/Keyboard/getLayoutMap
 page-type: web-api-instance-method
 status:
@@ -28,6 +29,11 @@ None.
 
 A {{jsxref('Promise')}} that resolves with an instance of
 {{domxref('KeyboardLayoutMap')}}.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call is blocked by a [permission policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 

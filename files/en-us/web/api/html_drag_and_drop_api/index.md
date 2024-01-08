@@ -2,7 +2,7 @@
 title: HTML Drag and Drop API
 slug: Web/API/HTML_Drag_and_Drop_API
 page-type: web-api-overview
-spec-urls: https://html.spec.whatwg.org/multipage/#dnd
+spec-urls: https://html.spec.whatwg.org/multipage/dnd.html
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -15,7 +15,9 @@ You can customize which elements can become _draggable_, the type of feedback th
 
 This overview of HTML Drag and Drop includes a description of the interfaces, basic steps to add drag-and-drop support to an application, and an interoperability summary of the interfaces.
 
-## Drag Events
+## Concepts and usage
+
+### Drag Events
 
 HTML drag-and-drop uses the {{domxref("Event","DOM event model")}} and _{{domxref("DragEvent","drag events")}}_ inherited from {{domxref("MouseEvent","mouse events")}}. A typical _drag operation_ begins when a user selects a _draggable_ element, continues when the user drags the element to a _droppable_ element, and then ends when the user releases the dragged element.
 
@@ -35,6 +37,184 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
 
 > **Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
 
+### The basics
+
+This section is a summary of the basic steps to add drag-and-drop functionality to an application.
+
+#### Identify what is draggable
+
+Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute and the {{domxref("HTMLElement.dragstart_event","dragstart")}} event handler, as shown in the following code sample:
+
+```html
+<script>
+  function dragstartHandler(ev) {
+    // Add the target element's id to the data transfer object
+    ev.dataTransfer.setData("text/plain", ev.target.id);
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    // Get the element by id
+    const element = document.getElementById("p1");
+    // Add the ondragstart event listener
+    element.addEventListener("dragstart", dragstartHandler);
+  });
+</script>
+
+<p id="p1" draggable="true">This element is draggable.</p>
+```
+
+For more information, see:
+
+- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
+- [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
+
+#### Define the drag's data
+
+The application is free to include any number of data items in a drag operation. Each data item is a string of a particular `type` — typically a MIME type such as `text/html`.
+
+Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
+
+```js
+function dragstartHandler(ev) {
+  // Add different types of drag data
+  ev.dataTransfer.setData("text/plain", ev.target.innerText);
+  ev.dataTransfer.setData("text/html", ev.target.outerHTML);
+  ev.dataTransfer.setData(
+    "text/uri-list",
+    ev.target.ownerDocument.location.href,
+  );
+}
+```
+
+- For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
+- For more information about drag data, see [Drag Data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_data).
+
+#### Define the drag image
+
+By default, the browser supplies an image that appears beside the pointer during a drag operation. However, an application may define a custom image with the {{domxref("DataTransfer.setDragImage","setDragImage()")}} method, as shown in the following example.
+
+```js
+// Create an image and then use it for the drag image.
+// NOTE: change "example.gif" to a real image URL or the image
+// will not be created and the default drag image will be used.
+let img = new Image();
+img.src = "example.gif";
+function dragstartHandler(ev) {
+  ev.dataTransfer.setDragImage(img, 10, 10);
+}
+```
+
+Learn more about drag feedback images in:
+
+- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image)
+
+#### Define the drop effect
+
+The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to control the feedback the user is given during a drag-and-drop operation. It typically affects which cursor the browser displays while dragging. For example, when the user hovers over a drop target, the browser's cursor may indicate the type of operation that will occur.
+
+Three effects may be defined:
+
+1. **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
+2. **`move`** indicates that the dragged data will be moved from its present location to the drop location.
+3. **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
+
+During the drag operation, drag effects may be modified to indicate that certain effects are allowed at certain locations.
+
+The following example shows how to use this property.
+
+```js
+function dragstartHandler(ev) {
+  ev.dataTransfer.dropEffect = "copy";
+}
+```
+
+For more details, see:
+
+- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects)
+
+#### Define a drop zone
+
+By default, the browser prevents anything from happening when dropping something onto most HTML elements. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must have both {{domxref("HTMLElement.dragover_event","ondragover")}} and {{domxref("HTMLElement.drop_event","ondrop")}} event handler attributes.
+
+The following example shows how to use those attributes, and includes basic event handlers for each attribute.
+
+```html
+<script>
+  function dragoverHandler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function dropHandler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("text/plain");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
+
+<p id="target" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)">
+  Drop Zone
+</p>
+```
+
+Note that each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this event (such as [touch events](/en-US/docs/Web/API/Touch_events) or [pointer events](/en-US/docs/Web/API/Pointer_events)).
+
+For more information, see:
+
+- [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets)
+
+#### Handle the drop effect
+
+The handler for the {{domxref("HTMLElement/drop_event", "drop")}} event is free to process the drag data in an application-specific way.
+
+Typically, an application uses the {{domxref("DataTransfer.getData","getData()")}} method to retrieve drag items and then process them accordingly. Additionally, application semantics may differ depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} and/or the state of modifier keys.
+
+The following example shows a drop handler getting the source element's `id` from the drag data, and then using the `id` to move the source element to the drop element:
+
+```html
+<script>
+  function dragstartHandler(ev) {
+    // Add the target element's id to the data transfer object
+    ev.dataTransfer.setData("application/my-app", ev.target.id);
+    ev.dataTransfer.effectAllowed = "move";
+  }
+  function dragoverHandler(ev) {
+    ev.preventDefault();
+    ev.dataTransfer.dropEffect = "move";
+  }
+  function dropHandler(ev) {
+    ev.preventDefault();
+    // Get the id of the target and add the moved element to the target's DOM
+    const data = ev.dataTransfer.getData("application/my-app");
+    ev.target.appendChild(document.getElementById(data));
+  }
+</script>
+
+<p id="p1" draggable="true" ondragstart="dragstartHandler(event)">
+  This element is draggable.
+</p>
+<div
+  id="target"
+  ondrop="dropHandler(event)"
+  ondragover="dragoverHandler(event)">
+  Drop Zone
+</div>
+```
+
+For more information, see:
+
+- [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#performing_a_drop)
+
+#### Drag end
+
+At the end of a drag operation, the {{domxref("HTMLElement/dragend_event", "dragend")}} event fires at the _source_ element — the element that was the target of the drag start.
+
+This event fires regardless of whether the drag completed or was canceled. The {{domxref("HTMLElement/dragend_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.
+
+For more information about handling the end of a drag operation, see:
+
+- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_a_drag)
+
 ## Interfaces
 
 The HTML Drag and Drop interfaces are {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}}.
@@ -53,192 +233,7 @@ A key difference between the {{domxref("DataTransfer")}} and {{domxref("DataTran
 
 > **Note:** {{domxref("DragEvent")}} and {{domxref("DataTransfer")}} are broadly supported on desktop browsers. However, the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have limited browser support. See [Interoperability](#interoperability) for more information about drag-and-drop interoperability.
 
-## The basics
-
-This section is a summary of the basic steps to add drag-and-drop functionality to an application.
-
-### Identify what is draggable
-
-Making an element _draggable_ requires adding the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute and the {{domxref("HTMLElement.dragstart_event","ondragstart")}} event handler, as shown in the following code sample:
-
-```html
-<script>
-  function dragstart_handler(ev) {
-    // Add the target element's id to the data transfer object
-    ev.dataTransfer.setData("text/plain", ev.target.id);
-  }
-
-  window.addEventListener("DOMContentLoaded", () => {
-    // Get the element by id
-    const element = document.getElementById("p1");
-    // Add the ondragstart event listener
-    element.addEventListener("dragstart", dragstart_handler);
-  });
-</script>
-
-<p id="p1" draggable="true">This element is draggable.</p>
-```
-
-For more information, see:
-
-- [Draggable attribute reference](/en-US/docs/Web/HTML/Global_attributes/draggable)
-- [Drag operations guide](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
-
-### Define the drag's data
-
-The application is free to include any number of data items in a drag operation. Each data item is a string of a particular `type` — typically a MIME type such as `text/html`.
-
-Each {{domxref("DragEvent","drag event")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property that _holds_ the event's data. This property (which is a {{domxref("DataTransfer")}} object) also has methods to _manage_ drag data. The {{domxref("DataTransfer.setData","setData()")}} method is used to add an item to the drag data, as shown in the following example.
-
-```js
-function dragstart_handler(ev) {
-  // Add different types of drag data
-  ev.dataTransfer.setData("text/plain", ev.target.innerText);
-  ev.dataTransfer.setData("text/html", ev.target.outerHTML);
-  ev.dataTransfer.setData(
-    "text/uri-list",
-    ev.target.ownerDocument.location.href
-  );
-}
-```
-
-- For a list of common data types used in drag-and-drop (such as text, HTML, links, and files), see [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types).
-- For more information about drag data, see [Drag Data](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_data).
-
-### Define the drag image
-
-By default, the browser supplies an image that appears beside the pointer during a drag operation. However, an application may define a custom image with the {{domxref("DataTransfer.setDragImage","setDragImage()")}} method, as shown in the following example.
-
-```js
-function dragstart_handler(ev) {
-  // Create an image and then use it for the drag image.
-  // NOTE: change "example.gif" to a real image URL or the image
-  // will not be created and the default drag image will be used.
-  let img = new Image();
-  img.src = "example.gif";
-  ev.dataTransfer.setDragImage(img, 10, 10);
-}
-```
-
-Learn more about drag feedback images in:
-
-- [Setting the Drag Feedback Image](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#setting_the_drag_feedback_image)
-
-### Define the drop effect
-
-The {{domxref("DataTransfer.dropEffect","dropEffect")}} property is used to control the feedback the user is given during a drag-and-drop operation. It typically affects which cursor the browser displays while dragging. For example, when the user hovers over a drop target, the browser's cursor may indicate the type of operation that will occur.
-
-Three effects may be defined:
-
-1. **`copy`** indicates that the dragged data will be copied from its present location to the drop location.
-2. **`move`** indicates that the dragged data will be moved from its present location to the drop location.
-3. **`link`** indicates that some form of relationship or connection will be created between the source and drop locations.
-
-During the drag operation, drag effects may be modified to indicate that certain effects are allowed at certain locations.
-
-The following example shows how to use this property.
-
-```js
-function dragstart_handler(ev) {
-  ev.dataTransfer.dropEffect = "copy";
-}
-```
-
-For more details, see:
-
-- [Drag Effects](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#drag_effects)
-
-### Define a drop zone
-
-By default, the browser prevents anything from happening when dropping something onto most HTML elements. To change that behavior so that an element becomes a _drop zone_ or is _droppable_, the element must have both {{domxref("HTMLElement.dragover_event","ondragover")}} and {{domxref("HTMLElement.drop_event","ondrop")}} event handler attributes.
-
-The following example shows how to use those attributes, and includes basic event handlers for each attribute.
-
-```html
-<script>
-  function dragover_handler(ev) {
-    ev.preventDefault();
-    ev.dataTransfer.dropEffect = "move";
-  }
-  function drop_handler(ev) {
-    ev.preventDefault();
-    // Get the id of the target and add the moved element to the target's DOM
-    const data = ev.dataTransfer.getData("text/plain");
-    ev.target.appendChild(document.getElementById(data));
-  }
-</script>
-
-<p
-  id="target"
-  ondrop="drop_handler(event)"
-  ondragover="dragover_handler(event)">
-  Drop Zone
-</p>
-```
-
-Note that each handler calls {{domxref("Event.preventDefault","preventDefault()")}} to prevent additional event processing for this event (such as [touch events](/en-US/docs/Web/API/Touch_events) or [pointer events](/en-US/docs/Web/API/Pointer_events)).
-
-For more information, see:
-
-- [Specifying Drop Targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#specifying_drop_targets)
-
-### Handle the drop effect
-
-The handler for the {{domxref("HTMLElement/drop_event", "drop")}} event is free to process the drag data in an application-specific way.
-
-Typically, an application uses the {{domxref("DataTransfer.getData","getData()")}} method to retrieve drag items and then process them accordingly. Additionally, application semantics may differ depending on the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} and/or the state of modifier keys.
-
-The following example shows a drop handler getting the source element's `id` from the drag data, and then using the `id` to move the source element to the drop element:
-
-```html
-<script>
-  function dragstart_handler(ev) {
-    // Add the target element's id to the data transfer object
-    ev.dataTransfer.setData("application/my-app", ev.target.id);
-    ev.dataTransfer.effectAllowed = "move";
-  }
-  function dragover_handler(ev) {
-    ev.preventDefault();
-    ev.dataTransfer.dropEffect = "move";
-  }
-  function drop_handler(ev) {
-    ev.preventDefault();
-    // Get the id of the target and add the moved element to the target's DOM
-    const data = ev.dataTransfer.getData("application/my-app");
-    ev.target.appendChild(document.getElementById(data));
-  }
-</script>
-
-<p id="p1" draggable="true" ondragstart="dragstart_handler(event)">
-  This element is draggable.
-</p>
-<div
-  id="target"
-  ondrop="drop_handler(event)"
-  ondragover="dragover_handler(event)">
-  Drop Zone
-</div>
-```
-
-For more information, see:
-
-- [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#performing_a_drop)
-
-### Drag end
-
-At the end of a drag operation, the {{domxref("HTMLElement/dragend_event", "dragend")}} event fires at the _source_ element — the element that was the target of the drag start.
-
-This event fires regardless of whether the drag completed or was canceled. The {{domxref("HTMLElement/dragend_event", "dragend")}} event handler can check the value of the {{domxref("DataTransfer.dropEffect","dropEffect")}} property to determine if the drag operation succeeded or not.
-
-For more information about handling the end of a drag operation, see:
-
-- [Finishing a Drag](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#finishing_a_drag)
-
-## Interoperability
-
-As can be seen in the [DataTransferItem interface's Browser Compatibility table](/en-US/docs/Web/API/DataTransferItem#browser_compatibility), drag-and-drop interoperability is relatively broad among desktop browsers (except the {{domxref("DataTransferItem")}} and {{domxref("DataTransferItemList")}} interfaces have less support). This data also indicates drag-and-drop support among mobile browsers is very low.
-
-## Examples and demos
+## Examples
 
 - [Copying and moving elements with the `DataTransfer` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransfer.html)
 - [Copying and moving elements with the `DataTransferListItem` interface](https://mdn.github.io/dom-examples/drag-and-drop/copy-move-DataTransferItemList.html)

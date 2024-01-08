@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.files
+title: "HTMLInputElement: files property"
+short-title: files
 slug: Web/API/HTMLInputElement/files
 page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.files
@@ -39,7 +40,7 @@ for (const file of fileInput.files) {
   let fileDate = new Date(file.lastModified);
   console.log(fileDate.toLocaleDateString()); // prints legible date
   console.log(
-    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB"
+    file.size < 1000 ? file.size : Math.round(file.size / 1000) + "KB",
   );
   console.log(file.type); // prints MIME type
 }
@@ -55,4 +56,4 @@ for (const file of fileInput.files) {
 
 ## See also
 
-- {{domxref("DataTransferItem.files")}}
+- {{domxref("DataTransfer.files")}}

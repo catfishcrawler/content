@@ -1,5 +1,6 @@
 ---
 title: "TaskSignal: prioritychange event"
+short-title: prioritychange
 slug: Web/API/TaskSignal/prioritychange_event
 page-type: web-api-event
 browser-compat: api.TaskSignal.prioritychange_event
@@ -69,7 +70,7 @@ if ("scheduler" in this) {
     () => {
       mylog("Task 1");
     },
-    { signal: controller.signal }
+    { signal: controller.signal },
   );
 
   // Change the priority to 'background' using the controller

@@ -1,5 +1,6 @@
 ---
-title: NDEFReadingEvent.serialNumber
+title: "NDEFReadingEvent: serialNumber property"
+short-title: serialNumber
 slug: Web/API/NDEFReadingEvent/serialNumber
 page-type: web-api-instance-property
 status:
@@ -32,7 +33,7 @@ function read() {
         ctlr.abort();
         resolve(event);
       },
-      { once: true }
+      { once: true },
     );
     ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
   });

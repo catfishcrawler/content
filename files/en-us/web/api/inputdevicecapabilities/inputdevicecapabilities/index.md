@@ -1,5 +1,6 @@
 ---
-title: InputDeviceCapabilities()
+title: "InputDeviceCapabilities: InputDeviceCapabilities() constructor"
+short-title: InputDeviceCapabilities()
 slug: Web/API/InputDeviceCapabilities/InputDeviceCapabilities
 page-type: web-api-constructor
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.InputDeviceCapabilities.InputDeviceCapabilities
 ---
 
-{{SeeCompatTable}}
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
 
 The `InputDeviceCapabilities()` constructor creates a new
 {{domxref("InputDeviceCapabilities")}} object provides information about the physical

@@ -1,6 +1,7 @@
 ---
 title: Client-side form validation
 slug: Learn/Forms/Form_validation
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -80,7 +81,7 @@ We've seen many of these earlier in the course, but to recap:
 - [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) and [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength): Specifies the minimum and maximum length of textual data (strings).
 - [`min`](/en-US/docs/Web/HTML/Attributes/min) and [`max`](/en-US/docs/Web/HTML/Attributes/max): Specifies the minimum and maximum values of numerical input types.
 - [`type`](/en-US/docs/Web/HTML/Element/input#input_types): Specifies whether the data needs to be a number, an email address, or some other specific preset type.
-- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern): Specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that defines a pattern the entered data needs to follow.
+- [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern): Specifies a [regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) that defines a pattern the entered data needs to follow.
 
 If the data entered in a form field follows all of the rules specified by the above attributes, it is considered valid.
 If not, it is considered invalid.
@@ -180,7 +181,7 @@ The presence of the `required` attribute on any element that supports this attri
 
 ### Validating against a regular expression
 
-Another useful validation feature is the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute, which expects a [Regular Expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) as its value.
+Another useful validation feature is the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute, which expects a [Regular Expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) as its value.
 A regular expression (regexp) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.
 
 Regexps are quite complex, and we don't intend to teach you them exhaustively in this article.
@@ -194,7 +195,7 @@ Below are some examples to give you a basic idea of how they work.
 - `abc|xyz` — Matches exactly `abc` or exactly `xyz` (but not `abcxyz` or `a` or `y`, and so on).
 
 There are many more possibilities that we don't cover here.
-For a complete list and many examples, consult our [Regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) documentation.
+For a complete list and many examples, consult our [Regular expression](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) documentation.
 
 Let's implement an example.
 Update your HTML to add a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute like this:
@@ -311,16 +312,22 @@ First, some HTML:
 
 ```html
 <form>
-  <p>
-    <fieldset>
-      <legend>Do you have a driver's license?<span aria-label="required">*</span></legend>
-      <!-- While only one radio button in a same-named group can be selected at a time,
-           and therefore only one radio button in a same-named group having the "required"
-           attribute suffices in making a selection a requirement -->
-      <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Yes</label>
-      <input type="radio" required name="driver" id="r2" value="no"><label for="r2">No</label>
-    </fieldset>
-  </p>
+  <fieldset>
+    <legend>
+      Do you have a driver's license?<span aria-label="required">*</span>
+    </legend>
+    <!-- While only one radio button in a same-named group can be selected at a time,
+         and therefore only one radio button in a same-named group having the "required"
+         attribute suffices in making a selection a requirement -->
+    <input type="radio" required name="driver" id="r1" value="yes" /><label
+      for="r1"
+      >Yes</label
+    >
+    <input type="radio" required name="driver" id="r2" value="no" /><label
+      for="r2"
+      >No</label
+    >
+  </fieldset>
   <p>
     <label for="n1">How old are you?</label>
     <!-- The pattern attribute can act as a fallback for browsers which
@@ -328,13 +335,26 @@ First, some HTML:
          Please note that browsers that support the pattern attribute will make it
          fail silently when used with a number field.
          Its usage here acts only as a fallback -->
-    <input type="number" min="12" max="120" step="1" id="n1" name="age"
-           pattern="\d+">
+    <input
+      type="number"
+      min="12"
+      max="120"
+      step="1"
+      id="n1"
+      name="age"
+      pattern="\d+" />
   </p>
   <p>
-    <label for="t1">What's your favorite fruit?<span aria-label="required">*</span></label>
-    <input type="text" id="t1" name="fruit" list="l1" required
-           pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range">
+    <label for="t1"
+      >What's your favorite fruit?<span aria-label="required">*</span></label
+    >
+    <input
+      type="text"
+      id="t1"
+      name="fruit"
+      list="l1"
+      required
+      pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Ss]trawberry|[Ll]emon|[Oo]range" />
     <datalist id="l1">
       <option>Banana</option>
       <option>Cherry</option>
@@ -346,7 +366,7 @@ First, some HTML:
   </p>
   <p>
     <label for="t2">What's your email address?</label>
-    <input type="email" id="t2" name="email">
+    <input type="email" id="t2" name="email" />
   </p>
   <p>
     <label for="t3">Leave a short message</label>
@@ -483,7 +503,7 @@ If the `validity.typeMismatch` property returns `false`, we call the `setCustomV
 
 You can try it out below:
 
-{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 120)}}
 
 > **Note:** You can find this example live on GitHub as [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/custom-error-message.html).)
 
@@ -702,7 +722,7 @@ p * {
   display: block;
 }
 
-input.mail {
+input#mail {
   appearance: none;
   width: 100%;
   border: 1px solid #333;
@@ -720,7 +740,7 @@ input.invalid {
   background-color: #fdd;
 }
 
-input:focus.invalid {
+input:focus:invalid {
   outline: none;
 }
 

@@ -1,7 +1,10 @@
 ---
 title: Customize your app's theme and background colors
 slug: Web/Progressive_web_apps/How_to/Customize_your_app_colors
+page-type: how-to
 ---
+
+{{PWASidebar}}
 
 When building [Progressive Web Apps (PWAs)](/en-US/docs/Web/Progressive_web_apps), it's important to not only consider the appearance of your app's content, but also the way the app appears on the user's device once the app is installed.
 
@@ -90,5 +93,5 @@ Note that on some browsers, like Safari on macOS and Chrome on Android, the `the
 ## See also
 
 - [Web App Manifests](/en-US/docs/Web/Manifest).
-- [Meta Theme Color and Trickery on css-tricks.com](https://css-tricks.com/meta-theme-color-and-trickery/) (July 13, 2021)
-- [Recommended fields on web.dev](https://web.dev/learn/pwa/web-app-manifest/#recommended-fields)
+- [Meta Theme Color and Trickery on css-tricks.com](https://css-tricks.com/meta-theme-color-and-trickery/) (2021)
+- [Recommended fields on web.dev](https://web.dev/learn/pwa/web-app-manifest#recommended_fields)

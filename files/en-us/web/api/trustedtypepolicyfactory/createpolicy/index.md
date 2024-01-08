@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicyFactory.createPolicy()
+title: "TrustedTypePolicyFactory: createPolicy() method"
+short-title: createPolicy()
 slug: Web/API/TrustedTypePolicyFactory/createPolicy
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.createPolicy
@@ -70,7 +71,7 @@ trustedTypes.createPolicy("default", {
   createScriptURL: (s, type, sink) => {
     console.log("Please refactor.");
     return `${s}?default-policy-used&type=${encodeURIComponent(
-      type
+      type,
     )}&sink=${encodeURIComponent(sink)}`;
   },
 });

@@ -1,5 +1,6 @@
 ---
-title: VRPose.angularAcceleration
+title: "VRPose: angularAcceleration property"
+short-title: angularAcceleration
 slug: Web/API/VRPose/angularAcceleration
 page-type: web-api-instance-property
 status:
@@ -10,7 +11,7 @@ browser-compat: api.VRPose.angularAcceleration
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`angularAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+The **`angularAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second per second.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
@@ -59,5 +60,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

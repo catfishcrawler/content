@@ -1,6 +1,7 @@
 ---
 title: aria-multiline
 slug: Web/Accessibility/ARIA/Attributes/aria-multiline
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-multiline
 ---
 
@@ -27,7 +28,7 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 - `false`
   - : The text box only accepts a single line of input.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaMultiLine")}}
   - : The [`ariaMultiLine`](/en-US/docs/Web/API/Element/ariaMultiLine) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-multiline` attribute.

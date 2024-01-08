@@ -1,5 +1,6 @@
 ---
-title: FeaturePolicy.allowedFeatures()
+title: "FeaturePolicy: allowedFeatures() method"
+short-title: allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
 page-type: web-api-instance-method
 status:
@@ -19,7 +20,7 @@ returns a subset of directives returned by {{DOMxRef("FeaturePolicy.features",
 ## Syntax
 
 ```js-nolint
-const allowed = FeaturePolicy.allowedFeatures()
+allowedFeatures()
 ```
 
 ### Parameters

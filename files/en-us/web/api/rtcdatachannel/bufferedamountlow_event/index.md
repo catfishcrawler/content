@@ -1,5 +1,6 @@
 ---
 title: "RTCDataChannel: bufferedamountlow event"
+short-title: bufferedamountlow
 slug: Web/API/RTCDataChannel/bufferedamountlow_event
 page-type: web-api-event
 browser-compat: api.RTCDataChannel.bufferedamountlow_event
@@ -42,7 +43,7 @@ pc.addEventListener(
       dc.send(source.readFile(65536));
     }
   },
-  false
+  false,
 );
 ```
 

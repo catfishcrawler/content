@@ -1,5 +1,6 @@
 ---
-title: Touch.force
+title: "Touch: force property"
+short-title: force
 slug: Web/API/Touch/force
 page-type: web-api-instance-property
 browser-compat: api.Touch.force
@@ -44,7 +45,7 @@ someElement.addEventListener(
       console.log(`targetTouches[${i}].force = ${e.targetTouches[i].force}`);
     }
   },
-  false
+  false,
 );
 ```
 

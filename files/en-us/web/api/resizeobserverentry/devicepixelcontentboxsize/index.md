@@ -1,5 +1,6 @@
 ---
-title: ResizeObserverEntry.devicePixelContentBoxSize
+title: "ResizeObserverEntry: devicePixelContentBoxSize property"
+short-title: devicePixelContentBoxSize
 slug: Web/API/ResizeObserverEntry/devicePixelContentBoxSize
 page-type: web-api-instance-property
 browser-compat: api.ResizeObserverEntry.devicePixelContentBoxSize
@@ -30,7 +31,7 @@ multi-column scenarios. Each object in the array contains two properties:
 
 ## Examples
 
-The following example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/device-pixel-content-box/). As the callback function of a {{domxref("ResizeObserver")}}
+The following example is taken from the article [Pixel-perfect rendering with devicePixelContentBox](https://web.dev/articles/device-pixel-content-box). As the callback function of a {{domxref("ResizeObserver")}}
 is called after layout but before paint.
 This provides an opportunity to log the exact size in physical pixels to
 ensure a one-to-one mapping of canvas pixels to physical pixels.

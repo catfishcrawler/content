@@ -40,7 +40,7 @@ Supporting a two-pointer gesture requires preserving a pointer's event state dur
 ```js
 // Global vars to cache event state
 const evCache = [];
-const prevDiff = -1;
+let prevDiff = -1;
 ```
 
 ### Register event handlers
@@ -97,7 +97,7 @@ function pointermoveHandler(ev) {
 
   // Find this event in the cache and update its record with this event
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache[index] = ev;
 
@@ -136,7 +136,7 @@ function pointerupHandler(ev) {
   log(ev.type, ev);
   // Remove this pointer from the cache and reset the target's
   // background and border
-  remove_event(ev);
+  removeEvent(ev);
   ev.target.style.background = "white";
   ev.target.style.border = "1px solid black";
 
@@ -180,7 +180,7 @@ This function helps manage the global event caches `evCache`.
 function removeEvent(ev) {
   // Remove this event from the target's cache
   const index = evCache.findIndex(
-    (cachedEv) => cachedEv.pointerId === ev.pointerId
+    (cachedEv) => cachedEv.pointerId === ev.pointerId,
   );
   evCache.splice(index, 1);
 }

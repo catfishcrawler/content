@@ -1,5 +1,5 @@
 ---
-title: '<b>: The Bring Attention To element'
+title: "<b>: The Bring Attention To element"
 slug: Web/HTML/Element/b
 page-type: html-element
 browser-compat: html.elements.b
@@ -82,8 +82,10 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

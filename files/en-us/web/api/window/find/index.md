@@ -1,5 +1,6 @@
 ---
-title: Window.find()
+title: "Window: find() method"
+short-title: find()
 slug: Web/API/Window/find
 page-type: web-api-instance-method
 status:
@@ -10,7 +11,7 @@ browser-compat: api.Window.find
 {{ApiRef}}{{Non-standard_Header}}
 
 > **Note:** Support for `Window.find()` might change in future
-> versions of Gecko. See [Webkit bug 672395](https://bugzil.la/672395).
+> versions of Gecko. See [Firefox bug 672395](https://bugzil.la/672395).
 
 The **`Window.find()`** method finds a string in a window sequentially.
 
@@ -46,7 +47,7 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
 ```js
 function findString(text) {
   document.querySelector("#output").textContent = `String found? ${window.find(
-    text
+    text,
   )}`;
 }
 ```

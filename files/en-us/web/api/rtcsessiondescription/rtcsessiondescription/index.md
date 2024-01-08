@@ -1,5 +1,6 @@
 ---
-title: RTCSessionDescription()
+title: "RTCSessionDescription: RTCSessionDescription() constructor"
+short-title: RTCSessionDescription()
 slug: Web/API/RTCSessionDescription/RTCSessionDescription
 page-type: web-api-constructor
 status:
@@ -61,7 +62,7 @@ navigator.getUserMedia({ video: true }, (stream) => {
       () => {
         // send the offer to a server to be forwarded to the friend you're calling.
       },
-      error
+      error,
     );
   }, error);
 });

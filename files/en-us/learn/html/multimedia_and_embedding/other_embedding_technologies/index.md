@@ -1,6 +1,7 @@
 ---
 title: From object to iframe — other embedding technologies
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -12,10 +13,9 @@ By now you should really be getting the hang of embedding things into your web p
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -168,7 +168,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -201,7 +201,7 @@ So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designe
 
 Before diving into using `<iframe>` elements, there are some security concerns to be aware of.
 Say you wanted to include the MDN glossary on one of your web pages using the {{htmlelement("iframe")}} element, you might try something like the next code example.
-If you were to do add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
+If you were to add the code below into one of your pages, you might be surprised to see an error message instead of the glossary page:
 
 ```html
 <head>
@@ -229,7 +229,7 @@ If you were to do add the code below into one of your pages, you might be surpri
 
 If you have a look at your browser's console, you'll see an error message like the following:
 
-```
+```plain
 Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
 ```
 
@@ -245,8 +245,6 @@ The example includes the bare essentials needed to use an `<iframe>`:
   - : This attribute, as with {{htmlelement("video")}}/{{htmlelement("img")}}, contains a path pointing to the URL of the document to be embedded.
 - [`width`](/en-US/docs/Web/HTML/Element/iframe#width) and [`height`](/en-US/docs/Web/HTML/Element/iframe#height)
   - : These attributes specify the width and height you want the iframe to be.
-- Fallback content
-  - : In the same way as other similar elements like {{htmlelement("video")}}, you can include fallback content between the opening and closing `<iframe></iframe>` tags that will appear if the browser doesn't support the `<iframe>`. In this case, we have included a link to the page instead. It is unlikely that you'll come across any browser that doesn't support `<iframe>`s these days.
 - [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#sandbox)
   - : This attribute, which works in slightly more modern browsers than the rest of the `<iframe>` features (e.g. IE 10 and above) requests heightened security settings; we'll say more about this in the next section.
 
@@ -274,12 +272,13 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 {{Glossary("HTTPS")}} is the encrypted version of {{Glossary("HTTP")}}. You should serve your websites using HTTPS whenever possible:
 
-1. HTTPS reduces the chance that remote content has been tampered with in transit,
+1. HTTPS reduces the chance that remote content has been tampered with in transit.
 2. HTTPS prevents embedded content from accessing content in your parent document, and vice versa.
 
 HTTPS-enabling your site requires a special security certificate to be installed. Many hosting providers offer HTTPS-enabled hosting without you needing to do any setup on your own to put a certificate in place. But if you _do_ need to set up HTTPS support for your site on your own, [Let's Encrypt](https://letsencrypt.org/) provides tools and instructions you can use for automatically creating and installing the necessary certificate — with built-in support for the most widely-used web servers, including the Apache web server, Nginx, and others. The Let's Encrypt tooling is designed to make the process as easy as possible, so there's really no good reason to avoid using it or other available means to HTTPS-enable your site.
 
-> **Note:** [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_Github_pages) allow content to be served via HTTPS by default, so it is useful for hosting content. If you are using a different hosting provider and are not sure, ask them about it.
+> **Note:** [GitHub pages](/en-US/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
+> If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
 
 #### Always use the `sandbox` attribute
 
@@ -318,26 +317,26 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   <tbody>
     <tr>
       <td>{{glossary("URL")}} of the embedded content</td>
-      <td><a href="/en-US/docs/Web/HTML/Element/src#embed"><code>embed</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/data#object"><code>object</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         <em>accurate </em>{{glossary("MIME type", 'media type')}}
         of the embedded content
       </td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#embed"><code>embed</code></a></td>
-      <td><a href="/en-US/docs/Web/HTML/Element/type#object"><code>object</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
+      <td><a href="/en-US/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         height and width (in CSS pixels) of the box controlled by the plugin
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br />><a href="en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Element/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

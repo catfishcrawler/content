@@ -1,6 +1,7 @@
 ---
 title: aria-relevant
 slug: Web/Accessibility/ARIA/Attributes/aria-relevant
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-relevant
 ---
 
@@ -33,7 +34,7 @@ The values of `removals` and `all` should be used sparingly. For example, when a
 - `additions text` (default)
   - : Element nodes are added to the accessibility tree within the live region AND text content or a text alternative is added to any descendant in the accessibility tree of the live region.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRelevant")}}
   - : The [`ariaRelevant`](/en-US/docs/Web/API/Element/ariaRelevant) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-relevant` attribute.

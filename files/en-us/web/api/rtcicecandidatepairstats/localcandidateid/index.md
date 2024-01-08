@@ -1,8 +1,9 @@
 ---
-title: RTCIceCandidateStats.localCandidateId
+title: "RTCIceCandidateStats: localCandidateId property"
+short-title: localCandidateId
 slug: Web/API/RTCIceCandidatePairStats/localCandidateId
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.localCandidateId
+browser-compat: api.RTCStatsReport.type_candidate-pair.localCandidateId
 ---
 
 {{APIRef("WebRTC")}}

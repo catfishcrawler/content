@@ -1,6 +1,7 @@
 ---
 title: Global attributes
 slug: Web/MathML/Global_attributes
+page-type: landing-page
 browser-compat: mathml.global_attributes
 ---
 
@@ -49,10 +50,6 @@ In addition to the basic MathML global attributes, the following global attribut
 - [`mathsize`](/en-US/docs/Web/MathML/Global_attributes/mathsize)
 
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) used as a [font-size](/en-US/docs/Web/CSS/font-size) for the element.
-
-- [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant)
-
-  - : A logical classes of token elements.
 
 - [`nonce`](/en-US/docs/Web/HTML/Global_attributes/nonce)
 

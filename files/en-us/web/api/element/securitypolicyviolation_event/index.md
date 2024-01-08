@@ -1,5 +1,6 @@
 ---
 title: "Element: securitypolicyviolation event"
+short-title: securitypolicyviolation
 slug: Web/API/Element/securitypolicyviolation_event
 page-type: web-api-event
 browser-compat: api.Element.securitypolicyviolation_event
@@ -57,4 +58,6 @@ window.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
+- The {{domxref("Document/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("Document")}} interface
+- The {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}} event of the {{domxref("WorkerGlobalScope")}} interface
 - [HTTP > Content Security Policy](/en-US/docs/Web/HTTP/CSP)

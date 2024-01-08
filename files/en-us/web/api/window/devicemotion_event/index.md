@@ -1,13 +1,14 @@
 ---
 title: "Window: devicemotion event"
+short-title: devicemotion
 slug: Web/API/Window/devicemotion_event
 page-type: web-api-event
 browser-compat: api.Window.devicemotion_event
 ---
 
-{{APIRef}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The `devicemotion` event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
+The **`devicemotion`** event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
 
 This event is not cancelable and does not bubble.
 

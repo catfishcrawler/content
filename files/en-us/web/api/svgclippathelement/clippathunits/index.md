@@ -1,5 +1,6 @@
 ---
-title: SVGClipPathElement.clipPathUnits
+title: "SVGClipPathElement: clipPathUnits property"
+short-title: clipPathUnits
 slug: Web/API/SVGClipPathElement/clipPathUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGClipPathElement.clipPathUnits
@@ -50,12 +51,12 @@ svg {
     <rect id="r4" x="55" y="0" width="45" height="45" />
 
     <!-- The first 3 rect are clipped with userSpaceOnUse units -->
-    <use clip-path="url(#clip1)" xlink:href="#r1" fill="red" />
-    <use clip-path="url(#clip1)" xlink:href="#r2" fill="blue" />
-    <use clip-path="url(#clip1)" xlink:href="#r3" fill="yellow" />
+    <use clip-path="url(#clip1)" href="#r1" fill="red" />
+    <use clip-path="url(#clip1)" href="#r2" fill="blue" />
+    <use clip-path="url(#clip1)" href="#r3" fill="yellow" />
 
     <!-- The last rect is clipped with objectBoundingBox units -->
-    <use clip-path="url(#clip2)" xlink:href="#r4" fill="green" />
+    <use clip-path="url(#clip2)" href="#r4" fill="green" />
   </svg>
 </div>
 <pre id="log"></pre>

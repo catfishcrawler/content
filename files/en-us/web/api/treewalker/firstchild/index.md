@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.firstChild()
+title: "TreeWalker: firstChild() method"
+short-title: firstChild()
 slug: Web/API/TreeWalker/firstChild
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.firstChild
@@ -36,7 +37,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.firstChild(); // returns the first child of the root element, or null if none
 ```

@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.setLocalDescription()
+title: "RTCPeerConnection: setLocalDescription() method"
+short-title: setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.setLocalDescription
@@ -79,7 +80,7 @@ This is equivalent to:
 myPeerConnection
   .createOffer()
   .then((offer) =>
-    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer))
+    myPeerConnection.setLocalDescription(new RTCSessionDescription(offer)),
   );
 ```
 

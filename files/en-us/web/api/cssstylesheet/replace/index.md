@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.replace()
+title: "CSSStyleSheet: replace() method"
+short-title: replace()
 slug: Web/API/CSSStyleSheet/replace
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleSheet.replace
@@ -63,5 +64,5 @@ stylesheet
 
 ## See also
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

@@ -1,5 +1,6 @@
 ---
-title: TrustedTypePolicy.createScriptURL()
+title: "TrustedTypePolicy: createScriptURL() method"
+short-title: createScriptURL()
 slug: Web/API/TrustedTypePolicy/createScriptURL
 page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicy.createScriptURL
@@ -38,7 +39,7 @@ In the below example a string containing the URL to an external resource is used
 
 ```js
 const escaped = escapeURLPolicy.createScriptURL(
-  "https://example.com/my-script.js"
+  "https://example.com/my-script.js",
 );
 ```
 

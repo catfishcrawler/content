@@ -1,5 +1,6 @@
 ---
-title: Element.computedStyleMap()
+title: "Element: computedStyleMap() method"
+short-title: computedStyleMap()
 slug: Web/API/Element/computedStyleMap
 page-type: web-api-instance-method
 browser-compat: api.Element.computedStyleMap
@@ -60,7 +61,7 @@ const stylesList = document.querySelector("#regurgitation");
 // Retrieve all computed styles with computedStyleMap()
 const allComputedStyles = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of allComputedStyles) {
   // properties
   const cssProperty = document.createElement("dt");

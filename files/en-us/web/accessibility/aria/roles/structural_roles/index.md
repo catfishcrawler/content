@@ -1,6 +1,7 @@
 ---
 title: "ARIA: document structural roles"
 slug: Web/Accessibility/ARIA/Roles/structural_roles
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#document_structure_roles
 ---
 
@@ -60,6 +61,6 @@ Do not use structural roles. Opt for HTML semantic elements instead.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

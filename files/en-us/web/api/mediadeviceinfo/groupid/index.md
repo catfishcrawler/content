@@ -1,13 +1,14 @@
 ---
-title: MediaDeviceInfo.groupId
+title: "MediaDeviceInfo: groupId property"
+short-title: groupId
 slug: Web/API/MediaDeviceInfo/groupId
 page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.groupId
 ---
 
-{{APIRef("Media Capture")}}
+{{APIRef("Media Capture and Streams")}}{{securecontext_header}}
 
-The **`groupId`** readonly property of
+The **`groupId`** read-only property of
 the {{domxref("MediaDeviceInfo")}} interface returns a string that
 is a group identifier.
 

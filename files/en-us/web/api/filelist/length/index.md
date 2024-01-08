@@ -1,13 +1,14 @@
 ---
-title: FileList.length
+title: "FileList: length property"
+short-title: length
 slug: Web/API/FileList/length
 page-type: web-api-instance-property
 browser-compat: api.FileList.length
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The read-only {{domxref("FileList")}} **`length`** property returns the number of files in the `FileList`.
+The **`length`** read-only property of the {{domxref("FileList")}} interface returns the number of files in the `FileList`.
 
 ## Value
 

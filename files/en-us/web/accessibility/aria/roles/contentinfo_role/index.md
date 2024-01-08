@@ -1,9 +1,10 @@
 ---
 title: "ARIA: contentinfo role"
 slug: Web/Accessibility/ARIA/Roles/contentinfo_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#contentinfo
-  - https://w3c.github.io/aria-practices/#aria_lh_contentinfo
+  - https://www.w3.org/WAI/ARIA/apg/patterns/landmarks/examples/contentinfo.html
 ---
 
 The `contentinfo` role defines a footer, containing identifying information such as copyright information, navigation links, and privacy statements, found on every document within a site. This section is commonly called a footer.
@@ -26,7 +27,7 @@ This is a website footer. Using the {{HTMLElement('footer')}} element instead is
 
 ## Description
 
-The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) used to identify a page footer. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Pages should only include one top-level `contentinfo` landmark role per page.
+The `contentinfo` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) used to identify a page footer. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Pages should only include one top-level `contentinfo` landmark role per page.
 
 Each page should only include one `contentinfo` landmark, created by either using the {{HTMLElement('footer')}} element or by declaring `role="contentinfo"`. `contentinfo` landmarks present in content embedded via {{HTMLElement('iframe')}} do not count towards this limit.
 
@@ -58,7 +59,7 @@ Each page should only include one `contentinfo` landmark, created by either usin
 
 ### Use sparingly
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles) are intended to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
 
 ### One `contentinfo` landmark per page
 
@@ -68,7 +69,7 @@ There should be only one `contentinfo` landmark per document, used as the immedi
 
 #### Mega-footers
 
-Do not nest additional {{HTMLElement('footer')}} elements or `contentinfo` landmarks inside of the document's footer. Use other [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) instead.
+Do not nest additional {{HTMLElement('footer')}} elements or `contentinfo` landmarks inside the document's footer. Use other [content sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) instead.
 
 ### Labeling landmarks
 
@@ -132,6 +133,6 @@ Certain technologies such as browser extensions can generate lists of all landma
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

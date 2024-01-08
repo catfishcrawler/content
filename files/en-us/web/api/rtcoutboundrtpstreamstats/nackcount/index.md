@@ -1,8 +1,9 @@
 ---
-title: RTCOutboundRtpStreamStats.nackCount
+title: "RTCOutboundRtpStreamStats: nackCount property"
+short-title: nackCount
 slug: Web/API/RTCOutboundRtpStreamStats/nackCount
 page-type: web-api-instance-property
-browser-compat: api.RTCOutboundRtpStreamStats.nackCount
+browser-compat: api.RTCStatsReport.type_outbound-rtp.nackCount
 ---
 
 {{APIRef("WebRTC")}}

@@ -1,5 +1,5 @@
 ---
-title: '<audio>: The Embed Audio element'
+title: "<audio>: The Embed Audio element"
 slug: Web/HTML/Element/audio
 page-type: html-element
 browser-compat: html.elements.audio
@@ -46,11 +46,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted use in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin) for additional information.
 
-- `disableremoteplayback` {{experimental_inline}}
+- `disableremoteplayback`
 
   - : A Boolean attribute used to disable the capability of remote playback in devices that are attached using wired (HDMI, DVI, etc.) and wireless technologies (Miracast, Chromecast, DLNA, AirPlay, etc.). See [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) for more information.
 
-    > **Note:** In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
+    In Safari, you can use [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) as a fallback.
 
 - `loop`
   - : A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
@@ -155,6 +155,12 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.loadstart_event", 'loadstart')}}
+      </td>
+      <td>Fired when the browser has started to load the resource.</td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.pause_event", 'pause')}}
       </td>
       <td>Playback has been paused.</td>
@@ -254,6 +260,7 @@ Other usage notes:
 - To allow precise control over your audio content, `HTMLMediaElement`s fire many different [events](/en-US/docs/Web/API/HTMLMediaElement#events). This also provides a way to monitor the audio's fetching process so you can watch for errors or detect when enough is available to begin to play or manipulate it.
 - You can also use the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to directly generate and manipulate audio streams from JavaScript code rather than streaming pre-existing audio files.
 - `<audio>` elements can't have subtitles or captions associated with them in the same way that `<video>` elements can. See [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio/) by Ian Devlin for some useful information and workarounds.
+- To test the fallback content on browsers that support the element, you can replace `<audio>` with a non-existing element like `<notanaudio>`.
 
 A good general source of information on using HTML `<audio>` is the [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) beginner's tutorial.
 
@@ -267,7 +274,7 @@ You can style the default controls with properties that affect the block as a si
 
 To get a consistent look and feel across browsers, you'll need to create custom controls; these can be marked up and styled in whatever way you want, and then JavaScript can be used along with the {{domxref("HTMLMediaElement")}} API to wire up their functionality.
 
-[Video player styling basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques — it is written in the context of `<video>`, but much of it is equally applicable to `<audio>`.
+[Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques — it is written in the context of `<video>`, but much of it is equally applicable to `<audio>`.
 
 ### Detecting addition and removal of tracks
 
@@ -340,7 +347,7 @@ This example includes multiple `<source>` elements. The browser tries to load th
 
 ## Accessibility concerns
 
-Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are experiencing hearing loss to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
+Audio with spoken dialog should provide both captions and transcripts that accurately describe its content. Captions, which are specified using [WebVTT](/en-US/docs/Web/API/WebVTT_API), allow people who are hearing impaired to understand an audio recording's content as the recording is being played, while transcripts allow people who need additional time to be able to review the recording's content at a pace and format that is comfortable for them.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source audio.
 
@@ -348,7 +355,7 @@ The `<audio>` element doesn't directly support WebVTT. You will have to find a l
 
 In addition to spoken dialog, subtitles and transcripts should also identify music and sound effects that communicate important information. This includes emotion and tone. For example, in the WebVTT below, note the use of square brackets to provide tone and emotional insight to the viewer; this can help establish the mood otherwise provided using music, nonverbal sounds and crucial sound effects, and so forth.
 
-```
+```plain
 1
 00:00:00 --> 00:00:45
 [Energetic techno music]
@@ -460,4 +467,4 @@ Also it's a good practice to provide some content (such as the direct download l
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
 - [Learning area: Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Cross-browser audio basics](/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [Cross-browser audio basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

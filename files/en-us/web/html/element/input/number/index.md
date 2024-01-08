@@ -345,39 +345,39 @@ input:valid + span::after {
 And finally, the JavaScript:
 
 ```js
-const metersInputGroup = document.querySelector('.metersInputGroup');
-const feetInputGroup = document.querySelector('.feetInputGroup');
-const metersInput = document.querySelector('#meters');
-const feetInput = document.querySelector('#feet');
-const inchesInput = document.querySelector('#inches');
+const metersInputGroup = document.querySelector(".metersInputGroup");
+const feetInputGroup = document.querySelector(".feetInputGroup");
+const metersInput = document.querySelector("#meters");
+const feetInput = document.querySelector("#feet");
+const inchesInput = document.querySelector("#inches");
 const switchBtn = document.querySelector('input[type="button"]');
 
-switchBtn.addEventListener('click', () => {
-  if (switchBtn.getAttribute('class') === 'meters') {
-    switchBtn.setAttribute('class', 'feet');
-    switchBtn.value = 'Enter height in meters';
+switchBtn.addEventListener("click", () => {
+  if (switchBtn.getAttribute("class") === "meters") {
+    switchBtn.setAttribute("class", "feet");
+    switchBtn.value = "Enter height in meters";
 
-    metersInputGroup.style.display = 'none';
-    feetInputGroup.style.display = 'block';
+    metersInputGroup.style.display = "none";
+    feetInputGroup.style.display = "block";
 
-    feetInput.setAttribute('required', '');
-    inchesInput.setAttribute('required', '');
-    metersInput.removeAttribute('required');
+    feetInput.setAttribute("required", "");
+    inchesInput.setAttribute("required", "");
+    metersInput.removeAttribute("required");
 
-    metersInput.value = '';
+    metersInput.value = "";
   } else {
-    switchBtn.setAttribute('class', 'meters');
-    switchBtn.value = 'Enter height in feet and inches';
+    switchBtn.setAttribute("class", "meters");
+    switchBtn.value = "Enter height in feet and inches";
 
-    metersInputGroup.style.display = 'block';
-    feetInputGroup.style.display = 'none';
+    metersInputGroup.style.display = "block";
+    feetInputGroup.style.display = "none";
 
-    feetInput.removeAttribute('required');
-    inchesInput.removeAttribute('required');
-    metersInput.setAttribute('required', '');
+    feetInput.removeAttribute("required");
+    inchesInput.removeAttribute("required");
+    metersInput.setAttribute("required", "");
 
-    feetInput.value = '';
-    inchesInput.value = '';
+    feetInput.value = "";
+    inchesInput.value = "";
   }
 });
 ```
@@ -390,7 +390,7 @@ After declaring a few variables, an event listener is added to the `button` to c
 >
 > If you didn't do this, you'd have to fill in both feet/inches **and** meters to submit the form!
 
-## Accessibility
+## Accessibility concerns
 
 The implicit [role](/en-US/docs/Web/Accessibility/ARIA/Roles) for the `<input type="number">` element is [`spinbutton`](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role). If spinbutton is not an important feature for your form control, consider _not_ using `type="number"`. Instead, use [`inputmode="numeric"`](/en-US/docs/Web/HTML/Global_attributes/inputmode) along with a [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute that limits the characters to numbers and associated characters. With `<input type="number">`, there is a risk of users accidentally incrementing a number when they're trying to do something else. Additionally, if users try to enter something that's not a number, there's no explicit feedback about what they're doing wrong.
 
@@ -414,10 +414,10 @@ Also consider using the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocom
     <tr>
       <td><strong>Supported common attributes</strong></td>
       <td>
-         <a href="en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-         <a href="en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+         <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
       </td>
     </tr>
     <tr>

@@ -1,5 +1,6 @@
 ---
-title: Element.releasePointerCapture()
+title: "Element: releasePointerCapture() method"
+short-title: releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
 page-type: web-api-instance-method
 browser-compat: api.Element.releasePointerCapture
@@ -33,9 +34,8 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-| Exception          | Explanation                                          |
-| ------------------ | ---------------------------------------------------- |
-| `InvalidPointerId` | pointerId does not match any of the active pointers. |
+- `NotFoundError` {{domxref("DOMException")}}
+  - : Thrown if `pointerId` does not match any active pointer.
 
 ## Examples
 
@@ -99,5 +99,6 @@ slider.onpointerup = stopSliding;
 
 ## See also
 
+- {{ domxref("Element.hasPointerCapture","Element.hasPointerCapture()") }}
 - {{ domxref("Element.setPointerCapture","Element.setPointerCapture()") }}
 - {{ domxref("Pointer_events","Pointer Events") }}

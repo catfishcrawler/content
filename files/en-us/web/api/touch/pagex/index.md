@@ -1,5 +1,6 @@
 ---
-title: Touch.pageX
+title: "Touch: pageX property"
+short-title: pageX
 slug: Web/API/Touch/pageX
 page-type: web-api-instance-property
 browser-compat: api.Touch.pageX
@@ -12,8 +13,8 @@ coordinate of the touch point relative to the viewport, including any scroll off
 
 ## Value
 
-A `long` representing the X coordinate of the touch point relative to the
-viewport, including any scroll offset.
+A `double` floating point value representing the X coordinate of the touch point
+relative to the viewport, including any scroll offset.
 
 ## Examples
 
@@ -44,7 +45,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
     }
   },
-  false
+  false,
 );
 ```
 

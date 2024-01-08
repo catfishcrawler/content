@@ -1,5 +1,6 @@
 ---
-title: URL.pathname
+title: "URL: pathname property"
+short-title: pathname
 slug: Web/API/URL/pathname
 page-type: web-api-instance-property
 browser-compat: api.URL.pathname
@@ -27,7 +28,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname?q=value"
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname?q=value",
 );
 console.log(url.pathname); // Logs "/en-US/docs/Web/API/URL/pathname"
 ```

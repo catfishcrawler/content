@@ -1,5 +1,6 @@
 ---
 title: "Element: compositionupdate event"
+short-title: compositionupdate
 slug: Web/API/Element/compositionupdate_event
 page-type: web-api-event
 browser-compat: api.Element.compositionupdate_event
@@ -23,7 +24,7 @@ oncompositionupdate = (event) => {};
 
 ## Event type
 
-A {{domxref("CompositionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("CompositionEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("CompositionEvent")}}
 

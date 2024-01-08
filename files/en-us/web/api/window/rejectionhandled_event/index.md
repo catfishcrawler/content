@@ -1,5 +1,6 @@
 ---
 title: "Window: rejectionhandled event"
+short-title: rejectionhandled
 slug: Web/API/Window/rejectionhandled_event
 page-type: web-api-event
 browser-compat: api.Window.rejectionhandled_event
@@ -51,7 +52,7 @@ window.addEventListener(
   (event) => {
     console.log(`Promise rejected; reason: ${event.reason}`);
   },
-  false
+  false,
 );
 ```
 

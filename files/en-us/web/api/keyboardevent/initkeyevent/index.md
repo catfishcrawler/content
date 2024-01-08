@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.initKeyEvent()
+title: "KeyboardEvent: initKeyEvent() method"
+short-title: initKeyEvent()
 slug: Web/API/KeyboardEvent/initKeyEvent
 page-type: web-api-instance-method
 status:
@@ -81,7 +82,7 @@ event.initKeyEvent(
   false, // shiftKeyArg,
   false, // metaKeyArg,
   9, // keyCodeArg,
-  0
+  0,
 ); // charCodeArg);
 
 document.getElementById("blah").dispatchEvent(event);

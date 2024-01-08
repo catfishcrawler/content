@@ -1,6 +1,7 @@
 ---
 title: scope
 slug: Web/Manifest/scope
+page-type: web-manifest-member
 browser-compat: html.manifest.scope
 ---
 
@@ -11,10 +12,6 @@ browser-compat: html.manifest.scope
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

@@ -1,6 +1,7 @@
 ---
 title: aria-details
 slug: Web/Accessibility/ARIA/Attributes/aria-details
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-details
 ---
 
@@ -45,7 +46,7 @@ When it comes to definition and term roles, the `aria-details` would be included
 </p>
 
 <a href="bezierExplanation.html" id="bezImg"
-  aria-label="Explanation of Bézier curve in CSS timing functions">
+  aria-label="Explanation of Bézier curve in CSS easing functions">
   <img alt="Animated Bézier curve showing 4 control points." src="bezier.gif">
 </a>
 ```
@@ -68,7 +69,7 @@ Used in **ALL** roles.
 - HTML [id](/en-US/docs/Web/HTML/Global_attributes/id) attribute
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-- [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [The image `alt` attribute](/en-US/docs/Web/API/HTMLImageElement/alt)
 - HTML [title](/en-US/docs/Web/HTML/Global_attributes/title) attribute
 

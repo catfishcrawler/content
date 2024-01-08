@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.getContextAttributes()
+title: "WebGLRenderingContext: getContextAttributes() method"
+short-title: getContextAttributes()
 slug: Web/API/WebGLRenderingContext/getContextAttributes
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getContextAttributes
@@ -45,7 +46,7 @@ gl.getContextAttributes();
 the `getContextAttributes` method returns an object that describes the
 attributes set on this context, for example:
 
-```
+```js
 {
   alpha: true,
   antialias: true,

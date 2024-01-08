@@ -1,6 +1,7 @@
 ---
 title: "Reason: CORS header 'Access-Control-Allow-Origin' does not match 'xyz'"
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
+page-type: http-cors-error
 ---
 
 {{HTTPSidebar}}
@@ -28,13 +29,13 @@ and `apache.conf` are common names for these), or in an
 
 > **Warning:** You must include the HTTPS or HTTP protocol as part of the origin.
 
-```
+```apacheconf
 Header set Access-Control-Allow-Origin 'origin'
 ```
 
 For Nginx, the command to set up this header is:
 
-```
+```nginx
 add_header 'Access-Control-Allow-Origin' 'origin'
 ```
 

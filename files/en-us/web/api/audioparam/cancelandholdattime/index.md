@@ -1,5 +1,6 @@
 ---
-title: AudioParam.cancelAndHoldAtTime()
+title: "AudioParam: cancelAndHoldAtTime() method"
+short-title: cancelAndHoldAtTime()
 slug: Web/API/AudioParam/cancelAndHoldAtTime
 page-type: web-api-instance-method
 browser-compat: api.AudioParam.cancelAndHoldAtTime
@@ -7,7 +8,7 @@ browser-compat: api.AudioParam.cancelAndHoldAtTime
 
 {{APIRef("Web Audio API")}}
 
-The **`cancelAndHoldAtTime()`** property of the
+The **`cancelAndHoldAtTime()`** method of the
 {{domxref("AudioParam")}} interface cancels all scheduled future changes to the
 `AudioParam` but holds its value at a given time until further changes are
 made using other methods.

@@ -1,5 +1,6 @@
 ---
-title: URL.username
+title: "URL: username property"
+short-title: username
 slug: Web/API/URL/username
 page-type: web-api-instance-property
 browser-compat: api.URL.username
@@ -20,7 +21,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username"
+  "https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/username",
 );
 console.log(url.username); // Logs "anonymous"
 ```

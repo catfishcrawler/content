@@ -4,7 +4,7 @@ slug: Web/API/Streams_API/Using_writable_streams
 page-type: guide
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 As a JavaScript developer, programmatically writing data to a stream is very useful! This article explains the [Streams API](/en-US/docs/Web/API/Streams_API)'s writable stream functionality.
 
@@ -38,7 +38,7 @@ const stream = new WritableStream(
   {
     highWaterMark: 3,
     size: () => 1,
-  }
+  },
 );
 ```
 
@@ -82,7 +82,7 @@ const writableStream = new WritableStream(
       console.error("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 ```
 

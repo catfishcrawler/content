@@ -1,5 +1,6 @@
 ---
-title: WindowClient.focused
+title: "WindowClient: focused property"
+short-title: focused
 slug: Web/API/WindowClient/focused
 page-type: web-api-instance-property
 browser-compat: api.WindowClient.focused
@@ -37,7 +38,7 @@ self.addEventListener("notificationclick", (event) => {
         }
 
         if (clients.openWindow) return clients.openWindow("/");
-      })
+      }),
   );
 });
 ```

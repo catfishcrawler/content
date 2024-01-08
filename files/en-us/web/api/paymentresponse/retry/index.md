@@ -1,5 +1,6 @@
 ---
-title: PaymentResponse.retry()
+title: "PaymentResponse: retry() method"
+short-title: retry()
 slug: Web/API/PaymentResponse/retry
 page-type: web-api-instance-method
 browser-compat: api.PaymentResponse.retry
@@ -105,7 +106,7 @@ async function recursiveValidate(request, response) {
     const promise = fixField(
       request,
       "shippingaddresschange",
-      shippingValidator
+      shippingValidator,
     );
     promisesToFixThings.push(promise);
   }

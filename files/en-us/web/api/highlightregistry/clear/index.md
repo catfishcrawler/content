@@ -1,14 +1,13 @@
 ---
-title: HighlightRegistry.clear()
+title: "HighlightRegistry: clear() method"
+short-title: clear()
 slug: Web/API/HighlightRegistry/clear
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.HighlightRegistry.clear
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-map.prototype.clear
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`clear()`** method of the {{domxref("HighlightRegistry")}} interface removes all the {{domxref("Highlight")}} objects registered in the `HighlightRegistry`.
 

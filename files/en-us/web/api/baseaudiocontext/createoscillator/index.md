@@ -1,5 +1,6 @@
 ---
-title: BaseAudioContext.createOscillator()
+title: "BaseAudioContext: createOscillator() method"
+short-title: createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 page-type: web-api-instance-method
 browser-compat: api.BaseAudioContext.createOscillator
@@ -32,7 +33,7 @@ An {{domxref("OscillatorNode")}}.
 ## Examples
 
 The following example shows basic usage of an AudioContext to create an oscillator
-node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/master/violent-theremin/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
+node. For applied examples/information, check out our [Violent Theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) ([see app.js](https://github.com/mdn/webaudio-examples/blob/main/violent-theremin/scripts/app.js) for relevant code); also see our {{domxref("OscillatorNode")}} page for
 more information.
 
 ```js

@@ -1,5 +1,6 @@
 ---
-title: Worklet.addModule()
+title: "Worklet: addModule() method"
+short-title: addModule()
 slug: Web/API/Worklet/addModule
 page-type: web-api-instance-method
 browser-compat: api.Worklet.addModule
@@ -65,11 +66,11 @@ audioWorklet.addModule("modules/bypassFilter.js", {
 
 ```js
 CSS.paintWorklet.addModule(
-  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js"
+  "https://mdn.github.io/houdini-examples/cssPaint/intro/worklets/hilite.js",
 );
 ```
 
-Once a {{domxref('paintWorklet')}} is included, the CSS {{cssxref("image/paint", "paint()")}} function
+Once the script has been added to the [paint worklet](/en-US/docs/Web/API/CSS/paintWorklet_static), the CSS {{cssxref("image/paint", "paint()")}} function
 can be used to include the image created by the worklet:
 
 ```css

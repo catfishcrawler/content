@@ -1,6 +1,7 @@
 ---
 title: "ARIA: searchbox role"
 slug: Web/Accessibility/ARIA/Roles/searchbox_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#searchbox
 ---
 
@@ -70,6 +71,6 @@ Including `role="searchbox"` when the form is a `search` and the label indicates
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

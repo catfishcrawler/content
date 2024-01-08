@@ -1,5 +1,6 @@
 ---
-title: Navigator.userAgentData
+title: "Navigator: userAgentData property"
+short-title: userAgentData
 slug: Web/API/Navigator/userAgentData
 page-type: web-api-instance-property
 status:
@@ -34,4 +35,4 @@ console.log(navigator.userAgentData.brands);
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)

@@ -8,7 +8,7 @@ page-type: guide
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures.
 
-The [language overview](/en-US/docs/Web/JavaScript/Language_Overview) offers a similar summary of the common data types, but with more comparisons to other languages.
+The [language overview](/en-US/docs/Web/JavaScript/Language_overview) offers a similar summary of the common data types, but with more comparisons to other languages.
 
 ## Dynamic and weak typing
 
@@ -28,7 +28,7 @@ const result = foo + "1"; // JavaScript coerces foo to a string, so it can be co
 console.log(result); // 421
 ```
 
-Implicit coercions is very convenient, but can be a potential footgun if developers didn't intend to do the conversion, or intend to convert in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
+Implicit coercions are very convenient, but can create subtle bugs when conversions happen where they are not expected, or where they are expected to happen in the other direction (for example, string to number instead of number to string). For [symbols](#symbol_type) and [BigInts](#bigint_type), JavaScript has intentionally disallowed certain implicit type conversions.
 
 ## Primitive values
 
@@ -73,7 +73,7 @@ Conceptually, `undefined` indicates the absence of a _value_, while `null` indic
 
 The {{jsxref("Boolean")}} type represents a logical entity and is inhabited by two values: `true` and `false`.
 
-Boolean values are usually used for conditional operations, including [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator), [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
+Boolean values are usually used for conditional operations, including [ternary operators](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator), [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else), [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while), etc.
 
 ### Number type
 
@@ -97,7 +97,7 @@ console.log(42 / -0); // -Infinity
 
 {{jsxref("NaN")}} ("**N**ot **a** **N**umber") is a special kind of number value that's typically encountered when the result of an arithmetic operation cannot be expressed as a number. It is also the only value in JavaScript that is not equal to itself.
 
-Although a number is conceptually a "mathematical value" and is always implicitly floating-point-encoded, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators). When applying bitwise operators, the number is first converted to a 32-bit integer.
+Although a number is conceptually a "mathematical value" and is always implicitly floating-point-encoded, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators). When applying bitwise operators, the number is first converted to a 32-bit integer.
 
 > **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
@@ -126,7 +126,7 @@ BigInt values are neither always more precise nor always less precise than numbe
 
 ### String type
 
-The {{jsxref("String")}} type represents textual data and is encoded as a sequence of 16-bit unsigned integer values representing [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters). Each element in the string occupies a position in the string. The first element is at index `0`, the next at index `1`, and so on. The [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) of a string is the number of UTF-16 code units in it, which may not correspond to the actual number of Unicode characters; see the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_codepoints_and_grapheme_clusters) reference page for more details.
+The {{jsxref("String")}} type represents textual data and is encoded as a sequence of 16-bit unsigned integer values representing [UTF-16 code units](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters). Each element in the string occupies a position in the string. The first element is at index `0`, the next at index `1`, and so on. The [length](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length) of a string is the number of UTF-16 code units in it, which may not correspond to the actual number of Unicode characters; see the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) reference page for more details.
 
 JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it. String methods create new strings based on the content of the current string — for example:
 
@@ -139,7 +139,7 @@ It can be tempting to use strings to represent complex data. Doing this comes wi
 
 - It is easy to build complex strings with concatenation.
 - Strings are easy to debug (what you see printed is always what is in the string).
-- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) responses when using `responseText`, etc.) and it can be tempting to only work with strings.
+- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`fetch()`](/en-US/docs/Web/API/fetch) responses when using {{domxref("Response.text()")}}, etc.) and it can be tempting to only work with strings.
 
 With conventions, it is possible to represent any data structure in a string. This does not make it a good idea. For instance, with a separator, one could emulate a list (while a JavaScript array would be more suitable). Unfortunately, when the separator is used in one of the "list" elements, then, the list is broken. An escape character can be chosen, etc. All of this requires conventions and creates an unnecessary maintenance burden.
 
@@ -203,7 +203,7 @@ When representing dates, the best choice is to use the built-in [`Date`](/en-US/
 
 Additionally, arrays inherit from `Array.prototype`, which provides a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) searches a value in the array and [`push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) appends an element to the array. This makes Arrays a perfect candidate to represent ordered lists.
 
-[Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
+[Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 
@@ -213,7 +213,7 @@ You could implement `Map`s and `Set`s yourself. However, since objects cannot be
 
 Usually, to bind data to a DOM node, one could set properties directly on the object, or use `data-*` attributes. This has the downside that the data is available to any script running in the same context. `Map`s and `WeakMap`s make it easy to _privately_ bind data to an object.
 
-`WeakMap` and `WeakSet` only allow object keys, and the keys are allowed to be garbage collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_Management#data_structures_aiding_memory_management).
+`WeakMap` and `WeakSet` only allow garbage-collectable values as keys, which are either objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), and the keys may be collected even when they remain in the collection. They are specifically used for [memory usage optimization](/en-US/docs/Web/JavaScript/Memory_management#data_structures_aiding_memory_management).
 
 ### Structured data: JSON
 
@@ -229,7 +229,7 @@ As mentioned above, JavaScript is a [weakly typed](#dynamic_and_weak_typing) lan
 
 ### Primitive coercion
 
-The [primitive coercion](https://tc39.es/ecma262/#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
+The [primitive coercion](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-toprimitive) process is used where a primitive value is expected, but there's no strong preference for what the actual type should be. This is usually when a [string](#string_type), a [number](#number_type), or a [BigInt](#bigint_type) are equally acceptable. For example:
 
 - The [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) constructor, when it receives one argument that's not a `Date` instance — strings represent date strings, while numbers represent timestamps.
 - The [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator — if one operand is a string, string concatenation is performed; otherwise, numeric addition is performed.
@@ -267,7 +267,5 @@ In all cases, `[@@toPrimitive]()`, if present, must be callable and return a pri
 
 ## See also
 
-- [JavaScript Data Structures and Algorithms by Oleksii Trekhleb](https://github.com/trekhleb/javascript-algorithms)
-- [Nicholas Zakas collection of common data structure and common algorithms in JavaScript.](https://github.com/humanwhocodes/computer-science-in-javascript)
-- [Search Tre(i)es implemented in JavaScript](https://github.com/monmohan/dsjslib)
-- [Data Types and Values in the ECMAScript specification](https://tc39.es/ecma262/#sec-ecmascript-data-types-and-values)
+- [JavaScript Data Structures and Algorithms](https://github.com/trekhleb/javascript-algorithms) by Oleksii Trekhleb
+- [Computer Science in JavaScript](https://github.com/humanwhocodes/computer-science-in-javascript) by Nicholas C. Zakas

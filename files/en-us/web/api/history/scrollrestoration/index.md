@@ -1,5 +1,6 @@
 ---
-title: History.scrollRestoration
+title: "History: scrollRestoration property"
+short-title: scrollRestoration
 slug: Web/API/History/scrollRestoration
 page-type: web-api-instance-property
 browser-compat: api.History.scrollRestoration
@@ -29,7 +30,7 @@ One of the following:
 const scrollRestoration = history.scrollRestoration;
 if (scrollRestoration === "manual") {
   console.log(
-    "The location on the page is not restored, user will need to scroll manually."
+    "The location on the page is not restored, user will need to scroll manually.",
   );
 }
 ```

@@ -1,5 +1,6 @@
 ---
-title: BackgroundFetchManager.fetch()
+title: "BackgroundFetchManager: fetch() method"
+short-title: fetch()
 slug: Web/API/BackgroundFetchManager/fetch
 page-type: web-api-instance-method
 status:
@@ -87,7 +88,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
         },
       ],
       downloadTotal: 60 * 1024 * 1024,
-    }
+    },
   );
 });
 ```

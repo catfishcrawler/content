@@ -1,9 +1,10 @@
 ---
 title: "ARIA: alert role"
 slug: Web/Accessibility/ARIA/Roles/alert_role
+page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#alert
-  - https://w3c.github.io/aria-practices/#log
+  - https://www.w3.org/TR/wai-aria-1.2/#alert
 ---
 
 The `alert` role is for important, and usually time-sensitive, information. The `alert` is a type of [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role) processed as an atomic live region.
@@ -120,12 +121,12 @@ document.getElementById("hiddenAlertContainer").innerHTML =
 - [ARIA: `alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [ARIA: live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [ARIA alert support - The Paciello Group](https://www.tpgi.com/aria-alert-support/)
-- [ARIA Practices alert example](https://w3c.github.io/aria-practices/examples/alert/alert.html)
+- [ARIA Practices alert example](https://www.w3.org/WAI/ARIA/apg/patterns/alert/examples/alert/)
 
 <section id="Quick_links">
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.readyState
+title: "IDBRequest: readyState property"
+short-title: readyState
 slug: Web/API/IDBRequest/readyState
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.readyState
@@ -60,7 +61,7 @@ objectStoreTitleRequest.onsuccess = () => {
 
   // Log the readyState of this request
   console.log(
-    `The readyState of this request is ${updateTitleRequest.readyState}`
+    `The readyState of this request is ${updateTitleRequest.readyState}`,
   );
 
   // When this new request succeeds, run the displayData()

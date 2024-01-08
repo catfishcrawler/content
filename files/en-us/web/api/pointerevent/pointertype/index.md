@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.pointerType
+title: "PointerEvent: pointerType property"
+short-title: pointerType
 slug: Web/API/PointerEvent/pointerType
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.pointerType
@@ -51,7 +52,7 @@ targetElement.addEventListener(
         console.log(`pointerType ${event.pointerType} is not supported`);
     }
   },
-  false
+  false,
 );
 ```
 

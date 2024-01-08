@@ -1,6 +1,7 @@
 ---
 title: <mmultiscripts>
 slug: Web/MathML/Element/mmultiscripts
+page-type: mathml-element
 browser-compat: mathml.elements.mmultiscripts
 ---
 
@@ -36,7 +37,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the superscript up.
 
-> **Note:** For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> **Note:** For the `subscriptshift` and `superscriptshift` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: HTMLSlotElement.assignedNodes()
+title: "HTMLSlotElement: assignedNodes() method"
+short-title: assignedNodes()
 slug: Web/API/HTMLSlotElement/assignedNodes
 page-type: web-api-instance-method
 browser-compat: api.HTMLSlotElement.assignedNodes
@@ -40,7 +41,7 @@ let slots = this.shadowRoot.querySelectorAll("slot");
 slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
   console.log(
-    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
   );
 });
 ```

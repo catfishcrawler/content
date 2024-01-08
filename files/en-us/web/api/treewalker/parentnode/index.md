@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.parentNode()
+title: "TreeWalker: parentNode() method"
+short-title: parentNode()
 slug: Web/API/TreeWalker/parentNode
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.parentNode
@@ -38,7 +39,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.parentNode(); // returns null as there is no parent
 ```

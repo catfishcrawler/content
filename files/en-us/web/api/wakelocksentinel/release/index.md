@@ -1,5 +1,6 @@
 ---
-title: WakeLockSentinel.release()
+title: "WakeLockSentinel: release() method"
+short-title: release()
 slug: Web/API/WakeLockSentinel/release
 page-type: web-api-instance-method
 browser-compat: api.WakeLockSentinel.release
@@ -24,7 +25,7 @@ None.
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
@@ -52,5 +53,4 @@ wakeLockOffButton.addEventListener("click", () => {
 
 ## See also
 
-- {{DOMxRef("WakeLockSentinel")}}
-- {{DOMxRef("WakeLock.request", "navigator.wakeLock.request()")}}
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)

@@ -1,5 +1,6 @@
 ---
-title: HTMLInputElement.showPicker()
+title: "HTMLInputElement: showPicker() method"
+short-title: showPicker()
 slug: Web/API/HTMLInputElement/showPicker
 page-type: web-api-instance-method
 browser-compat: api.HTMLInputElement.showPicker
@@ -170,5 +171,6 @@ button.addEventListener("click", () => {
 
 - {{ HTMLElement("input") }}
 - {{ domxref("HTMLInputElement") }}
+- {{ domxref("HTMLSelectElement.showPicker()") }}
 - {{htmlelement("datalist")}}
 - [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete)

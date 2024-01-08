@@ -1,5 +1,6 @@
 ---
 title: "Element: focusin event"
+short-title: focusin
 slug: Web/API/Element/focusin_event
 page-type: web-api-event
 browser-compat: api.Element.focusin_event
@@ -23,7 +24,7 @@ addEventListener("focusin", (event) => {});
 
 ## Event type
 
-A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

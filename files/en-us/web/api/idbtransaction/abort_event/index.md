@@ -1,5 +1,6 @@
 ---
 title: "IDBTransaction: abort event"
+short-title: abort
 slug: Web/API/IDBTransaction/abort_event
 page-type: web-api-event
 browser-compat: api.IDBTransaction.abort_event
@@ -82,7 +83,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
-The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.onabort", "onabort")}} property:
+The same example, but assigning the event handler to the {{DOMxRef("IDBTransaction.abort_event", "onabort")}} property:
 
 ```js
 // Open the database

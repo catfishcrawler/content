@@ -1,5 +1,6 @@
 ---
-title: MutationEvent.prevValue
+title: "MutationEvent: prevValue property"
+short-title: prevValue
 slug: Web/API/MutationEvent/prevValue
 page-type: web-api-instance-property
 status:
@@ -23,7 +24,7 @@ element.addEventListener(
   (event) => {
     console.log(event.previousValue);
   },
-  false
+  false,
 );
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.append()
+title: "URLSearchParams: append() method"
+short-title: append()
 slug: Web/API/URLSearchParams/append
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.append
@@ -13,7 +14,7 @@ interface appends a specified key/value pair as a new search parameter.
 As shown in the example below, if the same key is appended multiple times it will
 appear in the parameter string multiple times for each value.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

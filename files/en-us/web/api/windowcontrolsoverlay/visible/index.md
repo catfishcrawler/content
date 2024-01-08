@@ -1,5 +1,6 @@
 ---
-title: WindowControlsOverlay.visible
+title: "WindowControlsOverlay: visible property"
+short-title: visible
 slug: Web/API/WindowControlsOverlay/visible
 page-type: web-api-instance-property
 status:
@@ -9,7 +10,7 @@ browser-compat: api.WindowControlsOverlay.visible
 
 {{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
-The **`visible`** property of a {{domxref("WindowControlsOverlay")}} object returns a {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
+The **`visible`** read-only property of the {{domxref("WindowControlsOverlay")}} interface returns a {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
 
 The window controls overlay is not be visible if:
 

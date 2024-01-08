@@ -1,5 +1,6 @@
 ---
-title: ReadableStream()
+title: "ReadableStream: ReadableStream() constructor"
+short-title: ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 page-type: web-api-constructor
 browser-compat: api.ReadableStream.ReadableStream
@@ -45,7 +46,10 @@ new ReadableStream(underlyingSource, queuingStrategy)
         {{domxref("ReadableStreamDefaultController")}} or a
         {{domxref("ReadableByteStreamController")}}, depending on the value of the
         `type` property. This can be used by the developer to control the
-        stream as more chunks are fetched.
+        stream as more chunks are fetched. This function will not be called until `start()`
+        successfully completes. Additionally, it will only be called repeatedly if it
+        enqueues at least one chunk or fulfills a BYOB request; a no-op `pull()`
+        implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
         that the stream is to be cancelled (e.g. if {{domxref("ReadableStream.cancel()")}}
@@ -108,6 +112,7 @@ When a button is pressed, the generation is stopped, the stream is closed using
 which reads the data back out of the stream.
 
 ```js
+let interval;
 const stream = new ReadableStream({
   start(controller) {
     interval = setInterval(() => {
@@ -146,3 +151,10 @@ const stream = new ReadableStream({
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream")}}
+- {{domxref("ReadableByteStreamController")}}
+- {{domxref("ReadableStreamDefaultController")}}
+- [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)

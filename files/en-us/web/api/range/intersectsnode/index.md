@@ -1,5 +1,6 @@
 ---
-title: Range.intersectsNode()
+title: "Range: intersectsNode() method"
+short-title: intersectsNode()
 slug: Web/API/Range/intersectsNode
 page-type: web-api-instance-method
 browser-compat: api.Range.intersectsNode
@@ -32,7 +33,7 @@ const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
 const intersectingNode = range.intersectsNode(
-  document.getElementsByTagName("p").item(0)
+  document.getElementsByTagName("p").item(0),
 );
 ```
 

@@ -1,7 +1,6 @@
 ---
 title: devtools.panels.ElementsPanel.createSidebarPane()
-slug: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
+slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.ElementsPanel.createSidebarPane
 ---
@@ -50,8 +49,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

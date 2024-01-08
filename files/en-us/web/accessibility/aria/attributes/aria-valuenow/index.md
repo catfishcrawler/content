@@ -1,6 +1,7 @@
 ---
 title: aria-valuenow
 slug: Web/Accessibility/ARIA/Attributes/aria-valuenow
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow
 ---
 
@@ -85,7 +86,7 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 - `<number>`
   - : A decimal number, between the minimum and maximum values.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueNow")}}
   - : The [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.

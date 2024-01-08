@@ -1,6 +1,7 @@
 ---
 title: How to file ARIA-related bugs
 slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -10,7 +11,7 @@ slug: Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">ARIA live regions</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide">ARIA screen reader implementors guide</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques">Using ARIA: Roles, states, and properties</a></li>
-    <li><a href="/en-US/docs/Web/Accessibility/ARIA/forms">Web forms</a></li>
+    <li><a href="/en-US/docs/Web/Accessibility/ARIA/Multipart_labels">Multipart labels</a></li>
     <li><a href="/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">How to file ARIA-related bugs</a></li>
     <li class="toggle">
       <details><summary>ARIA states and properties</summary>
@@ -76,11 +77,6 @@ The state of ARIA technology has always depended on the community. If you notice
    <td>Google Chrome</td>
    <td><a href="https://code.google.com/p/chromium/issues/list">File Chromium bugs</a></td>
    <td></td>
-  </tr>
-  <tr>
-   <td>Microsoft Edge</td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">File MS Edge Bugs</a></td>
-   <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=ARIA">View existing MS Edge ARIA bugs</a></td>
   </tr>
   <tr>
    <td>Mozilla Firefox</td>

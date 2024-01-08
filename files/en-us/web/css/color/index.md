@@ -11,7 +11,7 @@ The **`color`** CSS property sets the foreground [color value](/en-US/docs/Web/C
 
 {{EmbedInteractiveExample("pages/css/color.html")}}
 
-For an overview of using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color).
+For an overview of using color in HTML, see [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color).
 
 ## Syntax
 
@@ -108,13 +108,13 @@ p {
   color: #ff0000;
 }
 p {
-  color: rgb(255, 0, 0);
+  color: rgb(255 0 0);
 }
 p {
-  color: rgb(100%, 0%, 0%);
+  color: rgb(100% 0% 0%);
 }
 p {
-  color: hsl(0, 100%, 50%);
+  color: hsl(0 100% 50%);
 }
 
 /* 50% translucent */
@@ -122,10 +122,10 @@ p {
   color: #ff000080;
 }
 p {
-  color: rgba(255, 0, 0, 0.5);
+  color: rgb(255 0 0 / 50%);
 }
 p {
-  color: hsla(0, 100%, 50%, 0.5);
+  color: hsl(0 100% 50% / 50%);
 }
 ```
 
@@ -141,4 +141,4 @@ p {
 
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, and {{cssxref("print-color-adjust")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_Colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

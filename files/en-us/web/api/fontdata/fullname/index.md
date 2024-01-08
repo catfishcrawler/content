@@ -1,5 +1,6 @@
 ---
-title: FontData.fullName
+title: "FontData: fullName property"
+short-title: fullName
 slug: Web/API/FontData/fullName
 page-type: web-api-instance-property
 status:
@@ -51,5 +52,7 @@ async function logFontData() {
 
 {{Compat}}
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+## See also
+
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

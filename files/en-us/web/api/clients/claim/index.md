@@ -1,5 +1,6 @@
 ---
-title: Clients.claim()
+title: "Clients: claim() method"
+short-title: claim()
 slug: Web/API/Clients/claim
 page-type: web-api-instance-method
 browser-compat: api.Clients.claim
@@ -50,7 +51,5 @@ self.addEventListener("activate", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [The service worker lifecycle](https://web.dev/service-worker-lifecycle/)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise", "Promises")}}
+- [The service worker lifecycle](https://web.dev/articles/service-worker-lifecycle)
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} - skip the service worker's waiting phase

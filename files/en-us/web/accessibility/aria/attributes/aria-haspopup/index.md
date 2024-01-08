@@ -1,6 +1,7 @@
 ---
 title: aria-haspopup
 slug: Web/Accessibility/ARIA/Attributes/aria-haspopup
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-haspopup
 ---
 
@@ -41,7 +42,7 @@ When creating a [`menubar`](/en-US/docs/Web/Accessibility/ARIA/Roles/menubar_rol
 - `dialog`
   - : The popup is a dialog.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaHasPopup")}}
   - : The [`ariaHasPopup`](/en-US/docs/Web/API/Element/ariaHasPopup) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-haspopup` attribute, which indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.

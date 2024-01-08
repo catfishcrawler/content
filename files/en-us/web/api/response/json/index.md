@@ -1,5 +1,6 @@
 ---
-title: Response.json()
+title: "Response: json() method"
+short-title: json()
 slug: Web/API/Response/json
 page-type: web-api-instance-method
 browser-compat: api.Response.json
@@ -48,9 +49,8 @@ fetch(myRequest)
       listItem.appendChild(document.createElement("strong")).textContent =
         product.Name;
       listItem.append(` can be found in ${product.Location}. Cost: `);
-      listItem.appendChild(
-        document.createElement("strong")
-      ).textContent = `£${product.Price}`;
+      listItem.appendChild(document.createElement("strong")).textContent =
+        `£${product.Price}`;
       myList.appendChild(listItem);
     }
   })

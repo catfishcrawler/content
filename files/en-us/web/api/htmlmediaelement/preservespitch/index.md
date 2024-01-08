@@ -1,5 +1,6 @@
 ---
-title: HTMLMediaElement.preservesPitch
+title: "HTMLMediaElement: preservesPitch property"
+short-title: preservesPitch
 slug: Web/API/HTMLMediaElement/preservesPitch
 page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.preservesPitch
@@ -45,18 +46,11 @@ div {
 
 ```js
 const audio = document.querySelector("audio");
-
-const rate = document.querySelector("#rate");
-rate.addEventListener("input", () => (audio.playbackRate = rate.value));
-
-const pitch = document.querySelector("#pitch");
-pitch.addEventListener("change", () => {
-  if ("preservesPitch" in audio) {
-    audio.preservesPitch = pitch.checked;
-  } else if ("mozPreservesPitch" in audio) {
-    // deprecated
-    audio.mozPreservesPitch = pitch.checked;
-  }
+document.getElementById("rate").addEventListener("change", (e) => {
+  audio.playbackRate = e.target.value;
+});
+document.getElementById("pitch").addEventListener("change", (e) => {
+  audio.preservesPitch = e.target.checked;
 });
 ```
 
@@ -73,4 +67,4 @@ pitch.addEventListener("change", () => {
 ## See also
 
 - {{domxref("HTMLMediaElement.playbackRate")}}
-- [Web Audio playbackRate explained](/en-US/docs/Web/Guide/Audio_and_video_delivery/WebAudio_playbackRate_explained)
+- [Web Audio playbackRate explained](/en-US/docs/Web/Media/Audio_and_video_delivery/WebAudio_playbackRate_explained)

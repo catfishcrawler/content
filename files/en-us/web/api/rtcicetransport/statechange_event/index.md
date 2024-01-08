@@ -1,5 +1,6 @@
 ---
 title: "RTCIceTransport: statechange event"
+short-title: statechange
 slug: Web/API/RTCIceTransport/statechange_event
 page-type: web-api-event
 browser-compat: api.RTCIceTransport.statechange_event
@@ -39,7 +40,7 @@ iceTransport.addEventListener(
       handleFailure(pc);
     }
   },
-  false
+  false,
 );
 ```
 

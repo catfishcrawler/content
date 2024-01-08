@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Keyed_collections
 page-type: guide
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}
 
 This chapter introduces collections of data which are indexed by a key; `Map` and `Set` objects contain elements which are iterable in the order of insertion.
 
@@ -14,7 +14,7 @@ This chapter introduces collections of data which are indexed by a key; `Map` an
 
 A {{jsxref("Map")}} object is a simple key/value map and can iterate its elements in insertion order.
 
-The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of","for...of")}} loop to return an array of `[key, value]` for each iteration.
+The following code shows some basic operations with a `Map`. See also the {{jsxref("Map")}} reference page for more examples and the complete API. You can use a {{jsxref("Statements/for...of", "for...of")}} loop to return an array of `[key, value]` for each iteration.
 
 ```js
 const sayings = new Map();
@@ -42,7 +42,7 @@ sayings.size; // 0
 
 Traditionally, {{jsxref("Object", "objects", "", 1)}} have been used to map strings to values. Objects allow you to set keys to values, retrieve those values, delete keys, and detect whether something is stored at a key. `Map` objects, however, have a few more advantages that make them better maps.
 
-- The keys of an `Object` are {{jsxref("Global_Objects/String","Strings")}} or {{jsxref("Global_Objects/Symbol","Symbols")}}, where they can be of any value for a `Map`.
+- The keys of an `Object` are [strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) or [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), where they can be of any value for a `Map`.
 - You can get the `size` of a `Map` easily, while you have to manually keep track of size for an `Object`.
 - The iteration of maps is in insertion order of the elements.
 - An `Object` has a prototype, so there are default keys in the map. (This can be bypassed using `map = Object.create(null)`.)
@@ -55,7 +55,7 @@ These three tips can help you to decide whether to use a `Map` or an `Object`:
 
 ### WeakMap object
 
-A {{jsxref("WeakMap")}} is a collection of key/value pairs whose keys must be objects, with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere.
+A {{jsxref("WeakMap")}} is a collection of key/value pairs whose keys must be objects or [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry), with values of any arbitrary [JavaScript type](/en-US/docs/Web/JavaScript/Data_structures), and which does not create strong references to its keys. That is, an object's presence as a key in a `WeakMap` does not prevent the object from being garbage collected. Once an object used as a key has been collected, its corresponding values in any `WeakMap` become candidates for garbage collection as well — as long as they aren't strongly referred to elsewhere. The only primitive type that can be used as a `WeakMap` key is symbol — more specifically, [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) — because non-registered symbols are guaranteed to be unique and cannot be re-created.
 
 The `WeakMap` API is essentially the same as the `Map` API. However, a `WeakMap` doesn't allow observing the liveness of its keys, which is why it doesn't allow enumeration. So there is no method to obtain a list of the keys in a `WeakMap`. If there were, the list would depend on the state of garbage collection, introducing non-determinism.
 
@@ -131,11 +131,11 @@ Traditionally, a set of elements has been stored in arrays in JavaScript in a lo
 
 ### WeakSet object
 
-{{jsxref("WeakSet")}} objects are collections of objects. An object in the `WeakSet` may only occur once. It is unique in the `WeakSet`'s collection, and objects are not enumerable.
+{{jsxref("WeakSet")}} objects are collections of garbage-collectable values, including objects and [non-registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). A value in the `WeakSet` may only occur once. It is unique in the `WeakSet`'s collection.
 
 The main differences to the {{jsxref("Set")}} object are:
 
-- In contrast to `Sets`, `WeakSets` are **collections of _objects only_**, and not of arbitrary values of any type.
+- In contrast to `Sets`, `WeakSets` are **collections of _objects or symbols only_**, and not of arbitrary values of any type.
 - The `WeakSet` is _weak_: References to objects in the collection are held weakly. If there is no other reference to an object stored in the `WeakSet`, they can be garbage collected. That also means that there is no list of current objects stored in the collection.
 - `WeakSets` are not enumerable.
 
@@ -149,4 +149,4 @@ Both the key equality of `Map` objects and the value equality of `Set` objects a
 - `-0` and `+0` are considered equal.
 - {{jsxref("NaN")}} is considered equal to itself (contrary to `===`).
 
-{{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
+{{PreviousNext("Web/JavaScript/Guide/Indexed_collections", "Web/JavaScript/Guide/Working_with_objects")}}

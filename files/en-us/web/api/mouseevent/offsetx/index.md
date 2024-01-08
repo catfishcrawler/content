@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.offsetX
+title: "MouseEvent: offsetX property"
+short-title: offsetX
 slug: Web/API/MouseEvent/offsetX
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.offsetX
@@ -26,3 +27,4 @@ Early versions of the spec defined this as an integer.
 ## See also
 
 - {{ domxref("MouseEvent") }}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

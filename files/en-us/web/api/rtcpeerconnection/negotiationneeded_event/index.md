@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: negotiationneeded event"
+short-title: negotiationneeded
 slug: Web/API/RTCPeerConnection/negotiationneeded_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.negotiationneeded_event
@@ -42,13 +43,13 @@ pc.addEventListener(
         sendSignalingMessage({
           type: "video-offer",
           sdp: pc.localDescription,
-        })
+        }),
       )
       .catch((err) => {
         // handle error
       });
   },
-  false
+  false,
 );
 ```
 
@@ -64,7 +65,7 @@ pc.onnegotiationneeded = (ev) => {
       sendSignalingMessage({
         type: "video-offer",
         sdp: pc.localDescription,
-      })
+      }),
     )
     .catch((err) => {
       // handle error

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: list role"
 slug: Web/Accessibility/ARIA/Roles/list_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#list
 ---
 
@@ -78,6 +79,6 @@ As an aside, note that if you are using the semantic HTML elements of `<ol>` or 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

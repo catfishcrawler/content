@@ -6,9 +6,7 @@ page-type: guide
 
 {{SVGRef}}
 
-> **Warning:** Although Chrome 45 deprecated SMIL in favor of CSS animations and Web animations, the Chrome developers have since [suspended](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5o0yiO440LM/YGEJBsjUAwAJ) that deprecation.
-
-Firefox 4 introduced support for animating [SVG](/en-US/docs/Web/SVG) using [Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL). SMIL allows you to:
+[Synchronized Multimedia Integration Language](https://www.w3.org/TR/REC-smil/) (SMIL) is an extension of [SVG](/en-US/docs/Web/SVG) allowing to animating SVG elements. SMIL allows you to:
 
 - animate the numeric attributes of an element (x, y, …)
 - animate transform attributes (translation or rotation)
@@ -99,7 +97,7 @@ In this example, a blue circle bounces between the left and right edges of a bla
 
 {{ EmbedLiveSample('Example_1_Linear_motion', '100%', 120) }}
 
-[View live sample](https://media.prod.mdn.mozit.cloud/samples/svg/svganimdemo1.html)
+[View live sample](https://mdn.dev/archives/media/samples/svg/svganimdemo1.html)
 
 ### Example 2: Curved motion
 

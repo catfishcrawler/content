@@ -1,5 +1,6 @@
 ---
-title: GeolocationPositionError.code
+title: "GeolocationPositionError: code property"
+short-title: code
 slug: Web/API/GeolocationPositionError/code
 page-type: web-api-instance-property
 browser-compat: api.GeolocationPositionError.code
@@ -7,7 +8,7 @@ browser-compat: api.GeolocationPositionError.code
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationPositionError.code`** read-only property is an `unsigned short` representing the error code.
+The **`code`** read-only property of the {{domxref("GeolocationPositionError")}} interface is an `unsigned short` representing the error code.
 
 The following values are possible:
 

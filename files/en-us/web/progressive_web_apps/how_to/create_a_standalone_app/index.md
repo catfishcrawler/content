@@ -1,7 +1,10 @@
 ---
 title: Create a standalone app
 slug: Web/Progressive_web_apps/How_to/Create_a_standalone_app
+page-type: how-to
 ---
+
+{{PWASidebar}}
 
 [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that are installed on a user's device can define how they appear when the user launches them. They can choose to be displayed in a web browser, just like websites, or have their own dedicated windows similar to how OS-native applications work.
 
@@ -62,7 +65,7 @@ In this example, the `.app-button` element will be hidden by default unless the 
 
 Here is another example showing how to use the {{domxref("window.matchMedia()")}} method to detect if the `standalone` display mode is enabled:
 
-```javascript
+```js
 function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }
@@ -71,5 +74,5 @@ function isStandaloneApp() {
 ## See also
 
 - [Web App Manifests](/en-US/docs/Web/Manifest).
-- [Display modes](https://web.dev/learn/pwa/app-design/#display-modes).
+- [Display modes](https://web.dev/learn/pwa/app-design/#display_modes).
 - Customize your app's title bar on desktop operating systems by using the [Window Controls Overlay API](/en-US/docs/Web/API/Window_Controls_Overlay_API).

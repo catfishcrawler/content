@@ -1,11 +1,12 @@
 ---
-title: indexedDB
+title: indexedDB global property
+short-title: indexedDB
 slug: Web/API/indexedDB
 page-type: web-api-global-property
 browser-compat: api.indexedDB
 ---
 
-{{ APIRef() }}
+{{APIRef("IndexedDB")}}{{AvailableInWorkers}}
 
 The global **`indexedDB`** read-only property provides a mechanism for applications to
 asynchronously access the capabilities of indexed databases.

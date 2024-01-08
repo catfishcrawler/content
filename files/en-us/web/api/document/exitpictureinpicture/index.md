@@ -1,14 +1,15 @@
 ---
-title: Document.exitPictureInPicture()
+title: "Document: exitPictureInPicture() method"
+short-title: exitPictureInPicture()
 slug: Web/API/Document/exitPictureInPicture
 page-type: web-api-instance-method
 browser-compat: api.Document.exitPictureInPicture
 ---
 
-{{ApiRef("Picture-in-Picture API")}}
+{{APIRef("Picture-in-Picture API")}}
 
-The {{domxref("Document")}} method
-**`exitPictureInPicture()`** requests that a video contained
+The **`exitPictureInPicture()`** method of the {{domxref("Document")}} interface
+requests that a video contained
 in this document, which is currently floating, be taken out of picture-in-picture
 mode, restoring the previous state of the screen. This usually reverses the
 effects of a previous call to {{domxref("HTMLVideoElement.requestPictureInPicture()")}}.
@@ -28,6 +29,11 @@ None.
 A {{jsxref("Promise")}}, which is resolved once the {{Glossary("user agent")}} has
 finished exiting picture-in-picture mode. If an error occurs while attempting to exit
 fullscreen mode, the `catch()` handler for the promise is called.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `document.pictureInPictureElement` is `null`.
 
 ## Examples
 
@@ -60,7 +66,6 @@ Note that if you want to track which video on your page is currently playing in 
 ## See also
 
 - {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
 - {{DOMxRef("Document.pictureInPictureElement")}}

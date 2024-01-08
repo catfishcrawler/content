@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-The [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) platform on which MDN runs provides a macro system, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
+The [Yari](https://github.com/mdn/yari) platform on which MDN runs provides a macro system, [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript), which makes it possible to automate certain tasks. This article provides information on how to invoke MDN's macros within articles.
 
 The [KumaScript guide](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md) provides an in-depth look at how to use macros on MDN, so this section is more of a brief overview.
 
@@ -35,3 +35,8 @@ Macros are heavily cached; for any set of input values (both parameters and envi
 Macros can be as simple as just inserting a larger block of text or swapping in contents from another part of MDN, or as complex as building an entire index of content by searching through parts of the site, styling the output, and adding links.
 
 You can read up on our most commonly-used macros on the [Commonly-used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros) page; also, you can browse through the [complete sources for all macros](https://github.com/mdn/yari/tree/main/kumascript/macros). Most of the macro sources have documentation built into them, as comments at the top.
+
+## See also
+
+- [Quicklinks](/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks)
+- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github

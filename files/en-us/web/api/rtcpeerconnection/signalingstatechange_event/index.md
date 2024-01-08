@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: signalingstatechange event"
+short-title: signalingstatechange
 slug: Web/API/RTCPeerConnection/signalingstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.signalingstatechange_event
@@ -39,7 +40,7 @@ pc.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

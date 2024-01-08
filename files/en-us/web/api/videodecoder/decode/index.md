@@ -1,5 +1,6 @@
 ---
-title: VideoDecoder.decode()
+title: "VideoDecoder: decode() method"
+short-title: decode()
 slug: Web/API/VideoDecoder/decode
 page-type: web-api-instance-method
 browser-compat: api.VideoDecoder.decode
@@ -40,6 +41,7 @@ const responses = await downloadVideoChunksFromServer(timestamp);
 for (const response of responses) {
   const chunk = new EncodedVideoChunk({
     timestamp: response.timestamp,
+    type: response.key ? "key" : "delta",
     data: new Uint8Array(response.body),
   });
   decoder.decode(chunk);

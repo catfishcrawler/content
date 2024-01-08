@@ -1,5 +1,6 @@
 ---
-title: Node.textContent
+title: "Node: textContent property"
+short-title: textContent
 slug: Web/API/Node/textContent
 page-type: web-api-instance-property
 browser-compat: api.Node.textContent
@@ -7,7 +8,7 @@ browser-compat: api.Node.textContent
 
 {{APIRef("DOM")}}
 
-The **`textContent`** property of the {{domxref ("Node")}}
+The **`textContent`** property of the {{domxref("Node")}}
 interface represents the text content of the node and its descendants.
 
 > **Note:** `textContent` and {{domxref("HTMLElement.innerText")}} are easily confused,

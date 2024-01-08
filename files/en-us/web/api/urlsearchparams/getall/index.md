@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.getAll()
+title: "URLSearchParams: getAll() method"
+short-title: getAll()
 slug: Web/API/URLSearchParams/getAll
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.getAll
@@ -10,7 +11,7 @@ browser-compat: api.URLSearchParams.getAll
 The **`getAll()`** method of the {{domxref("URLSearchParams")}}
 interface returns all the values associated with a given search parameter as an array.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -25,7 +26,7 @@ getAll(name)
 
 ### Return value
 
-An array of strings.
+An array of strings, which may be empty if no values for the given parameter are found.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: WorkerNavigator.permissions
+title: "WorkerNavigator: permissions property"
+short-title: permissions
 slug: Web/API/WorkerNavigator/permissions
 page-type: web-api-instance-property
 browser-compat: api.WorkerNavigator.permissions
@@ -31,7 +32,7 @@ navigator.permissions.query({ name: "notifications" }).then((result) => {
 
 {{Specifications}}
 
-## Browser Support
+## Browser compatibility
 
 {{Compat}}
 

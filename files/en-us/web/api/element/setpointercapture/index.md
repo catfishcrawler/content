@@ -1,5 +1,6 @@
 ---
-title: Element.setPointerCapture()
+title: "Element: setPointerCapture() method"
+short-title: setPointerCapture()
 slug: Web/API/Element/setPointerCapture
 page-type: web-api-instance-method
 browser-compat: api.Element.setPointerCapture
@@ -108,5 +109,6 @@ slider.onpointerup = stopSliding;
 
 ## See also
 
-- {{domxref("Element.releasePointerCapture")}}
+- {{domxref("Element.hasPointerCapture","Element.hasPointerCapture()")}}
+- {{domxref("Element.releasePointerCapture","Element.releasePointerCapture()")}}
 - {{domxref("Pointer_events","Pointer Events")}}

@@ -19,18 +19,21 @@ lch(52.2345% 72.2 56.2 / .5);
 
 ### Values
 
-- Functional notation: `lch(L C H [/ A])`
+Functional notation: `lch(L C H[ / A])`
 
-  - `L` is a {{cssxref("&lt;number&gt;")}} between `0` and `100` or a {{cssxref("&lt;percentage&gt;")}} between `0%` and `100%` that specifies the CIE Lightness where the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
-
-  - `C` is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;percentage&gt;")}} where `0%` is `0` and `100%` is the number `150`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is 0, while its maximum is theoretically unbounded (but in practice does not exceed `230`).
-
-  - `H` is a {{cssxref("&lt;number&gt;")}} or a {{cssxref("&lt;angle&gt;")}} that specifies the hue angle along the positive "a" axis (toward purplish red), `90deg` points along the positive "b" axis (toward mustard yellow), `180deg` points along the negative "a" axis (toward greenish cyan), and `270deg` points along the negative "b" axis (toward sky blue).
-
-  - `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
+- `L`
+  - : A {{CSSXref("&lt;number&gt;")}} between `0` and `100`, a {{CSSXref("&lt;percentage&gt;")}} between `0%` and `100%`, or the keyword `none`, which specifies the CIE Lightness. Here the number `0` corresponds to `0%` (black) and the number `100` corresponds to `100%` (white).
+- `C`
+  - : A {{CSSXref("&lt;number&gt;")}}, a {{CSSXref("&lt;percentage&gt;")}}, or the keyword `none`, where `0%` is `0` and `100%` is the number `150`. It is a measure of the chroma (roughly representing the "amount of color"). Its minimum useful value is `0`, while its maximum is theoretically unbounded (but in practice does not exceed `230`).
+- `H`
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none`, which represents the hue angle. More details on this type can be found on the {{CSSXref("&lt;hue&gt;")}} reference.
+- `A` {{optional_inline}}
+  - : An {{CSSXref("&lt;alpha-value&gt;")}} or the keyword `none`, where the number `1` corresponds to `100%` (full opacity).
 
 > **Note:** Usually when percentage values have a numeric equivalent in CSS, `100%` is equal to the number `1`.
 > This case is notable where `100%` is equal to the number `100` for the `L` value and `150` for the `C` value.
+
+> **Note:** See [Missing color components](/en-US/docs/Web/CSS/color_value#missing_color_components) for the effect of `none`.
 
 ### Formal syntax
 
@@ -42,6 +45,8 @@ lch(52.2345% 72.2 56.2 / .5);
 
 The following example shows the effect of varying the `L` (lightness), `C` (chroma), and `H` (hue) values of the `lch()` functional notation.
 
+#### HTML
+
 ```html
 <div data-color="blue"></div>
 <div data-color="blue-light"></div>
@@ -52,6 +57,8 @@ The following example shows the effect of varying the `L` (lightness), `C` (chro
 <div data-color="green"></div>
 <div data-color="green-hue"></div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -87,7 +94,9 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Adjusting_lightness,_chroma,_and_hue_with_lch')}}
+#### Result
+
+{{EmbedLiveSample("adjusting_lightness_chroma_and_hue_with_lch")}}
 
 ### Adjusting opacity with lch()
 
@@ -95,12 +104,16 @@ The following example shows the effect of varying the `A` (alpha) value of the `
 The `red` and `red-alpha` elements overlap the `#background-div` element to demonstrate the effect of opacity.
 Giving `A` a value of `0.4` makes the color 40% opaque.
 
+#### HTML
+
 ```html
 <div id="background-div">
   <div data-color="red"></div>
   <div data-color="red-alpha"></div>
 </div>
 ```
+
+#### CSS
 
 ```css hidden
 div {
@@ -127,7 +140,9 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Adjusting_opacity_with_lch')}}
+#### Result
+
+{{EmbedLiveSample("adjusting_opacity_with_lch")}}
 
 ## Specifications
 
@@ -139,6 +154,6 @@ div {
 
 ## See also
 
-- The [`<color>` data type](/en-US/docs/Web/CSS/color_value) for a list of all color notations
+- [List of all color notations](/en-US/docs/Web/CSS/color_value)
+- {{CSSXref("&lt;hue&gt;")}} data type
 - [LCH colors in CSS: what, why, and how?](https://lea.verou.me/2020/04/lch-colors-in-css-what-why-and-how/)
-- [Safari Technology Preview 122 release notes](https://webkit.org/blog/11577/release-notes-for-safari-technology-preview-122/): includes `lch()` and {{cssxref("color_value/lab",'lab()')}} colors.

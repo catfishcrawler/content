@@ -1,13 +1,12 @@
 ---
-title: Touch.screenX
+title: "Touch: screenX property"
+short-title: screenX
 slug: Web/API/Touch/screenX
 page-type: web-api-instance-property
 browser-compat: api.Touch.screenX
 ---
 
 {{ APIRef("Touch Events") }}
-
-## Summary
 
 Returns the X coordinate of the touch point relative to the screen, not including any scroll offset.
 
@@ -35,7 +34,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].screenY = ${e.touches[i].screenY}`);
     }
   },
-  false
+  false,
 );
 ```
 

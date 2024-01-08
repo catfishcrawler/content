@@ -1,5 +1,6 @@
 ---
-title: window.cancelAnimationFrame()
+title: "Window: cancelAnimationFrame() method"
+short-title: cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.cancelAnimationFrame
@@ -66,5 +67,5 @@ cancelAnimationFrame(myReq);
 
 ## See also
 
-- {{domxref("window.requestAnimationFrame()")}}
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
+- {{domxref("Window.requestAnimationFrame()")}}
+- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}

@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.verify()
+title: "SubtleCrypto: verify() method"
+short-title: verify()
 slug: Web/API/SubtleCrypto/verify
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.verify
@@ -88,7 +89,7 @@ Fetch the encoded message-to-sign and verify it against the stored signature.
 */
 async function verifyMessage(publicKey) {
   const signatureValue = document.querySelector(
-    ".rsassa-pkcs1 .signature-value"
+    ".rsassa-pkcs1 .signature-value",
   );
   signatureValue.classList.remove("valid", "invalid");
 
@@ -97,7 +98,7 @@ async function verifyMessage(publicKey) {
     "RSASSA-PKCS1-v1_5",
     publicKey,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
@@ -138,7 +139,7 @@ async function verifyMessage(publicKey) {
     },
     publicKey,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
@@ -179,7 +180,7 @@ async function verifyMessage(publicKey) {
     },
     publicKey,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
@@ -217,7 +218,7 @@ async function verifyMessage(key) {
     "HMAC",
     key,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");

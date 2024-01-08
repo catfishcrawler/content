@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.nextSibling()
+title: "TreeWalker: nextSibling() method"
+short-title: nextSibling()
 slug: Web/API/TreeWalker/nextSibling
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.nextSibling
@@ -36,7 +37,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 treeWalker.firstChild();
 const node = treeWalker.nextSibling(); // returns null if the first child of the root element has no sibling

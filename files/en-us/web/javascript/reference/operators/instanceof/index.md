@@ -114,6 +114,8 @@ const obj = { [Forgeable.isInstanceFlag]: true };
 console.log(obj instanceof Forgeable); // true
 ```
 
+Because all functions inherit from `Function.prototype` by default, most of the time, the [`Function.prototype[@@hasInstance]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance) method specifies the behavior of `instanceof` when the right-hand side is a function. See the {{jsxref("Symbol.hasInstance")}} page for the exact algorithm of `instanceof`.
+
 ### instanceof and multiple realms
 
 JavaScript execution environments (windows, frames, etc.) are each in their own _realm_. This means that they have different built-ins (different global object, different constructors, etc.). This may result in unexpected results. For instance, `[] instanceof window.frames[0].Array` will return `false`, because `Array.prototype !== window.frames[0].Array.prototype` and arrays in the current realm inherit from the former.
@@ -180,7 +182,7 @@ const nullObject = Object.create(null);
 nullObject.name = "My object";
 
 literalObject instanceof Object; // true, every object literal has Object.prototype as prototype
-({} instanceof Object); // true, same case as above
+({}) instanceof Object; // true, same case as above
 nullObject instanceof Object; // false, prototype is end of prototype chain (null)
 ```
 
@@ -212,7 +214,7 @@ if (!(mycar instanceof Car)) {
 
 This is really different from:
 
-```js example-bad
+```js-nolint example-bad
 if (!mycar instanceof Car) {
   // unreachable code
 }
@@ -222,7 +224,7 @@ This will always be `false`. (`!mycar` will be evaluated before `instanceof`, so
 
 ### Overriding the behavior of instanceof
 
-A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `C` from `x`, it would still fail:
+A common pitfall of using `instanceof` is believing that, if `x instanceof C`, then `x` was created using `C` as constructor. This is not true, because `x` could be directly assigned with `C.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) of `C` from `x`, it would still fail:
 
 ```js
 class C {

@@ -1,5 +1,6 @@
 ---
-title: ResizeObserver.unobserve()
+title: "ResizeObserver: unobserve() method"
+short-title: unobserve()
 slug: Web/API/ResizeObserver/unobserve
 page-type: web-api-instance-method
 browser-compat: api.ResizeObserver.unobserve
@@ -43,26 +44,26 @@ const resizeObserver = new ResizeObserver((entries) => {
       if (entry.contentBoxSize[0]) {
         h1Elem.style.fontSize = `${Math.max(
           1.5,
-          entry.contentBoxSize[0].inlineSize / 200
+          entry.contentBoxSize[0].inlineSize / 200,
         )}rem`;
         pElem.style.fontSize = `${Math.max(
           1,
-          entry.contentBoxSize[0].inlineSize / 600
+          entry.contentBoxSize[0].inlineSize / 600,
         )}rem`;
       } else {
         h1Elem.style.fontSize = `${Math.max(
           1.5,
-          entry.contentBoxSize.inlineSize / 200
+          entry.contentBoxSize.inlineSize / 200,
         )}rem`;
         pElem.style.fontSize = `${Math.max(
           1,
-          entry.contentBoxSize.inlineSize / 600
+          entry.contentBoxSize.inlineSize / 600,
         )}rem`;
       }
     } else {
       h1Elem.style.fontSize = `${Math.max(
         1.5,
-        entry.contentRect.width / 200
+        entry.contentRect.width / 200,
       )}rem`;
       pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }

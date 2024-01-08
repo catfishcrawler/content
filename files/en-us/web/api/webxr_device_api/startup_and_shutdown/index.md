@@ -34,7 +34,7 @@ Be sure to read the readme carefully; the polyfill comes in several versions dep
 
 #### WebXR API Emulator extension
 
-The [Mozilla WebXR team](https://mixedreality.mozilla.org/) has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
+Mozilla WebXR team has created a [WebXR API Emulator](https://blog.mozvr.com/webxr-emulator-extension/) browser extension, compatible with both Firefox and Chrome, which emulates the WebXR API, simulating a variety of compatible devices such as the HTC Vive, the Oculus Go and Oculus Quest, Samsung Gear, and Google Cardboard. With the extension in place, you can open up a developer tools panel that lets you control the position and orientation of the headset and any hand controllers, as well as button presses on the controllers.
 
 ##### Emulator usage
 
@@ -109,7 +109,7 @@ Of course, you can simplify this depending on your needs; since your app is prob
 
 ### Permissions and security
 
-There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
+There are a number of security measures in place revolving around WebXR. First among these is that use of `immersive-vr` mode—which entirely replaces the user's view of the world—requires that the `xr-spatial-tracking` [permission policy](/en-US/docs/Web/HTTP/Permissions_Policy) be in place. On top of that, the document needs to be secure and currently focused. Finally, you must call {{domxref("XRSystem.requestSession", "requestSession()")}} from a user event handler, such as the handler for the {{domxref("Element.click_event", "click")}} event.
 
 For more specifics about securing WebXR activities and usage, see the article [Permissions and security for WebXR](/en-US/docs/Web/API/WebXR_Device_API/Permissions_and_security).
 
@@ -231,8 +231,8 @@ async function runSession(session) {
   worldData.referenceSpace = referenceSpace.getOffsetReferenceSpace(
     new XRRigidTransform(
       worldData.playerSpawnPosition,
-      worldData.playerSpawnOrientation
-    )
+      worldData.playerSpawnOrientation,
+    ),
   );
   worldData.animationFrameRequestID =
     worldData.session.requestAnimationFrame(onDrawFrame);

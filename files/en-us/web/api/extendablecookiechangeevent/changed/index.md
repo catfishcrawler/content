@@ -1,5 +1,6 @@
 ---
-title: ExtendableCookieChangeEvent.changed
+title: "ExtendableCookieChangeEvent: changed property"
+short-title: changed
 slug: Web/API/ExtendableCookieChangeEvent/changed
 page-type: web-api-instance-property
 browser-compat: api.ExtendableCookieChangeEvent.changed
@@ -8,6 +9,8 @@ browser-compat: api.ExtendableCookieChangeEvent.changed
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`changed`** read-only property of the {{domxref("ExtendableCookieChangeEvent")}} interface returns any cookies that have been changed by the given `ExtendableCookieChangeEvent` instance.
+
+{{AvailableInWorkers}}
 
 ## Value
 
@@ -27,7 +30,7 @@ An array of objects containing the changed cookie(s). Each object contains the f
   - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -36,7 +39,8 @@ An array of objects containing the changed cookie(s). Each object contains the f
     - `"none"`
       - : Cookies will be sent in all contexts.
 
-    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
+- `partitioned`
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Partitioned_cookies) for more information.
 
 ## Examples
 

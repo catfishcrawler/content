@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: canplaythrough event"
+short-title: canplaythrough
 slug: Web/API/HTMLMediaElement/canplaythrough_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.canplaythrough_event
@@ -36,7 +37,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("canplaythrough", (event) => {
   console.log(
-    "I think I can play through the entire video without having to stop to buffer."
+    "I think I can play through the entire video without having to stop to buffer.",
   );
 });
 ```
@@ -48,7 +49,7 @@ const video = document.querySelector("video");
 
 video.oncanplaythrough = (event) => {
   console.log(
-    "I think I can play through the entire video without having to stop to buffer."
+    "I think I can play through the entire video without having to stop to buffer.",
   );
 };
 ```

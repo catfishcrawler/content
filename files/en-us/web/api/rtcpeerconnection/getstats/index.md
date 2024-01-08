@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.getStats()
+title: "RTCPeerConnection: getStats() method"
+short-title: getStats()
 slug: Web/API/RTCPeerConnection/getStats
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.getStats
@@ -94,7 +95,7 @@ setInterval(() => {
 ```
 
 This works by calling `getStats()`, then, when the promise is resolved,
-iterates over the {{domxref("RTCStats")}} objects on the returned
+iterates over the {{domxref("RTCStatsReport")}} objects on the returned
 {{domxref("RTCStatsReport")}}. A section is created for each report with a header and
 all of the statistics below, with the type, ID, and timestamp handled specially to place
 them at the top of the list.

@@ -1,15 +1,16 @@
 ---
 title: "Document: pointerlockerror event"
+short-title: pointerlockerror
 slug: Web/API/Document/pointerlockerror_event
 page-type: web-api-event
 browser-compat: api.Document.pointerlockerror_event
 ---
 
-{{APIRef}}
+{{APIRef("Pointer Lock API")}}
 
-The `pointerlockerror` event is fired when locking the pointer failed (for technical reasons or because the permission was denied).
+The **`pointerlockerror`** event is fired when locking the pointer failed (for technical reasons or because the permission was denied).
 
-This event is not cancelable.
+This event is not cancelable and does not bubble.
 
 ## Syntax
 

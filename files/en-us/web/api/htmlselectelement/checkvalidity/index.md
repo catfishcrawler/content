@@ -1,5 +1,6 @@
 ---
-title: HTMLSelectElement.checkValidity()
+title: "HTMLSelectElement: checkValidity() method"
+short-title: checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
 page-type: web-api-instance-method
 browser-compat: api.HTMLSelectElement.checkValidity
@@ -24,7 +25,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns `true` if the value of the element has no validity problems; otherwise returns `false`.
 
 ## Specifications
 

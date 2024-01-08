@@ -1,5 +1,6 @@
 ---
-title: AudioContext.close()
+title: "AudioContext: close() method"
+short-title: close()
 slug: Web/API/AudioContext/close
 page-type: web-api-instance-method
 browser-compat: api.AudioContext.close
@@ -27,7 +28,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 
 ## Examples
 
-The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples/blob/master/audiocontext-states/index.html) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the stop button is clicked, `close()` is called. When the promise resolves, the example is reset to its beginning state.
+The following snippet is taken from our [AudioContext states demo](https://github.com/mdn/webaudio-examples/blob/main/audiocontext-states/index.html) ([see it running live](https://mdn.github.io/webaudio-examples/audiocontext-states/).) When the stop button is clicked, `close()` is called. When the promise resolves, the example is reset to its beginning state.
 
 ```js
 stopBtn.onclick = () => {

@@ -1,5 +1,5 @@
 ---
-title: '<select>: The HTML Select element'
+title: "<select>: The HTML Select element"
 slug: Web/HTML/Element/select
 page-type: html-element
 browser-compat: html.elements.select
@@ -17,7 +17,7 @@ Each `<option>` element should have a [`value`](/en-US/docs/Web/HTML/Element/opt
 
 The `<select>` element has some unique attributes you can use to control it, such as `multiple` to specify whether multiple options can be selected, and `size` to specify how many options should be shown at once. It also accepts most of the general form input attributes such as `required`, `disabled`, `autofocus`, etc.
 
-You can further nest `<option>` elements inside {{htmlelement("optgroup")}} elements to create separate groups of options inside the dropdown.
+You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("optgroup")}} elements to create separate groups of options inside the dropdown. You can also include {{HTMLElement("hr")}} elements to create separators that add visual breaks between options.
 
 For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn/Forms/Other_form_controls#drop-down_controls).
 
@@ -123,7 +123,7 @@ Keyboard users can select multiple non-contiguous items by:
 
 ## Styling with CSS
 
-The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_Fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
+The `<select>` element is notoriously difficult to style productively with CSS. You can affect certain aspects like any element — for example, manipulating the [box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model), the [displayed font](/en-US/docs/Web/CSS/CSS_fonts), etc., and you can use the {{cssxref("appearance")}} property to remove the default system `appearance`.
 
 However, these properties don't produce a consistent result across browsers, and it is hard to do things like line different types of form element up with one another in a column. The `<select>` element's internal structure is complex, and hard to control. If you want to get full control, you should consider using a library with good facilities for styling form widgets, or try rolling your own dropdown menu using non-semantic elements, JavaScript, and [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) to provide semantics.
 
@@ -149,14 +149,59 @@ The following example creates a very simple dropdown menu, the second option of 
 </select>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_select", "", "100")}}
+
+### Select with grouping options
+
+The following example creates a dropdown menu with grouping using {{HTMLElement("optgroup")}} and {{HTMLElement("hr")}} to make it easier for the user to understand the content in the dropdown.
+
+```html
+<label for="hr-select">Your favorite food</label> <br />
+
+<select name="foods" id="hr-select">
+  <option value="">Choose a food</option>
+  <hr />
+  <optgroup label="Fruit">
+    <option value="apple">Apples</option>
+    <option value="banana">Bananas</option>
+    <option value="cherry">Cherries</option>
+    <option value="damson">Damsons</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Vegetables">
+    <option value="artichoke">Artichokes</option>
+    <option value="broccoli">Broccoli</option>
+    <option value="cabbage">Cabbages</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Meat">
+    <option value="beef">Beef</option>
+    <option value="chicken">Chicken</option>
+    <option value="pork">Pork</option>
+  </optgroup>
+  <hr />
+  <optgroup label="Fish">
+    <option value="cod">Cod</option>
+    <option value="haddock">Haddock</option>
+    <option value="salmon">Salmon</option>
+    <option value="turbot">Turbot</option>
+  </optgroup>
+</select>
+```
+
+#### Result
+
+{{EmbedLiveSample("select_with_grouping_options", "", "100")}}
 
 ### Advanced select with multiple features
 
 The follow example is more complex, showing off more features you can use on a `<select>` element:
 
 ```html
-<label>Please choose one or more pets:
+<label>
+  Please choose one or more pets:
   <select name="pets" multiple size="4">
     <optgroup label="4-legged pets">
       <option value="dog">Dog</option>
@@ -171,6 +216,8 @@ The follow example is more complex, showing off more features you can use on a `
   </select>
 </label>
 ```
+
+#### Result
 
 {{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}
 
@@ -187,7 +234,7 @@ This example shows how you could use some CSS and JavaScript to provide extensiv
 
 This example basically:
 
-- Clones the `<select>`'s context (the [`<option>`s](/en-US/docs/Web/HTML/Element/option)) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
+- Clones the `<select>`'s context (the [`<option>`](/en-US/docs/Web/HTML/Element/option) elements) in a parent wrapper and reimplements the standard expected behavior using additional HTML elements and JavaScript. This includes basic tab behavior to provide keyboard accessibility.
 - Maps some standards native `attributes` to `data-attributes` of the new elements in order to manage state and CSS.
 
 > **Note:** Not all native features are supported, it's a Proof of Concept. IT starts from standard HTML but the same results can be achieved starting from JSON data, custom HTML, or other solutions.
@@ -376,18 +423,18 @@ html body form fieldset#custom div.select div.header span {
 #### JavaScript
 
 ```js
-const selects = custom.querySelectorAll('select');
+const selects = custom.querySelectorAll("select");
 for (const select of selects) {
-  const div = document.createElement('div');
-  const header = document.createElement('div');
-  const datalist = document.createElement('datalist');
-  const optgroups = select.querySelectorAll('optgroup');
-  const span = document.createElement('span');
+  const div = document.createElement("div");
+  const header = document.createElement("div");
+  const datalist = document.createElement("datalist");
+  const optgroups = select.querySelectorAll("optgroup");
+  const span = document.createElement("span");
   const options = select.options;
   const parent = select.parentElement;
-  const multiple = select.hasAttribute('multiple');
+  const multiple = select.hasAttribute("multiple");
   function onclick(e) {
-    const disabled = this.hasAttribute('data-disabled');
+    const disabled = this.hasAttribute("data-disabled");
     select.value = this.dataset.value;
     span.innerText = this.dataset.label;
     if (disabled) return;
@@ -400,7 +447,7 @@ for (const select of selects) {
           this.setAttribute("data-checked", "");
         }
       } else {
-        const options = div.querySelectorAll('.option');
+        const options = div.querySelectorAll(".option");
         for (let i = 0; i < options.length; i++) {
           const option = options[i];
           option.removeAttribute("data-checked");
@@ -418,8 +465,8 @@ for (const select of selects) {
     }
   }
 
-  div.classList.add('select');
-  header.classList.add('header');
+  div.classList.add("select");
+  header.classList.add("header");
   div.tabIndex = 1;
   select.tabIndex = -1;
   span.innerText = select.label;
@@ -429,14 +476,14 @@ for (const select of selects) {
     div.dataset[attribute.name] = attribute.value;
   }
   for (let i = 0; i < options.length; i++) {
-    const option = document.createElement('div');
-    const label = document.createElement('div');
+    const option = document.createElement("div");
+    const label = document.createElement("div");
     const o = options[i];
     for (const attribute of o.attributes) {
       option.dataset[attribute.name] = attribute.value;
     }
-    option.classList.add('option');
-    label.classList.add('label');
+    option.classList.add("option");
+    label.classList.add("label");
     label.innerText = o.label;
     option.dataset.value = o.value;
     option.dataset.label = o.label;
@@ -448,25 +495,25 @@ for (const select of selects) {
   }
   div.appendChild(header);
   for (const o of optgroups) {
-    const optgroup = document.createElement('div');
-    const label = document.createElement('div');
-    const options = o.querySelectorAll('option');
+    const optgroup = document.createElement("div");
+    const label = document.createElement("div");
+    const options = o.querySelectorAll("option");
 
     Object.assign(optgroup, o);
-    optgroup.classList.add('optgroup');
-    label.classList.add('label');
+    optgroup.classList.add("optgroup");
+    label.classList.add("label");
     label.innerText = o.label;
     optgroup.appendChild(label);
     div.appendChild(optgroup);
     for (const o of options) {
-      const option = document.createElement('div');
-      const label = document.createElement('div');
+      const option = document.createElement("div");
+      const label = document.createElement("div");
 
       for (const attribute of o.attributes) {
         option.dataset[attribute.name] = attribute.value;
       }
-      option.classList.add('option');
-      label.classList.add('label');
+      option.classList.add("option");
+      label.classList.add("label");
       label.innerText = o.label;
       option.tabIndex = i + 1;
       option.dataset.value = o.value;
@@ -490,7 +537,7 @@ for (const select of selects) {
 
   div.onclick = (e) => {
     if (!multiple) {
-      const open = this.hasAttribute("data-open");
+      const open = div.hasAttribute("data-open");
       e.stopPropagation();
       if (open) {
         div.removeAttribute("data-open");
@@ -507,16 +554,18 @@ for (const select of selects) {
     }
   };
 
-  document.addEventListener('click', (e) => {
+  document.addEventListener("click", (e) => {
     if (div.hasAttribute("data-open")) {
       div.removeAttribute("data-open");
     }
   });
 
-  const width = Math.max(...Array.from(options).map((e) => {
-    span.innerText = e.label;
-    return div.offsetWidth;
-  }));
+  const width = Math.max(
+    ...Array.from(options).map((e) => {
+      span.innerText = e.label;
+      return div.offsetWidth;
+    }),
+  );
 
   console.log(width);
   div.style.width = `${width}px`;
@@ -531,6 +580,10 @@ document.forms[0].onsubmit = (e) => {
 #### Result
 
 {{EmbedGHLiveSample("html-examples/custom-select", '100%', 300)}}
+
+## Accessibility concerns
+
+The `<hr>` within a `<select>` should be considered purely decorative, as they are currently not exposed within the accessibility tree and therefore not exposed to assistive technologies.
 
 ## Technical summary
 
@@ -573,8 +626,8 @@ document.forms[0].onsubmit = (e) => {
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        Zero or more {{HTMLElement("option")}} or
-        {{HTMLElement("optgroup")}} elements.
+        Zero or more {{HTMLElement("option")}},
+        {{HTMLElement("optgroup")}} or {{HTMLElement("hr")}} elements.
       </td>
     </tr>
     <tr>

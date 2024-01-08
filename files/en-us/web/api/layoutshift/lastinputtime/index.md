@@ -1,17 +1,18 @@
 ---
-title: LayoutShift.lastInputTime
+title: "LayoutShift: lastInputTime property"
+short-title: lastInputTime
 slug: Web/API/LayoutShift/lastInputTime
 page-type: web-api-instance-property
-browser-compat: api.LayoutShift.lastInputTime
 status:
   - experimental
+browser-compat: api.LayoutShift.lastInputTime
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
 
 The **`lastInputTime`** read-only property of the {{domxref("LayoutShift")}} interface returns the time of the most recent excluding input or `0` if no excluding input has occurred.
 
-Layout shifts are only bad if the user wasn't expecting them. Many layout shift metrics (like [Cumulative Layout Shift (CLS)](https://web.dev/cls/)) exclude shifts that occurred soon after certain user interactions. These interactions are called _excluding inputs_. Excluding inputs are:
+Layout shifts are only bad if the user wasn't expecting them. Many layout shift metrics (like [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls)) exclude shifts that occurred soon after certain user interactions. These interactions are called _excluding inputs_. Excluding inputs are:
 
 - Any events which signal a user's active interaction with the document: ([`mousedown`](/en-US/docs/Web/API/Element/mousedown_event), [`keydown`](/en-US/docs/Web/API/Element/keydown_event), and [`pointerdown`](/en-US/docs/Web/API/Element/pointerdown_event))
 - Any events which directly changes the size of the viewport.

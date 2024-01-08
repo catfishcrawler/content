@@ -1,5 +1,6 @@
 ---
-title: Element.setAttribute()
+title: "Element: setAttribute() method"
+short-title: setAttribute()
 slug: Web/API/Element/setAttribute
 page-type: web-api-instance-method
 browser-compat: api.Element.setAttribute
@@ -48,8 +49,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : The specified attribute `name` contains one or more characters which are
-    not valid in attribute names.
+  - : Thrown if the [`name`](#name) value is not a valid [XML name](https://www.w3.org/TR/REC-xml/#dt-name); for example, it starts with a number, a hyphen, or a period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
 
 ## Examples
 

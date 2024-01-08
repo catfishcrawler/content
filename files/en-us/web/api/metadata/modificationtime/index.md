@@ -1,5 +1,6 @@
 ---
-title: Metadata.modificationTime
+title: "Metadata: modificationTime property"
+short-title: modificationTime
 slug: Web/API/Metadata/modificationTime
 page-type: web-api-instance-property
 status:
@@ -45,13 +46,13 @@ workingDirectory.getFile(
             { create: true },
             (newEntry) => {
               fileEntry = newEntry;
-            }
+            },
           );
         });
       }
     });
   },
-  handleError
+  handleError,
 );
 ```
 

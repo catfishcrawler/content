@@ -1,5 +1,5 @@
 ---
-title: '<samp>: The Sample Output element'
+title: "<samp>: The Sample Output element"
 slug: Web/HTML/Element/samp
 page-type: html-element
 browser-compat: html.elements.samp
@@ -43,7 +43,7 @@ In this simple example, a paragraph includes an example of the output of a progr
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 100)}}
 
@@ -132,8 +132,10 @@ The resulting output is this:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

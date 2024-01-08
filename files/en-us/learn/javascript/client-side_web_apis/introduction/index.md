@@ -1,6 +1,7 @@
 ---
 title: Introduction to web APIs
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -12,9 +13,9 @@ First up, we'll start by looking at APIs from a high level — what are they, ho
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of
-        <a href="/en-US/docs/Learn/HTML">HTML</a> and
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, JavaScript basics (see
+        A basic understanding of
+        <a href="/en-US/docs/Learn/HTML">HTML</a>,
+        <a href="/en-US/docs/Learn/CSS">CSS</a>, and JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">first steps</a>,
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
           >building blocks</a
@@ -76,7 +77,7 @@ In particular, the most common categories of browser APIs you'll use (and which 
 - **APIs for manipulating documents** loaded into the browser. The most obvious example is the [DOM (Document Object Model) API](/en-US/docs/Web/API/Document_Object_Model), which allows you to manipulate HTML and CSS — creating, removing and changing HTML, dynamically applying new styles to your page, etc. Every time you see a popup window appear on a page or some new content displayed, for example, that's the DOM in action. Find out more about these types of API in [Manipulating documents](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
 - **APIs that fetch data from the server** to update small sections of a webpage on their own are very commonly used. This seemingly small detail has had a huge impact on the performance and behavior of sites — if you just need to update a stock listing or list of available new stories, doing it instantly without having to reload the whole entire page from the server can make the site or app feel much more responsive and "snappy". The main API used for this is the [Fetch API](/en-US/docs/Web/API/Fetch_API), although older code might still use the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) API. You may also come across the term **Ajax**, which describes this technique. Find out more about such APIs in [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data).
 - **APIs for drawing and manipulating graphics** are widely supported in browsers — the most popular ones are [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API), which allow you to programmatically update the pixel data contained in an HTML {{htmlelement("canvas")}} element to create 2D and 3D scenes. For example, you might draw shapes such as rectangles or circles, import an image onto the canvas, and apply a filter to it such as sepia or grayscale using the Canvas API, or create a complex 3D scene with lighting and textures using WebGL. Such APIs are often combined with APIs for creating animation loops (such as {{domxref("window.requestAnimationFrame()")}}) and others to make constantly updating scenes like cartoons and games.
-- **[Audio and Video APIs](/en-US/docs/Web/Guide/Audio_and_video_delivery)** like {{domxref("HTMLMediaElement")}}, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc.).
+- **[Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery)** like {{domxref("HTMLMediaElement")}}, the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia such as creating custom UI controls for playing audio and video, displaying text tracks like captions and subtitles along with your videos, grabbing video from your web camera to be manipulated via a canvas (see above) or displayed on someone else's computer in a web conference, or adding effects to audio tracks (such as gain, distortion, panning, etc.).
 - **Device APIs** enable you to interact with device hardware: for example, accessing the device GPS to find the user's position using the [Geolocation API](/en-US/docs/Web/API/Geolocation_API).
 - **Client-side storage APIs** enable you to store data on the client-side, so you can create an app that will save its state between page loads, and perhaps even work when the device is offline. There are several options available, e.g. simple name/value storage with the [Web Storage API](/en-US/docs/Web/API/Web_Storage_API), and more complex database storage with the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API).
 
@@ -92,8 +93,6 @@ Third-party APIs come in a large variety; some of the more popular ones that you
 - The [Pinterest API](https://developers.pinterest.com/), which provides tools to manage Pinterest boards and pins to include them in your website.
 - The [Twilio API](https://www.twilio.com/), which provides a framework for building voice and video call functionality into your app, sending SMS/MMS from your apps, and more.
 - The [Mastodon API](https://docs.joinmastodon.org/api/), which enables you to manipulate features of the Mastodon social network programmatically.
-
-> **Note:** You can find information on a lot more 3rd party APIs in the [Programmable Web API directory](https://www.programmableweb.com/category/all/apis).
 
 ## How do APIs work?
 
@@ -135,9 +134,9 @@ const audioCtx = new AudioContext();
 Next, we create constants that store references to our `<audio>`, `<button>`, and `<input>` elements, and use the {{domxref("AudioContext.createMediaElementSource()")}} method to create a `MediaElementAudioSourceNode` representing the source of our audio — the `<audio>` element will be played from:
 
 ```js
-const audioElement = document.querySelector('audio');
-const playBtn = document.querySelector('button');
-const volumeSlider = document.querySelector('.volume');
+const audioElement = document.querySelector("audio");
+const playBtn = document.querySelector("button");
+const volumeSlider = document.querySelector(".volume");
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 ```
@@ -146,29 +145,29 @@ Next up we include a couple of event handlers that serve to toggle between play 
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-     audioCtx.resume();
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 
   // if track is stopped, play it
-  if (playBtn.getAttribute('class') === 'paused') {
+  if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
-    playBtn.setAttribute('class', 'playing');
-    playBtn.textContent = 'Pause'
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
     // if track is playing, stop it
-} else if (playBtn.getAttribute('class') === 'playing') {
+  } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
   }
 });
 
 // if track ends
-audioElement.addEventListener('ended', () => {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Play'
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
 });
 ```
 
@@ -180,7 +179,7 @@ Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioC
 // volume
 const gainNode = audioCtx.createGain();
 
-volumeSlider.addEventListener('input', () => {
+volumeSlider.addEventListener("input", () => {
   gainNode.gain.value = volumeSlider.value;
 });
 ```
@@ -200,23 +199,23 @@ When using an API, you should make sure you know where the entry point is for th
 The Document Object Model (DOM) API also has a simple entry point — its features tend to be found hanging off the {{domxref("Document")}} object, or an instance of an HTML element that you want to affect in some way, for example:
 
 ```js
-const em = document.createElement('em'); // create a new em element
-const para = document.querySelector('p'); // reference an existing p element
-em.textContent = 'Hello there!'; // give em some text content
+const em = document.createElement("em"); // create a new em element
+const para = document.querySelector("p"); // reference an existing p element
+em.textContent = "Hello there!"; // give em some text content
 para.appendChild(em); // embed em inside para
 ```
 
 The [Canvas API](/en-US/docs/Web/API/Canvas_API) also relies on getting a context object to use to manipulate things, although in this case, it's a graphical context rather than an audio context. Its context object is created by getting a reference to the {{htmlelement("canvas")}} element you want to draw on, and then calling its {{domxref("HTMLCanvasElement.getContext()")}} method:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 ```
 
 Anything that we want to do to the canvas is then achieved by calling properties and methods of the context object (which is an instance of {{domxref("CanvasRenderingContext2D")}}), for example:
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -236,29 +235,29 @@ We already saw a number of event handlers in use in our Web Audio API example ab
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-     audioCtx.resume();
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 
   // if track is stopped, play it
-  if (playBtn.getAttribute('class') === 'paused') {
+  if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
-    playBtn.setAttribute('class', 'playing');
-    playBtn.textContent = 'Pause'
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
     // if track is playing, stop it
-} else if (playBtn.getAttribute('class') === 'playing') {
+  } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
   }
 });
 
 // if track ends
-audioElement.addEventListener('ended', () => {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Play'
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
 });
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()
+title: "WEBGL_multi_draw: multiDrawElementsInstancedWEBGL() method"
+short-title: multiDrawElementsInstancedWEBGL()
 slug: Web/API/WEBGL_multi_draw/multiDrawElementsInstancedWEBGL
 page-type: webgl-extension-method
 browser-compat: api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
@@ -110,7 +111,7 @@ ext.multiDrawElementsInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  counts.length
+  counts.length,
 );
 ```
 

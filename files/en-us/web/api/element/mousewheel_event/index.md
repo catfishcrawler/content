@@ -1,5 +1,6 @@
 ---
 title: "Element: mousewheel event"
+short-title: mousewheel
 slug: Web/API/Element/mousewheel_event
 page-type: web-api-event
 status:
@@ -26,7 +27,7 @@ onmousewheel = (event) => {};
 
 ## Event type
 
-A {{domxref("WheelEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("WheelEvent")}}. Inherits from {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("WheelEvent")}}
 

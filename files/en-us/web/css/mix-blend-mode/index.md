@@ -31,6 +31,8 @@ mix-blend-mode: hue;
 mix-blend-mode: saturation;
 mix-blend-mode: color;
 mix-blend-mode: luminosity;
+mix-blend-mode: plus-darker;
+mix-blend-mode: plus-lighter;
 
 /* Global values */
 mix-blend-mode: inherit;
@@ -44,6 +46,10 @@ mix-blend-mode: unset;
 
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : The blending mode that should be applied.
+- `plus-darker`
+  - : Blending using the [_plus-darker_ compositing operator](https://drafts.fxtf.org/compositing/#porterduffcompositingoperators_plus_darker).
+- `plus-lighter`
+  - : Blending using the [_plus-lighter_ compositing operator](https://drafts.fxtf.org/compositing/#porterduffcompositingoperators_plus_lighter). Useful for cross-fade effects (prevents unwanted blinking when two overlaying elements animate their opacity in opposite directions).
 
 ## Formal definition
 
@@ -286,6 +292,32 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
+      <div class="cell">
+        plus-darker
+        <div class="container plus-darker">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        plus-lighter
+        <div class="container plus-lighter">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="note">Blending globally (blend with the background)</div>
@@ -498,6 +530,32 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
+      <div class="cell">
+        plus-darker
+        <div class="container plus-darker">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="cell">
+        plus-lighter
+        <div class="container plus-lighter">
+          <div class="group">
+            <div class="item firefox"></div>
+            <svg class="item" viewBox="0 0 150 150">
+              <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item G" cx="75" cy="75" rx="25" ry="70"></ellipse>
+              <ellipse class="item B" cx="75" cy="75" rx="25" ry="70"></ellipse>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -632,9 +690,15 @@ body {
 .luminosity .item {
   mix-blend-mode: luminosity;
 }
+.plus-darker .item {
+  mix-blend-mode: plus-darker;
+}
+.plus-lighter .item {
+  mix-blend-mode: plus-lighter;
+}
 ```
 
-{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", 1600, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("Effect_of_different_mix-blend-mode_values", "100%", "1600px")}}
 
 ### Using mix-blend-mode with HTML
 
@@ -738,7 +802,9 @@ This example uses `mix-blend-mode` to blend text color with the background color
 }
 
 p {
-  font: 4rem "Rubik Moonrocks", cursive;
+  font:
+    4rem "Rubik Moonrocks",
+    cursive;
   font-weight: bold;
   color: orange;
   padding: 0.5rem;

@@ -33,6 +33,7 @@ It clones by recursing through the input object while maintaining a map of previ
 - {{jsxref("Date")}}
 - {{jsxref("Error")}} types (but see [Error types](#error_types) below).
 - {{jsxref("Map")}}
+- {{jsxref("Number")}}
 - {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
 - [Primitive types](/en-US/docs/Web/JavaScript/Data_structures#primitive_values), except `symbol`.
 - {{jsxref("RegExp")}}: but note that `lastIndex` is not preserved.
@@ -79,7 +80,6 @@ Browsers must serialize the properties `name` and `message`, and are expected to
 - [HTML Specification: Safe passing of structured data](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
 - [Transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)
 - {{domxref("structuredClone()")}}
-- {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
 - [IndexedDB](/en-US/docs/Web/API/IndexedDB_API)

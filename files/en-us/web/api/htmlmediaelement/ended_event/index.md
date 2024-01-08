@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: ended event"
+short-title: ended
 slug: Web/API/HTMLMediaElement/ended_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.ended_event
@@ -38,7 +39,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("ended", (event) => {
   console.log(
-    "Video stopped either because it has finished playing or no further data is available."
+    "Video stopped either because it has finished playing or no further data is available.",
   );
 });
 ```
@@ -50,7 +51,7 @@ const video = document.querySelector("video");
 
 video.onended = (event) => {
   console.log(
-    "Video stopped either because it has finished playing or no further data is available."
+    "Video stopped either because it has finished playing or no further data is available.",
   );
 };
 ```

@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.previousNode()
+title: "TreeWalker: previousNode() method"
+short-title: previousNode()
 slug: Web/API/TreeWalker/previousNode
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.previousNode
@@ -38,7 +39,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.previousNode(); // returns null as there is no parent
 ```

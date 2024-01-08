@@ -1,11 +1,12 @@
 ---
-title: clearTimeout()
+title: clearTimeout() global function
+short-title: clearTimeout()
 slug: Web/API/clearTimeout
 page-type: web-api-global-function
 browser-compat: api.clearTimeout
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers}}
 
 The global **`clearTimeout()`** method cancels a timeout previously established
 by calling {{domxref("setTimeout()")}}.
@@ -59,7 +60,7 @@ const alarm = {
         this.remind(msg);
       },
       1000,
-      "Wake up!"
+      "Wake up!",
     );
   },
 

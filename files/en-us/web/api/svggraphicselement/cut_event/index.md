@@ -1,11 +1,12 @@
 ---
 title: "SVGGraphicsElement: cut event"
+short-title: cut
 slug: Web/API/SVGGraphicsElement/cut_event
 page-type: web-api-event
 browser-compat: api.Element.cut_event
 ---
 
-{{APIRef}}
+{{APIRef("SVG")}}
 
 The **`cut`** event is fired on an {{domxref("SVGGraphicsElement")}} when the user has initiated a "cut" action through the browser's user interface.
 

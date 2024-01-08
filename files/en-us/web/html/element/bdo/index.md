@@ -1,5 +1,5 @@
 ---
-title: '<bdo>: The Bidirectional Text Override element'
+title: "<bdo>: The Bidirectional Text Override element"
 slug: Web/HTML/Element/bdo
 page-type: html-element
 browser-compat: html.elements.bdo
@@ -83,8 +83,10 @@ The HTML 4 specification did not specify events for this element; they were adde
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

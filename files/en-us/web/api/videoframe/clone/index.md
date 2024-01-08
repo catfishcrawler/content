@@ -1,5 +1,6 @@
 ---
-title: VideoFrame.clone()
+title: "VideoFrame: clone() method"
+short-title: clone()
 slug: Web/API/VideoFrame/clone
 page-type: web-api-instance-method
 browser-compat: api.VideoFrame.clone
@@ -7,7 +8,7 @@ browser-compat: api.VideoFrame.clone
 
 {{APIRef("Web Codecs API")}}
 
-The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object with reference to the same media resource as the original.
+The **`clone()`** method of the {{domxref("VideoFrame")}} interface creates a new `VideoFrame` object referencing the same media resource as the original.
 
 ## Syntax
 
@@ -21,7 +22,7 @@ None.
 
 ### Return value
 
-The cloned {{domxref("VideoData")}} object.
+A new cloned {{domxref("VideoFrame")}} object.
 
 ### Exceptions
 

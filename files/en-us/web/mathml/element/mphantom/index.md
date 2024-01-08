@@ -1,6 +1,7 @@
 ---
 title: <mphantom>
 slug: Web/MathML/Element/mphantom
+page-type: mathml-element
 browser-compat: mathml.elements.mphantom
 ---
 
@@ -28,7 +29,7 @@ This element accepts the [global MathML attributes](/en-US/docs/Web/MathML/Globa
 </math>
 ```
 
-{{ EmbedLiveSample('mphantom_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

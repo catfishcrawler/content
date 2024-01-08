@@ -1,5 +1,5 @@
 ---
-title: '<small>: the side comment element'
+title: "<small>: the side comment element"
 slug: Web/HTML/Element/small
 page-type: html-element
 browser-compat: html.elements.small
@@ -26,6 +26,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 </p>
 ```
 
+#### Result
+
 {{EmbedLiveSample("Basic_usage")}}
 
 ### CSS alternative
@@ -36,6 +38,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
   <span style="font-size:0.8em">This whole sentence is in small letters.</span>
 </p>
 ```
+
+#### Result
 
 {{EmbedLiveSample("CSS_alternative")}}
 
@@ -85,8 +89,10 @@ Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement(
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

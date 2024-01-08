@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.lastChild()
+title: "TreeWalker: lastChild() method"
+short-title: lastChild()
 slug: Web/API/TreeWalker/lastChild
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.lastChild
@@ -35,7 +36,7 @@ const treeWalker = document.createTreeWalker(
     acceptNode(node) {
       return NodeFilter.FILTER_ACCEPT;
     },
-  }
+  },
 );
 const node = treeWalker.lastChild(); // returns the last visible child of the root element
 ```

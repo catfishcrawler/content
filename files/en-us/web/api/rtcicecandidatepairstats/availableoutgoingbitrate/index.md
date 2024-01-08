@@ -1,8 +1,9 @@
 ---
-title: RTCIceCandidatePairStats.availableOutgoingBitrate
+title: "RTCIceCandidatePairStats: availableOutgoingBitrate property"
+short-title: availableOutgoingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.availableOutgoingBitrate
+browser-compat: api.RTCStatsReport.type_candidate-pair.availableOutgoingBitrate
 ---
 
 {{APIRef("WebRTC")}}

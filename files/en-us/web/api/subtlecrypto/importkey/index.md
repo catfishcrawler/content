@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.importKey()
+title: "SubtleCrypto: importKey() method"
+short-title: importKey()
 slug: Web/API/SubtleCrypto/importKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.importKey
@@ -259,7 +260,7 @@ function importPrivateKey(pem) {
   const pemFooter = "-----END PRIVATE KEY-----";
   const pemContents = pem.substring(
     pemHeader.length,
-    pem.length - pemFooter.length
+    pem.length - pemFooter.length,
   );
   // base64 decode the string to get the binary data
   const binaryDerString = window.atob(pemContents);
@@ -274,7 +275,7 @@ function importPrivateKey(pem) {
       hash: "SHA-256",
     },
     true,
-    ["sign"]
+    ["sign"],
   );
 }
 ```
@@ -305,7 +306,7 @@ function importRsaKey(pem) {
   const pemFooter = "-----END PUBLIC KEY-----";
   const pemContents = pem.substring(
     pemHeader.length,
-    pem.length - pemFooter.length
+    pem.length - pemFooter.length - 1,
   );
   // base64 decode the string to get the binary data
   const binaryDerString = window.atob(pemContents);
@@ -320,7 +321,7 @@ function importRsaKey(pem) {
       hash: "SHA-256",
     },
     true,
-    ["encrypt"]
+    ["encrypt"],
   );
 }
 ```
@@ -355,7 +356,7 @@ function importPrivateKey(jwk) {
       namedCurve: "P-384",
     },
     true,
-    ["sign"]
+    ["sign"],
   );
 }
 ```

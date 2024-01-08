@@ -1,5 +1,6 @@
 ---
-title: Touch.target
+title: "Touch: target property"
+short-title: target
 slug: Web/API/Touch/target
 page-type: web-api-instance-property
 browser-compat: api.Touch.target
@@ -32,7 +33,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].target = ${e.targetTouches[i].target}`);
     }
   },
-  false
+  false,
 );
 ```
 

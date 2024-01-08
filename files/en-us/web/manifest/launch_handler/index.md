@@ -1,6 +1,7 @@
 ---
 title: launch_handler
 slug: Web/Manifest/launch_handler
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.launch_handler
@@ -13,10 +14,6 @@ browser-compat: html.manifest.launch_handler
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -61,7 +58,7 @@ The `launch_handler` member defines values that control the launch of a web appl
 }
 
 "launch_handler": {
-    "client_mode": ["focus-existing, auto"]
+    "client_mode": ["focus-existing", "auto"]
 }
 ```
 

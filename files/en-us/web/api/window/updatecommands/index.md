@@ -1,5 +1,6 @@
 ---
-title: Window.updateCommands()
+title: "Window: updateCommands() method"
+short-title: updateCommands()
 slug: Web/API/Window/updateCommands
 page-type: web-api-instance-method
 status:
@@ -8,8 +9,6 @@ browser-compat: api.Window.updateCommands
 ---
 
 {{ApiRef}}{{Non-standard_Header}}
-
-## Summary
 
 Updates the state of commands of the current chrome window (UI).
 

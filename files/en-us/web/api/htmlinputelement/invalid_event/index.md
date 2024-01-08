@@ -1,5 +1,6 @@
 ---
 title: "HTMLInputElement: invalid event"
+short-title: invalid
 slug: Web/API/HTMLInputElement/invalid_event
 page-type: web-api-event
 browser-compat: api.HTMLInputElement.invalid_event
@@ -58,7 +59,7 @@ input.addEventListener("invalid", (e) => {
   log.appendChild(
     Object.assign(document.createElement("li"), {
       textContent: JSON.stringify(e.target.value),
-    })
+    }),
   );
 });
 ```

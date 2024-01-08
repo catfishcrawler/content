@@ -1,6 +1,7 @@
 ---
 title: Sec-Fetch-Mode
 slug: Web/HTTP/Headers/Sec-Fetch-Mode
+page-type: http-header
 browser-compat: http.headers.Sec-Fetch-Mode
 ---
 
@@ -91,5 +92,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

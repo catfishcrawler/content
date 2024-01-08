@@ -1,10 +1,11 @@
 ---
-title: LayoutShift.value
+title: "LayoutShift: value property"
+short-title: value
 slug: Web/API/LayoutShift/value
 page-type: web-api-instance-property
-browser-compat: api.LayoutShift.value
 status:
   - experimental
+browser-compat: api.LayoutShift.value
 ---
 
 {{SeeCompatTable}}{{APIRef("Performance API")}}
@@ -21,7 +22,7 @@ It is calculated as the impact fraction (fraction of the viewport that was shift
 layout shift score = impact fraction * distance fraction
 ```
 
-For more details, see [Layout shift score](https://web.dev/cls/#layout-shift-score) on web.dev.
+For more details, see [Layout shift score](https://web.dev/articles/cls#layout_shift_score) on web.dev.
 
 ## Examples
 

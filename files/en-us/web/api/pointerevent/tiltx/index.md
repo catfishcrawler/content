@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.tiltX
+title: "PointerEvent: tiltX property"
+short-title: tiltX
 slug: Web/API/PointerEvent/tiltX
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.tiltX
@@ -29,7 +30,7 @@ someElement.addEventListener(
   (event) => {
     process_tilt(event.tiltX, event.tiltY);
   },
-  false
+  false,
 );
 ```
 

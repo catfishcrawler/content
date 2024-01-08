@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.sort()
+title: "URLSearchParams: sort() method"
+short-title: sort()
 slug: Web/API/URLSearchParams/sort
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.sort
@@ -13,7 +14,7 @@ order is according to unicode code points of the keys. This method uses a stable
 algorithm (i.e. the relative order between key/value pairs with equal keys will be
 preserved).
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

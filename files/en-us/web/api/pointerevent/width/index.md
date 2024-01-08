@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.width
+title: "PointerEvent: width property"
+short-title: width
 slug: Web/API/PointerEvent/width
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.width
@@ -33,7 +34,7 @@ target.addEventListener(
     // Calculate the contact area
     const area = ev.width * ev.height;
   },
-  false
+  false,
 );
 ```
 

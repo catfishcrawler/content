@@ -1,6 +1,7 @@
 ---
 title: orientation
 slug: Web/Manifest/orientation
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.orientation
@@ -13,10 +14,6 @@ browser-compat: html.manifest.orientation
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

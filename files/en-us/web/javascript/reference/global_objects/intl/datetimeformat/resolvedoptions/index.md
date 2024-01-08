@@ -7,20 +7,19 @@ browser-compat: javascript.builtins.Intl.DateTimeFormat.resolvedOptions
 
 {{JSRef}}
 
-The **`Intl.DateTimeFormat.prototype.resolvedOptions()`**
-method returns a new object with properties reflecting the locale and date and time
-formatting options computed during initialization of this {{jsxref("Intl.DateTimeFormat")}}
-object.
+The **`resolvedOptions()`** method of {{jsxref("Intl.DateTimeFormat")}} instances returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this `Intl.DateTimeFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-resolvedoptions.html")}}
-
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
 
 ## Syntax
 
 ```js-nolint
 resolvedOptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -43,10 +42,7 @@ The resulting object has the following properties:
     `"nu"` or filled in as default values.
 - `timeZone`
   - : The value provided for this property in the `options` argument;
-    {{jsxref("undefined")}} (representing the runtime's default time zone) if none was
-    provided. Warning: Applications should not rely on {{jsxref("undefined")}} being
-    returned, as future versions may return a {{jsxref("String")}} value identifying
-    the runtime's default time zone instead.
+    defaults to the runtime's default time zone. Should never be `undefined`.
 - `hour12`
   - : The value provided for this property in the `options` argument or
     filled in as a default.

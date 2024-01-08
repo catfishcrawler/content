@@ -1,5 +1,6 @@
 ---
 title: "HTMLCanvasElement: webglcontextrestored event"
+short-title: webglcontextrestored
 slug: Web/API/HTMLCanvasElement/webglcontextrestored_event
 page-type: web-api-event
 browser-compat: api.HTMLCanvasElement.webglcontextrestored_event
@@ -49,7 +50,7 @@ canvas.addEventListener(
   (e) => {
     console.log(e);
   },
-  false
+  false,
 );
 
 gl.getExtension("WEBGL_lose_context").restoreContext();

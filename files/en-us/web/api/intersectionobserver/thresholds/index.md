@@ -1,5 +1,6 @@
 ---
-title: IntersectionObserver.thresholds
+title: "IntersectionObserver: thresholds property"
+short-title: thresholds
 slug: Web/API/IntersectionObserver/thresholds
 page-type: web-api-instance-property
 browser-compat: api.IntersectionObserver.thresholds
@@ -31,7 +32,7 @@ If no `threshold` option was included when
 
 > **Note:** Although the `options` object you can specify when creating an
 > {{domxref("IntersectionObserver")}} has a field named
-> {{domxref("IntersectionObserver.threshold", "threshold")}}, this property is called
+> `threshold`, this property is called
 > `thresholds`. Confusing? Yes. If you accidentally use
 > `thresholds` as the name of the field in your `options`, the
 > `thresholds` array will wind up being `[0.0]`, which is likely

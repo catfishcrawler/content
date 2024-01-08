@@ -1,5 +1,6 @@
 ---
-title: NamedNodeMap.getNamedItem()
+title: "NamedNodeMap: getNamedItem() method"
+short-title: getNamedItem()
 slug: Web/API/NamedNodeMap/getNamedItem
 page-type: web-api-instance-method
 browser-compat: api.NamedNodeMap.getNamedItem
@@ -44,7 +45,7 @@ And 'boum' has ${attrMap["boum"] ? "been" : "not been"} found.`;
 
 {{EmbedLiveSample("Example", "100%", 80)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

@@ -1,8 +1,9 @@
 ---
 title: "HTMLInputElement: select event"
+short-title: select
 slug: Web/API/HTMLInputElement/select_event
-browser-compat: api.HTMLInputElement.select_event
 page-type: web-api-event
+browser-compat: api.HTMLInputElement.select_event
 ---
 
 {{APIRef}}
@@ -37,7 +38,7 @@ function logSelection(event) {
   const log = document.getElementById("log");
   const selection = event.target.value.substring(
     event.target.selectionStart,
-    event.target.selectionEnd
+    event.target.selectionEnd,
   );
   log.textContent = `You selected: ${selection}`;
 }

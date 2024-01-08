@@ -1,6 +1,7 @@
 ---
 title: aria-pressed
 slug: Web/Accessibility/ARIA/Attributes/aria-pressed
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-pressed
 ---
 
@@ -37,7 +38,7 @@ The first rule of ARIA use is "if you can use a native feature with the semantic
 - `undefined` (default)
   - : The element does not support being pressed.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaPressed")}}
   - : The [`ariaPressed`](/en-US/docs/Web/API/Element/ariaPressed) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-pressed` attribute.

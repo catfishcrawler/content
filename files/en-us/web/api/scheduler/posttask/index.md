@@ -1,5 +1,6 @@
 ---
-title: Scheduler.postTask()
+title: "Scheduler: postTask() method"
+short-title: postTask()
 slug: Web/API/Scheduler/postTask
 page-type: web-api-instance-method
 browser-compat: api.Scheduler.postTask
@@ -161,7 +162,7 @@ scheduler.postTask(() => {
 
 The expected output is shown below: tasks are executed in priority order, and then declaration order.
 
-```
+```plain
 usr-blk 1
 usr-blk 2
 usr-vis 1

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.multiline
 
 {{JSRef}}
 
-The **`multiline`** accessor property indicates whether or not the `m` flag is used with the regular expression.
+The **`multiline`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `m` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}
 
@@ -38,10 +38,10 @@ console.log(regex.multiline); // true
 ## See also
 
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

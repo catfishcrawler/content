@@ -1,11 +1,12 @@
 ---
-title: self.performance
+title: performance global property
+short-title: performance
 slug: Web/API/performance_property
 page-type: web-api-global-property
 browser-compat: api.performance
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{AvailableInWorkers}}
 
 The global **`performance`** property returns a {{domxref("Performance")}} object, which can be used to gather performance information about the context it is called in (window or worker).
 
@@ -40,6 +41,7 @@ The following table provides an overview about the availability of the performan
 | {{domxref("PerformanceServerTiming")}}                     | x      | x      |
 | {{domxref("PerformanceTiming")}} {{deprecated_inline}}     | x      |        |
 | {{domxref("TaskAttributionTiming")}}                       | x      |        |
+| {{domxref("VisibilityStateEntry")}}                        | x      |        |
 
 ## Specifications
 

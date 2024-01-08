@@ -1,6 +1,7 @@
 ---
 title: "ARIA: tablist role"
 slug: Web/Accessibility/ARIA/Roles/tablist_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tablist
 ---
 
@@ -78,7 +79,7 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 <!--
 ### Required JavaScript features
 
-## Accessibility Concerns
+## Accessibility concerns
 
 ## Best Practices
 
@@ -102,6 +103,6 @@ See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

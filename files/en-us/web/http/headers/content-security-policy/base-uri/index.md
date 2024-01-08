@@ -1,6 +1,7 @@
 ---
 title: "CSP: base-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.base-uri
 ---
 
@@ -50,7 +51,7 @@ Note however that some of the values don't make sense for `base-uri`, such as th
 
 ### Apache configuration
 
-```
+```apacheconf
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
@@ -58,7 +59,7 @@ Header set Content-Security-Policy "base-uri 'self'";
 
 ### Nginx configuration
 
-```
+```nginx
 add_header Content-Security-Policy "base-uri 'self';"
 ```
 

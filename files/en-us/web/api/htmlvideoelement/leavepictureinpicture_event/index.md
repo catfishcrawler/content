@@ -1,11 +1,12 @@
 ---
 title: "HTMLVideoElement: leavepictureinpicture event"
+short-title: leavepictureinpicture
 slug: Web/API/HTMLVideoElement/leavepictureinpicture_event
 page-type: web-api-event
 browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
 
-{{APIRef("HTMLVideoElement")}}
+{{APIRef("Picture-in-Picture API")}}
 
 The `leavepictureinpicture` event is fired when the {{DOMxRef("HTMLVideoElement")}} leaves picture-in-picture mode successfully.
 

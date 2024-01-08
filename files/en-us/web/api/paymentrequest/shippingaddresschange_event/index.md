@@ -1,5 +1,6 @@
 ---
 title: "PaymentRequest: shippingaddresschange event"
+short-title: shippingaddresschange
 slug: Web/API/PaymentRequest/shippingaddresschange_event
 page-type: web-api-event
 status:
@@ -51,7 +52,7 @@ paymentRequest.addEventListener(
     let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
     event.updateWith(detailsUpdate);
   },
-  false
+  false,
 );
 
 const checkAddress = (theAddress) => {

@@ -1,11 +1,12 @@
 ---
-title: KeyframeEffect()
+title: "KeyframeEffect: KeyframeEffect() constructor"
+short-title: KeyframeEffect()
 slug: Web/API/KeyframeEffect/KeyframeEffect
 page-type: web-api-constructor
 browser-compat: api.KeyframeEffect.KeyframeEffect
 ---
 
-{{ APIRef("Web Animations API") }}
+{{ APIRef("Web Animations") }}
 
 The **`KeyframeEffect()`** constructor of the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API) returns a new {{domxref("KeyframeEffect")}} object instance, and also allows you to clone an existing keyframe effect object instance.
 
@@ -86,12 +87,12 @@ const rabbitDownKeyframes = new KeyframeEffect(
     { transform: "translateY(0%)" }, // keyframe
     { transform: "translateY(100%)" }, // keyframe
   ],
-  { duration: 3000, fill: "forwards" } // keyframe options
+  { duration: 3000, fill: "forwards" }, // keyframe options
 );
 
 const rabbitDownAnimation = new Animation(
   rabbitDownKeyframes,
-  document.timeline
+  document.timeline,
 );
 
 // Play rabbit animation

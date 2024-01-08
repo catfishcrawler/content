@@ -1,6 +1,7 @@
 ---
 title: "ARIA: listitem role"
 slug: Web/Accessibility/ARIA/Roles/listitem_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#listitem
 ---
 
@@ -78,6 +79,6 @@ or use an ordered list if the order of the list items matters:
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

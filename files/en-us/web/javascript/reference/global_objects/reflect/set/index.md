@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.set
 
 {{JSRef}}
 
-The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
+The **`Reflect.set()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) and [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) syntax, but as a function.
 
 {{EmbedInteractiveExample("pages/js/reflect-set.html")}}
 
@@ -40,7 +40,7 @@ A {{jsxref("Boolean")}} indicating whether or not setting the property was succe
 
 ## Description
 
-`Reflect.set()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors). That is, `Reflect.set(target, propertyKey, value, receiver)` is semantically equivalent to:
+`Reflect.set()` provides the reflective semantic of a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors). That is, `Reflect.set(target, propertyKey, value, receiver)` is semantically equivalent to:
 
 ```js
 target[propertyKey] = value;
@@ -56,12 +56,12 @@ Note that in a normal property access, `target` and `receiver` would observably 
 
 ```js
 // Object
-let obj = {};
+const obj = {};
 Reflect.set(obj, "prop", "value"); // true
 obj.prop; // "value"
 
 // Array
-let arr = ["duck", "duck", "duck"];
+const arr = ["duck", "duck", "duck"];
 Reflect.set(arr, 2, "goose"); // true
 arr[2]; // "goose"
 
@@ -70,7 +70,6 @@ Reflect.set(arr, "length", 1); // true
 arr; // ["duck"]
 
 // With just one argument, propertyKey and value are "undefined".
-let obj = {};
 Reflect.set(obj); // true
 Reflect.getOwnPropertyDescriptor(obj, "undefined");
 // { value: undefined, writable: true, enumerable: true, configurable: true }
@@ -113,5 +112,5 @@ Reflect.set(target, "a", 2, receiver); // true
 
 - [Polyfill of `Reflect.set` in `core-js`](https://github.com/zloirock/core-js#ecmascript-reflect)
 - {{jsxref("Reflect")}}
-- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_Accessors)
-- [`Proxy`'s `set` handler](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)
+- [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
+- [`handler.set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set)

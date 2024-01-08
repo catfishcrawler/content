@@ -1,5 +1,6 @@
 ---
-title: TrustedScriptURL.toJSON()
+title: "TrustedScriptURL: toJSON() method"
+short-title: toJSON()
 slug: Web/API/TrustedScriptURL/toJSON
 page-type: web-api-instance-method
 browser-compat: api.TrustedScriptURL.toJSON
@@ -29,7 +30,7 @@ The constant `sanitized` is an object created via a Trusted Types policy. The `t
 
 ```js
 const sanitized = scriptPolicy.createScriptURL(
-  "https://example.com/my-script.js"
+  "https://example.com/my-script.js",
 );
 console.log(sanitized.toJSON());
 ```

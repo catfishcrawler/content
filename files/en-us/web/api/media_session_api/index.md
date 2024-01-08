@@ -7,7 +7,7 @@ browser-compat: api.MediaSession
 
 {{DefaultAPISidebar("Media Session API")}}
 
-The Media Session API provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
+The **Media Session API** provides a way to customize media notifications. It does this by providing metadata for display by the user agent for the media your web app is playing.
 
 It also provides action handlers that the browser can use to access platform media keys such as hardware keys found on keyboards, headsets, remote controls, and software keys found in notification areas and on lock screens of mobile devices. So you can seamlessly control web-provided media via your device, even when not looking at the web page.
 
@@ -15,7 +15,7 @@ The aim is to allow users to know what's playing and to control it, without need
 
 ## Media Session concepts and usage
 
-The {{domxref("MediaMetadata")}} interface lets a web site provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
+The {{domxref("MediaMetadata")}} interface lets a website provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), and artwork. The platform can show this metadata in media centers, notifications, device lockscreens, etc.
 
 The {{domxref("MediaSession")}} interface lets users control playback of media through user-agent defined interface elements. Interaction with these elements triggers action handlers in the web page, playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors, when no page-defined behavior is available.
 
@@ -33,11 +33,6 @@ navigator.mediaSession.playbackState = "playing";
   - : Allows a web page to provide rich media metadata for display in a platform UI.
 - {{domxref("MediaSession")}}
   - : Allows a web page to provide custom behaviors for standard media playback interactions.
-
-## Dictionaries
-
-- {{domxref("MediaImage")}}
-  - : A `MediaImage` object contains information describing an image associated with the media. This might be a CD or DVD cover, a movie poster, a poster frame, or the like.
 
 ## Examples
 
@@ -110,6 +105,15 @@ if ("mediaSession" in navigator) {
     /* Code excerpted. */
   });
   navigator.mediaSession.setActionHandler("skipad", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglecamera", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("togglemicrophone", () => {
+    /* Code excerpted. */
+  });
+  navigator.mediaSession.setActionHandler("hangup", () => {
     /* Code excerpted. */
   });
 }

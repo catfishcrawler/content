@@ -1,6 +1,7 @@
 ---
 title: Viewport-Width
 slug: Web/HTTP/Headers/Viewport-Width
+page-type: http-header
 status:
   - deprecated
   - non-standard
@@ -69,7 +70,7 @@ Viewport-Width: 320
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}
@@ -78,4 +79,4 @@ Viewport-Width: 320
   - {{HTTPHeader("Width")}}
 
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses) and {{HTTPHeader("Vary")}}
+- [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

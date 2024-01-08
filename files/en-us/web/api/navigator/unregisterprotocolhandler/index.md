@@ -1,5 +1,6 @@
 ---
-title: Navigator.unregisterProtocolHandler()
+title: "Navigator: unregisterProtocolHandler() method"
+short-title: unregisterProtocolHandler()
 slug: Web/API/Navigator/unregisterProtocolHandler
 page-type: web-api-instance-method
 browser-compat: api.Navigator.unregisterProtocolHandler
@@ -88,7 +89,7 @@ If your site is `burgers.example.com`, and you have a `web+burger:` scheme, you 
 ```js
 navigator.unregisterProtocolHandler(
   "web+burger",
-  "https://burgers.example.com/?burger=%s"
+  "https://burgers.example.com/?burger=%s",
 );
 ```
 

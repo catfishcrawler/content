@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.suppressLocalAudioPlayback
+title: "MediaTrackSupportedConstraints: suppressLocalAudioPlayback property"
+short-title: suppressLocalAudioPlayback
 slug: Web/API/MediaTrackSupportedConstraints/suppressLocalAudioPlayback
 page-type: web-api-instance-property
 status:
@@ -33,9 +34,8 @@ async function capture() {
   }
 
   try {
-    videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(
-      displayMediaOptions
-    );
+    videoElem.srcObject =
+      await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
   } catch (err) {
     /* handle the error */
   }

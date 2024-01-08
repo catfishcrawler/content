@@ -1,5 +1,5 @@
 ---
-title: '<textarea>: The Textarea element'
+title: "<textarea>: The Textarea element"
 slug: Web/HTML/Element/textarea
 page-type: html-element
 browser-compat: html.elements.textarea
@@ -18,11 +18,15 @@ The above example demonstrates a number of features of `<textarea>`:
 - `rows` and `cols` attributes to allow you to specify an exact size for the `<textarea>` to take. Setting these is a good idea for consistency, as browser defaults can differ.
 - Default content entered between the opening and closing tags. `<textarea>` does not support the `value` attribute.
 
-The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
+The `<textarea>` element also accepts several attributes common to form `<input>`s, such as `autocapitalize`, `autocomplete`, `autofocus`, `disabled`, `placeholder`, `readonly`, and `required`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `autocapitalize`
+
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - `autocomplete`
 
@@ -46,14 +50,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads. Only one form-associated element in a document can have this attribute specified.
 - `cols`
   - : The visible width of the text control, in average character widths. If it is specified, it must be a positive integer. If it is not specified, the default value is `20`.
+- `dirname`
+
+  - : This attribute is used to indicate the text directionality of the element contents similar to the [`dirname`](/en-US/docs/Web/HTML/Element/input#dirname) attribute of the `<input>` element.
+    For more information, see the [`dirname` attribute](/en-US/docs/Web/HTML/Attributes/dirname).
+
 - `disabled`
   - : This Boolean attribute indicates that the user cannot interact with the control. If this attribute is not specified, the control inherits its setting from the containing element, for example {{ HTMLElement("fieldset") }}; if there is no containing element when the `disabled` attribute is set, the control is enabled.
 - `form`
   - : The form element that the `<textarea>` element is associated with (its "form owner"). The value of the attribute must be the `id` of a form element in the same document. If this attribute is not specified, the `<textarea>` element must be a descendant of a form element. This attribute enables you to place `<textarea>` elements anywhere within a document, not just as descendants of form elements.
 - `maxlength`
-  - : The maximum number of characters (UTF-16 code units) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.
+  - : The maximum string length (measured in UTF-16 code units) that the user can enter. If this value isn't specified, the user can enter an unlimited number of characters.
 - `minlength`
-  - : The minimum number of characters (UTF-16 code units) required that the user should enter.
+  - : The minimum string length (measured in UTF-16 code units) required that the user should enter.
 - `name`
   - : The name of the control.
 - `placeholder`
@@ -130,6 +139,8 @@ The following example shows a very simple textarea, with a set numbers of rows a
 <textarea name="textarea" rows="10" cols="50">Write something here</textarea>
 ```
 
+#### Result
+
 {{ EmbedLiveSample('Basic_example','600','150') }}
 
 ### Example using "minlength" and "maxlength"
@@ -141,6 +152,8 @@ This example has a minimum and maximum number of characters — of 10 and 20 res
 Write something here…
 </textarea>
 ```
+
+#### Result
 
 {{ EmbedLiveSample('Example using "minlength" and "maxlength"','600','80') }}
 
@@ -158,7 +171,9 @@ This example has a placeholder set. Notice how it disappears when you start typi
   placeholder="Comment text."></textarea>
 ```
 
-{{ EmbedLiveSample('Example using "placeholder"','600','80') }}
+#### Result
+
+{{ EmbedLiveSample('Example using "placeholder"','600','100') }}
 
 > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
@@ -177,7 +192,9 @@ I am a read-only textarea.
 </textarea>
 ```
 
-{{ EmbedLiveSample('Disabled_and_readonly','600','80') }}
+#### Result
+
+{{ EmbedLiveSample('Disabled_and_readonly','600','100') }}
 
 ## Technical summary
 
@@ -277,7 +294,6 @@ Other form-related elements:
 - {{ HTMLElement("optgroup") }}
 - {{ HTMLElement("option") }}
 - {{ HTMLElement("input") }}
-- {{ HTMLElement("keygen") }}
 - {{ HTMLElement("fieldset") }}
 - {{ HTMLElement("output") }}
 - {{ HTMLElement("progress") }}

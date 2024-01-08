@@ -1,5 +1,6 @@
 ---
 title: "PaymentResponse: payerdetailchange event"
+short-title: payerdetailchange
 slug: Web/API/PaymentResponse/payerdetailchange_event
 page-type: web-api-event
 status:
@@ -89,7 +90,7 @@ response.onpayerdetailchange = async (ev) => {
   // validation to the errors list
 
   const errors = await Promise.all(promisesToValidate).then((results) =>
-    results.reduce((errors, result), Object.assign(errors, result))
+    results.reduce((errors, result), Object.assign(errors, result)),
   );
 
   // If we found any errors, wait for them to be corrected

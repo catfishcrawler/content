@@ -1,12 +1,14 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
+page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.DNT
 ---
 
-{{HTTPSidebar}}{{Deprecated_header}}
+{{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`DNT`** (**D**o **N**ot
 **T**rack) request header indicates the user's tracking preference. It lets
@@ -50,7 +52,7 @@ The user's DNT preference can also be read from JavaScript using the
 {{domxref("Navigator.doNotTrack")}} property:
 
 ```js
-navigator.doNotTrack; // "0" or "1"
+navigator.doNotTrack; // "0", "1" or null
 ```
 
 ## Specifications

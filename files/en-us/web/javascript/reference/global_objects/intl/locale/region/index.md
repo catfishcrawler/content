@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Locale.region
 
 {{JSRef}}
 
-The **`Intl.Locale.prototype.region`** property is an accessor property that returns the region of the world (usually a country) associated with the locale.
+The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances returns the region of the world (usually a country) associated with this locale.
 
 ## Description
 
@@ -43,5 +43,5 @@ console.log(locale.region); // Prints "FR"
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}
 - [Unicode region chart](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/territory_containment_un_m_49.html)

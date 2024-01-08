@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Symbol.unscopables
 
 {{JSRef}}
 
-The **`Symbol.unscopables`** static data property represents the well-known symbol used to specify properties of the associated object that should not become bindings within the [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) environment.
+The **`Symbol.unscopables`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@unscopables`. The {{jsxref("Statements/with", "with")}} statement looks up this symbol on the scope object for a property containing a collection of properties that should not become bindings within the `with` environment.
 
 {{EmbedInteractiveExample("pages/js/symbol-unscopables.html")}}
 
@@ -31,7 +31,7 @@ This protocol is also utilized by DOM APIs, such as [`Element.prototype.append()
 
 ### Scoping in with statements
 
-The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside a `with` environment, "keys" would now be the method and not the variable. That's why the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
+The following code works fine in ES5 and below. However, in ECMAScript 2015 and later, the {{jsxref("Array.prototype.keys()")}} method was introduced. That means that inside a `with` environment, "keys" would now be the method and not the variable. That's why the `@@unscopables` symbol was introduced. A built-in `@@unscopables` setting is implemented as {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
 
 ```js
 var keys = [];
@@ -160,6 +160,6 @@ const character = {
 
 ## See also
 
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
-- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement (not available in [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))
+- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with)
 - [`Element.prototype.append()`](/en-US/docs/Web/API/Element/append)

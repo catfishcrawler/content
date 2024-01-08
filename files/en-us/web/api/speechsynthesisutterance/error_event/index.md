@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: error event"
+short-title: error
 slug: Web/API/SpeechSynthesisUtterance/error_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.error_event
@@ -47,7 +48,7 @@ You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/Eve
 ```js
 utterThis.addEventListener("error", (event) => {
   console.log(
-    `An error has occurred with the speech synthesis: ${event.error}`
+    `An error has occurred with the speech synthesis: ${event.error}`,
   );
 });
 ```
@@ -57,7 +58,7 @@ Or use the `onerror` event handler property:
 ```js
 utterThis.onerror = (event) => {
   console.log(
-    `An error has occurred with the speech synthesis: ${event.error}`
+    `An error has occurred with the speech synthesis: ${event.error}`,
   );
 };
 ```

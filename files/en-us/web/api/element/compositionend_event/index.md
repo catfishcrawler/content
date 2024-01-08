@@ -1,5 +1,6 @@
 ---
 title: "Element: compositionend event"
+short-title: compositionend
 slug: Web/API/Element/compositionend_event
 page-type: web-api-event
 browser-compat: api.Element.compositionend_event
@@ -23,7 +24,7 @@ oncompositionend = (event) => {};
 
 ## Event type
 
-A {{domxref("CompositionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("CompositionEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("CompositionEvent")}}
 

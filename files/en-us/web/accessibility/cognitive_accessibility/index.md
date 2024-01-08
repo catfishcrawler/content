@@ -1,6 +1,7 @@
 ---
 title: Cognitive accessibility
 slug: Web/Accessibility/Cognitive_accessibility
+page-type: guide
 ---
 
 <section id="Quick_links">
@@ -11,7 +12,7 @@ Cognitive accessibility covers accessibility considerations for people with cogn
 
 Cognitive impairment refers to a broad range of disabilities, from people with intellectual disabilities who may have the most-limited capabilities, to age-related issues with thinking and remembering. The range includes people with mental illnesses, such as depression and schizophrenia. It also includes people with learning disabilities, such as dyslexia and attention deficit hyperactivity disorder (ADHD).
 
-Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their web sites and applications.
+Though there is a lot of diversity within clinical definitions of cognitive impairments, people with them experience a common set of functional problems. These problems include difficulty with understanding content, remembering how to complete tasks, and confusion caused by inconsistent or non-traditional web page layouts. In this document, we focus on steps developers should take to improve the cognitive accessibility of their websites and applications.
 
 ## Overview
 
@@ -267,7 +268,7 @@ The above are good design practices. They will benefit everyone.
 - Many people with cognitive impairments also have physical disabilities. Websites must conform with the W3C's [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/).
 - The W3C's [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) produces web accessibility guidelines for people with cognitive impairments.
 - WebAIM has a [Cognitive page](https://webaim.org/articles/cognitive/) of relevant information and resources.
-- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://www.cdc.gov/media/releases/2018/p0816-disability.html).
+- The United States Centers for Disease Control estimate that, as of 2018, 1 in 4 U.S. citizens have a disability and, of them, [cognitive impairment is the most common for young people](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html).
 - In the U.S., "intellectual disabilities" used to be called "mental retardation". In the U.K., "intellectual disabilities" is commonly called "learning disabilities" or "learning difficulties".
 
 ## See also
@@ -277,7 +278,7 @@ The above are good design practices. They will benefit everyone.
 - [Accessibility for seizure disorders](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 - [Accessibility overview](/en-US/docs/Learn/Accessibility)
-- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines).
+- [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
 - [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
-- [CDC information on disabilities.](https://www.cdc.gov/media/releases/2018/p0816-disability.html)
+- [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)

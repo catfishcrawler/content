@@ -1,5 +1,6 @@
 ---
-title: DragEvent.dataTransfer
+title: "DragEvent: dataTransfer property"
+short-title: dataTransfer
 slug: Web/API/DragEvent/dataTransfer
 page-type: web-api-instance-property
 browser-compat: api.DragEvent.dataTransfer
@@ -7,10 +8,8 @@ browser-compat: api.DragEvent.dataTransfer
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DragEvent.dataTransfer`** property holds the drag
+The **`DragEvent.dataTransfer`** read-only property holds the drag
 operation's data (as a {{domxref("DataTransfer")}} object).
-
-This property is {{ReadOnlyInline}}.
 
 ## Value
 
@@ -32,7 +31,7 @@ dragTarget.addEventListener(
     // Call the drag and drop data processor
     if (ev.dataTransfer !== null) processData(ev.dataTransfer);
   },
-  false
+  false,
 );
 ```
 

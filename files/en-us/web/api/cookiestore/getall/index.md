@@ -1,5 +1,6 @@
 ---
-title: CookieStore.getAll()
+title: "CookieStore: getAll() method"
+short-title: getAll()
 slug: Web/API/CookieStore/getAll
 page-type: web-api-instance-method
 status:
@@ -10,6 +11,8 @@ browser-compat: api.CookieStore.getAll
 {{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
 
 The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -64,7 +67,7 @@ Each object contains the following properties:
 
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values (see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) for more information):
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -87,11 +90,12 @@ Each object contains the following properties:
 
 ## Examples
 
-In this example we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
+In this example, we use `getAll()` with no parameters. This returns all of the cookies for this context as an array of objects.
 
 ```js
-let cookies = await cookieStore.getAll();
-if (cookies) {
+const cookies = await cookieStore.getAll();
+
+if (cookies.length > 0) {
   console.log(cookies);
 } else {
   console.log("Cookie not found");

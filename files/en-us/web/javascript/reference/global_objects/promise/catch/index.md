@@ -7,28 +7,26 @@ browser-compat: javascript.builtins.Promise.catch
 
 {{JSRef}}
 
-The **`catch()`** method of a {{jsxref("Promise")}} object schedules a function to be called when the promise is rejected. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}}.
+The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns an equivalent {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}}.
 
 {{EmbedInteractiveExample("pages/js/promise-catch.html")}}
 
 ## Syntax
 
 ```js-nolint
-catch(onRejected)
-
-catch((reason) => {
-  // rejection handler
-})
+promiseInstance.catch(onRejected)
 ```
 
 ### Parameters
 
 - `onRejected`
-  - : A {{jsxref("Function")}} called when the `Promise` is rejected. This function has one parameter: the _rejection reason_.
+  - : A function to asynchronously execute when this promise becomes rejected. Its return value becomes the fulfillment value of the promise returned by `catch()`. The function is called with the following arguments:
+    - `reason`
+      - : The value that the promise was rejected with.
 
 ### Return value
 
-Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. It's eventually rejected if `onRejected` throws an error or returns a Promise which is itself rejected; otherwise, it's eventually fulfilled.
+Returns a new {{jsxref("Promise")}}. This new promise is always pending when returned, regardless of the current promise's status. If `onRejected` is called, the returned promise will resolve based on the return value of this call, or reject with the thrown error from this call. If the current promise fulfills, `onRejected` is not called and the returned promise fulfills to the same value.
 
 ## Description
 
@@ -85,7 +83,7 @@ p1.then((value) => {
     console.error(e.message); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 
@@ -98,7 +96,7 @@ p1.then((value) => {
     console.error(e); // "oh, no!"
   })
   .then(
-    () => console.log("after a catch the chain is restored"),
+    () => console.log("after a catch the chain is restored"), // "after a catch the chain is restored"
     () => console.log("Not fired due to the catch"),
   );
 ```

@@ -1,5 +1,6 @@
 ---
-title: CanMakePaymentEvent()
+title: "CanMakePaymentEvent: CanMakePaymentEvent() constructor"
+short-title: CanMakePaymentEvent()
 slug: Web/API/CanMakePaymentEvent/CanMakePaymentEvent
 page-type: web-api-constructor
 status:
@@ -37,7 +38,7 @@ self.addEventListener("canmakepayment", (e) => {
         .catch((error) => {
           reject(error);
         });
-    })
+    }),
   );
 });
 ```
@@ -53,8 +54,8 @@ self.addEventListener("canmakepayment", (e) => {
 ## See also
 
 - {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
-- [Web-based payment apps overview](https://web.dev/web-based-payment-apps-overview/)
-- [Setting up a payment method](https://web.dev/setting-up-a-payment-method/)
-- [Life of a payment transaction](https://web.dev/life-of-a-payment-transaction/)
+- [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
+- [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
+- [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

@@ -1,5 +1,6 @@
 ---
-title: MediaRecorderErrorEvent.error
+title: "MediaRecorderErrorEvent: error property"
+short-title: error
 slug: Web/API/MediaRecorderErrorEvent/error
 page-type: web-api-instance-property
 status:
@@ -10,8 +11,8 @@ browser-compat: api.MediaRecorderErrorEvent.error
 
 {{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The read-only `error` property in the
-**{{domxref("MediaRecorderErrorEvent")}}** interface is a
+The **`error`** read-only property of the
+{{domxref("MediaRecorderErrorEvent")}} interface is a
 {{domxref("DOMException")}} object providing details about the exception that was thrown
 by a {{domxref("MediaRecorder")}} instance.
 
@@ -84,7 +85,7 @@ function recordStream(stream) {
 
 ## Specifications
 
-{{Specifications}}
+This feature is no longer part of any specification, and longer on track to become standard.
 
 ## Browser compatibility
 

@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.requestPresent()
+title: "VRDisplay: requestPresent() method"
+short-title: requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 page-type: web-api-instance-method
 status:
@@ -60,7 +61,7 @@ if (navigator.getVRDisplays) {
               Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(
               leftEye.renderHeight,
-              rightEye.renderHeight
+              rightEye.renderHeight,
             );
 
             // stop the normal presentation, and start the vr presentation
@@ -99,5 +100,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

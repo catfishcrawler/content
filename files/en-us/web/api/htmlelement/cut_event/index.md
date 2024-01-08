@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: cut event"
+short-title: cut
 slug: Web/API/HTMLElement/cut_event
 page-type: web-api-event
 browser-compat: api.Element.cut_event
@@ -30,12 +31,7 @@ A {{domxref("ClipboardEvent")}}. Inherits from {{domxref("Event")}}.
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
-
-### Value
-
-`functionRef` is a function name or a [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function). The function receives a {{domxref("ClipboardEvent")}} object as its
-sole argument.
+  - : A {{domxref("DataTransfer")}} object containing the data affected by the user-initiated `cut`, {{domxref("HTMLElement/copy_event", "copy")}}, or {{domxref("HTMLElement/paste_event", "paste")}} operation, along with its MIME type.
 
 ## Example
 

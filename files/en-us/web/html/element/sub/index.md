@@ -1,5 +1,5 @@
 ---
-title: '<sub>: The Subscript element'
+title: "<sub>: The Subscript element"
 slug: Web/HTML/Element/sub
 page-type: html-element
 browser-compat: html.elements.sub
@@ -56,7 +56,7 @@ Traditional footnotes are denoted using numbers which are rendered in subscript.
 </p>
 ```
 
-The resulting output looks like this:
+#### Result
 
 {{EmbedLiveSample("Footnote_numbers", 650, 80)}}
 
@@ -64,14 +64,14 @@ The resulting output looks like this:
 
 In mathematics, families of variables related to the same concept (such as distances along the same axis) are represented using the same variable name with a subscript following. For example:
 
-```html
+```html-nolint
 <p>
   The horizontal coordinates' positions along the X-axis are represented as
   <var>x<sub>1</sub></var> … <var>x<sub>n</sub></var>.
 </p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Variable_subscripts", 650, 80)}}
 
@@ -89,7 +89,7 @@ Another example:
 </p>
 ```
 
-The output:
+#### Result
 
 {{EmbedLiveSample("Chemical_formulas", 650, 120)}}
 
@@ -136,8 +136,9 @@ The output:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">subscript</a
+          ></code
         >
       </td>
     </tr>

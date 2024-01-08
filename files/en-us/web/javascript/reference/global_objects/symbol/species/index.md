@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Symbol.species
 
 {{JSRef}}
 
-The **`Symbol.species`** static data property represents the well-known symbol specifying the method that a constructor function uses to create derived objects.
+The **`Symbol.species`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@species`. Methods that create copies of an object may look up this symbol on the object for the constructor function to use when creating the copy.
 
 > **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
@@ -55,10 +55,10 @@ console.log(mapped instanceof Array); // true
 
 ## See also
 
-- {{jsxref("Array.@@species", "Array[@@species]")}}
-- {{jsxref("ArrayBuffer.@@species", "ArrayBuffer[@@species]")}}
-- {{jsxref("Map.@@species", "Map[@@species]")}}
-- {{jsxref("Promise.@@species", "Promise[@@species]")}}
-- {{jsxref("RegExp.@@species", "RegExp[@@species]")}}
-- {{jsxref("Set.@@species", "Set[@@species]")}}
-- {{jsxref("TypedArray.@@species", "TypedArray[@@species]")}}
+- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
+- {{jsxref("Map/@@species", "Map[@@species]")}}
+- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- {{jsxref("RegExp/@@species", "RegExp[@@species]")}}
+- {{jsxref("Set/@@species", "Set[@@species]")}}
+- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}

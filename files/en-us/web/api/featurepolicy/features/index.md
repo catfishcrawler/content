@@ -1,5 +1,6 @@
 ---
-title: FeaturePolicy.features()
+title: "FeaturePolicy: features() method"
+short-title: features()
 slug: Web/API/FeaturePolicy/features
 page-type: web-api-instance-method
 status:
@@ -18,7 +19,7 @@ accessible because of user's permissions.
 ## Syntax
 
 ```js-nolint
-const supportedFeatures = FeaturePolicy.features()
+features()
 ```
 
 ### Parameters

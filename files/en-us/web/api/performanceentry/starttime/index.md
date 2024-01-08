@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.startTime
+title: "PerformanceEntry: startTime property"
+short-title: startTime
 slug: Web/API/PerformanceEntry/startTime
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.startTime
@@ -40,6 +41,8 @@ The meaning of this property depends on the value of this performance entry's {{
   - : The value of this entry's {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} property.
 - `taskattribution`
   - : Always `0`.
+- `visibility-state`
+  - : The time when the visibility state change occurred.
 
 ## Examples
 

@@ -1,6 +1,7 @@
 ---
 title: <msub>
 slug: Web/MathML/Element/msub
+page-type: mathml-element
 browser-compat: mathml.elements.msub
 ---
 
@@ -17,7 +18,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum amount to shift the baseline of the subscript down.
 
-> **Note:** For the `subscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Attribute/Values#legacy_mathml_lengths).
+> **Note:** For the `subscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
@@ -30,7 +31,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 </math>
 ```
 
-{{ EmbedLiveSample('msub_example', 700, 200, "", "") }}
+{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: MediaStreamTrackGenerator()
+title: "MediaStreamTrackGenerator: MediaStreamTrackGenerator() constructor"
+short-title: MediaStreamTrackGenerator()
 slug: Web/API/MediaStreamTrackGenerator/MediaStreamTrackGenerator
 page-type: web-api-constructor
 status:
@@ -50,4 +51,4 @@ const trackGenerator = new MediaStreamTrackGenerator({ kind: "video" });
 
 ## See also
 
-- [Insertable streams for MediaStreamTrack](https://web.dev/mediastreamtrack-insertable-media-processing/)
+- [Insertable streams for MediaStreamTrack](https://developer.chrome.com/docs/capabilities/web-apis/mediastreamtrack-insertable-media-processing)

@@ -1,5 +1,6 @@
 ---
-title: PushEvent.data
+title: "PushEvent: data property"
+short-title: data
 slug: Web/API/PushEvent/data
 page-type: web-api-instance-property
 browser-compat: api.PushEvent.data
@@ -11,7 +12,7 @@ The `data` read-only property of the **`PushEvent`** interface returns a referen
 
 ## Value
 
-A {{domxref("PushMessageData")}} object.
+A {{domxref("PushMessageData")}} object or `null` if no `data` member is passed when the event instance initialized.
 
 ## Examples
 
@@ -37,7 +38,7 @@ self.addEventListener("push", (event) => {
 
   notification.addEventListener("click", () => {
     clients.openWindow(
-      "https://example.blog.com/2015/03/04/something-new.html"
+      "https://example.blog.com/2015/03/04/something-new.html",
     );
   });
 });

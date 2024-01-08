@@ -1,7 +1,7 @@
 ---
 title: Getting started with Angular
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -94,7 +94,7 @@ To install Angular on your local system, you need the following:
 
 - **Node.js**
 
-  Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/about/releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
+  Angular requires a [current, active LTS, or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the `engines` key in the [package.json](https://unpkg.com/@angular/cli/package.json) file.
 
   For more information on installing Node.js, see [nodejs.org](https://nodejs.org).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
@@ -193,17 +193,16 @@ You create a component with a `@Component()` decorator that has metadata that te
 A typical component is as follows:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-item',
-    // the following metadata specifies the location of the other parts of the component
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.css']
+  selector: "app-item",
+  // the following metadata specifies the location of the other parts of the component
+  templateUrl: "./item.component.html",
+  styleUrls: ["./item.component.css"],
 })
-
 export class ItemComponent {
-// your code goes here
+  // your code goes here
 }
 ```
 
@@ -227,11 +226,11 @@ To refer to an external HTML file, use the `templateUrl` property:
 
 ```js
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html",
 })
-
 export class AppComponent {
+  // code goes here
 }
 ```
 
@@ -239,11 +238,11 @@ To write inline HTML, use the `template` property and write your HTML within bac
 
 ```js
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `<h1>Hi!</h1>`,
 })
-
 export class AppComponent {
+  // code goes here
 }
 ```
 
@@ -259,16 +258,15 @@ The double curly braces instruct Angular to interpolate the contents within them
 The value for `title` comes from the component class:
 
 ```js
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
-@Component ({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@Component({
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
-
 export class AppComponent {
-    title = 'To do application';
+  title = "To do application";
 }
 ```
 

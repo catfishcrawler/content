@@ -1,6 +1,7 @@
 ---
 title: aria-sort
 slug: Web/Accessibility/ARIA/Attributes/aria-sort
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-sort
 ---
 
@@ -58,7 +59,7 @@ We provided instructions in the caption for assistive technology who may not see
 - `other`
   - : A sorting algorithm other than ascending or descending has been applied.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaSort")}}
   - : The [`ariaSort`](/en-US/docs/Web/API/Element/ariaSort) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-sort` attribute.

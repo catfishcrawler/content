@@ -1,8 +1,9 @@
 ---
-title: RTCIceCandidatePairStats.responsesSent
+title: "RTCIceCandidatePairStats: responsesSent property"
+short-title: responsesSent
 slug: Web/API/RTCIceCandidatePairStats/responsesSent
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.responsesSent
+browser-compat: api.RTCStatsReport.type_candidate-pair.responsesSent
 ---
 
 {{APIRef("WebRTC")}}

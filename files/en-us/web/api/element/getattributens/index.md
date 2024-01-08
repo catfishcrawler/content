@@ -1,5 +1,6 @@
 ---
-title: Element.getAttributeNS()
+title: "Element: getAttributeNS() method"
+short-title: getAttributeNS()
 slug: Web/API/Element/getAttributeNS
 page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNS
@@ -61,7 +62,7 @@ In an HTML document the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -120,7 +121,3 @@ requested attribute does not exist on the specified element.
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Code snippets:getAttributeNS](/en-US/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)

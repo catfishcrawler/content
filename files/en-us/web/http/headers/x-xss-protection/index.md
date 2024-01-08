@@ -1,6 +1,7 @@
 ---
 title: X-XSS-Protection
 slug: Web/HTTP/Headers/X-XSS-Protection
+page-type: http-header
 status:
   - non-standard
 browser-compat: http.headers.X-XSS-Protection
@@ -87,7 +88,7 @@ header("X-XSS-Protection: 1; mode=block");
 
 Apache (.htaccess)
 
-```
+```apacheconf
 <IfModule mod_headers.c>
   Header set X-XSS-Protection "1; mode=block"
 </IfModule>
@@ -95,7 +96,7 @@ Apache (.htaccess)
 
 Nginx
 
-```
+```nginx
 add_header "X-XSS-Protection" "1; mode=block";
 ```
 

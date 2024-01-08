@@ -1,5 +1,6 @@
 ---
-title: WEBGL_compressed_texture_s3tc_srgb
+title: WEBGL_compressed_texture_s3tc_srgb extension
+short-title: WEBGL_compressed_texture_s3tc_srgb
 slug: Web/API/WEBGL_compressed_texture_s3tc_srgb
 page-type: webgl-extension
 browser-compat: api.WEBGL_compressed_texture_s3tc_srgb
@@ -43,7 +44,7 @@ gl.compressedTexImage2D(
   512,
   512,
   0,
-  textureData
+  textureData,
 );
 
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);

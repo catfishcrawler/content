@@ -1,8 +1,9 @@
 ---
-title: RTCIceCandidateStats.port
+title: "RTCIceCandidateStats: port property"
+short-title: port
 slug: Web/API/RTCIceCandidateStats/port
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidateStats.port
+browser-compat: api.RTCStatsReport.type_local-candidate.port
 ---
 
 {{APIRef("WebRTC")}}

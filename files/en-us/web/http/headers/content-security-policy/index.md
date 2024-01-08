@@ -1,6 +1,7 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
+page-type: http-header
 browser-compat: http.headers.Content-Security-Policy
 ---
 
@@ -70,8 +71,7 @@ where `<policy-directive>` consists of:
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
-  - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}},
-    and {{HTMLElement("applet")}} elements.
+  - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
     > **Note:** Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
@@ -80,7 +80,7 @@ where `<policy-directive>` consists of:
     > restrict this fetch-directive (e.g., explicitly set `object-src 'none'` if
     > possible).
 
-- {{CSP("prefetch-src")}} {{experimental_inline}}
+- {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
   - : Specifies valid sources for JavaScript and WebAssembly resources.
@@ -121,12 +121,7 @@ for example.
     given context.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
-    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, or
-    {{HTMLElement("applet")}}.
-- {{CSP("navigate-to")}} {{experimental_inline}}
-  - : Restricts the URLs to which a document can initiate navigation by any means,
-    including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
-    {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
+    {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
 
 ### Reporting directives
 
@@ -196,17 +191,20 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
 - `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ### Unsafe keyword values
 
 - `'unsafe-inline'`
   - : Allow use of inline resources.
 - `'unsafe-eval'`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("setTimeout()")}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `'unsafe-allow-redirects'` {{experimental_inline}}
-  - : TBD
+- `'wasm-unsafe-eval'`
+  - : Allows the loading and execution of WebAssembly modules without the need to also allow unsafe JavaScript execution via `'unsafe-eval'`.
+    The single quotes are required.
 
 ### Hosts values
 

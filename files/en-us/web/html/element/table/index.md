@@ -87,7 +87,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `center`: the table is displayed in the center of the document;
     - `right`: the table is displayed on the right side of the document.
 
-    Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to `auto` or {{cssxref("margin")}} to `0 auto` to achieve an effect that is similar to the align attribute.
+    Set {{cssxref("margin-left")}} and {{cssxref("margin-right")}} to achieve an effect that is similar to the align attribute:
+
+    - `left`: `margin-right: auto; margin-left: 0;`
+    - `center`: `margin-right: auto; margin-left: auto;`
+    - `right`: `margin-right: 0; margin-left: auto;`
 
 - `bgcolor` {{Deprecated_inline}}
 
@@ -136,6 +140,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `width` {{Deprecated_inline}}
   - : This attribute defines the width of the table. Use the CSS {{cssxref("width")}} property instead.
 
+> **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the height of the parent container.
+
 ## Examples
 
 ### Simple table
@@ -152,6 +158,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   </tr>
 </table>
 ```
+
+#### Result
 
 {{EmbedLiveSample('Simple_table', '100%', '100')}}
 
@@ -260,6 +268,8 @@ td {
   border: 1px solid black;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample('Further_simple_examples', '100%', '700')}}
 
@@ -619,7 +629,7 @@ This helps people navigating with the aid of assistive technology such as a scre
 
 The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header elements is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, scope can be specified to provide necessary information about the cells related to a header.
 
-#### Example
+#### Examples
 
 ```html
 <table>
@@ -648,6 +658,10 @@ The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header element
   </tbody>
 </table>
 ```
+
+##### Result
+
+{{EmbedLiveSample('Scoping_rows_and_columns')}}
 
 Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will help describe that the cell is at the top of a column. Providing a declaration of `scope="row"` on a {{HTMLElement("th")}} element will help describe that the cell is the first in a row.
 
@@ -682,6 +696,6 @@ If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs
 - CSS properties that may be especially useful to style the `<table>` element:
 
   - {{cssxref("width")}} to control the width of the table;
-  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
+  - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules, and frame;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;
   - {{cssxref("text-align")}} and {{cssxref("vertical-align")}} to define the alignment of text and cell content.

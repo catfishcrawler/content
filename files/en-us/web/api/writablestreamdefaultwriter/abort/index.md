@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter.abort()
+title: "WritableStreamDefaultWriter: abort() method"
+short-title: abort()
 slug: Web/API/WritableStreamDefaultWriter/abort
 page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.abort
@@ -54,7 +55,7 @@ const writableStream = new WritableStream(
       // ...
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 // ...

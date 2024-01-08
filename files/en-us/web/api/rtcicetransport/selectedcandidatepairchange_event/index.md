@@ -1,5 +1,6 @@
 ---
 title: "RTCIceTransport: selectedcandidatepairchange event"
+short-title: selectedcandidatepairchange
 slug: Web/API/RTCIceTransport/selectedcandidatepairchange_event
 page-type: web-api-event
 browser-compat: api.RTCIceTransport.selectedcandidatepairchange_event
@@ -45,7 +46,7 @@ iceTransport.addEventListener(
     localProtoElem.innerText = pair.local.protocol.toUpperCase();
     remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
   },
-  false
+  false,
 );
 ```
 

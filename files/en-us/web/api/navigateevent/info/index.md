@@ -1,5 +1,6 @@
 ---
-title: NavigateEvent.info
+title: "NavigateEvent: info property"
+short-title: info
 slug: Web/API/NavigateEvent/info
 page-type: web-api-instance-property
 status:
@@ -23,24 +24,26 @@ One example of how `info` might be used is to trigger different single-page navi
 ```js
 navigation.addEventListener("navigate", (event) => {
   if (isPhotoNavigation(event)) {
-    event.intercept({ async handler() {
-      switch (event.info.?via) {
-        case "go-left": {
-          await animateLeft();
-          break;
+    event.intercept({
+      async handler() {
+        switch (event.info?.via) {
+          case "go-left": {
+            await animateLeft();
+            break;
+          }
+          case "go-right": {
+            await animateRight();
+            break;
+          }
+          case "gallery": {
+            await animateZoomFromThumbnail(event.info.thumbnail);
+            break;
+          }
         }
-        case "go-right": {
-          await animateRight();
-          break;
-        }
-        case "gallery": {
-          await animateZoomFromThumbnail(event.info.thumbnail);
-          break;
-        }
-      }
 
-      // TODO: actually load the photo.
-    } });
+        // TODO: actually load the photo.
+      },
+    });
   }
 });
 ```

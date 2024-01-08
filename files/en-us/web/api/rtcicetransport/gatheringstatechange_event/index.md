@@ -1,5 +1,6 @@
 ---
 title: "RTCIceTransport: gatheringstatechange event"
+short-title: gatheringstatechange
 slug: Web/API/RTCIceTransport/gatheringstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCIceTransport.gatheringstatechange_event
@@ -45,7 +46,7 @@ pc.getSenders().forEach((sender) => {
         but others may still be working on it */
       }
     },
-    false
+    false,
   );
 });
 ```

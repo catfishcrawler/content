@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: loadedmetadata event"
+short-title: loadedmetadata
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadedmetadata_event
@@ -34,7 +35,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("loadedmetadata", (event) => {
   console.log(
-    "The duration and dimensions of the media and tracks are now known."
+    "The duration and dimensions of the media and tracks are now known.",
   );
 });
 ```
@@ -46,7 +47,7 @@ const video = document.querySelector("video");
 
 video.onloadedmetadata = (event) => {
   console.log(
-    "The duration and dimensions of the media and tracks are now known."
+    "The duration and dimensions of the media and tracks are now known.",
   );
 };
 ```
@@ -86,4 +87,3 @@ video.onloadedmetadata = (event) => {
 - {{domxref("HTMLVideoElement")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
-- This event is part of gecko's [Audio API extension](/en-US/docs/Introducing_the_Audio_API_Extension)

@@ -1,5 +1,6 @@
 ---
-title: KeyboardEvent.keyCode
+title: "KeyboardEvent: keyCode property"
+short-title: keyCode
 slug: Web/API/KeyboardEvent/keyCode
 page-type: web-api-instance-property
 status:
@@ -41,7 +42,7 @@ window.addEventListener(
       event.preventDefault();
     }
   },
-  true
+  true,
 );
 ```
 
@@ -63,7 +64,7 @@ IE just exposes the native virtual keycode value as `KeyboardEvent.keyCode`.
 
 Google Chrome, Chromium and Safari must decide the value from the input character. If the inputting character can be inputted with the US keyboard layout, they use the `keyCode` value on the US keyboard layout.
 
-Firefox gets `keyCode` values from ASCII characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
+Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable by the key — even with shift modifiers or an ASCII capable keyboard layout. See the following rules for details:
 
 1. If the system is Windows and the native keycode of the pressed key indicates that the key is a-z or 0-9, use a keycode for it.
 2. If the system is Mac and the native keycode of the pressed key indicates that the key is 0-9, use a keycode for it.
@@ -1151,7 +1152,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x11 (17)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSLeft"</code></th>
+      <th scope="row"><code>"MetaLeft"</code></th>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
       <td><code>0x5B (91)</code></td>
@@ -1162,7 +1163,7 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td><code>0x5B (91)</code></td>
     </tr>
     <tr>
-      <th scope="row"><code>"OSRight"</code></th>
+      <th scope="row"><code>"MetaRight"</code></th>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5C (92)</code></td>
       <td><code>0x5D (93)</code>⚠️</td>

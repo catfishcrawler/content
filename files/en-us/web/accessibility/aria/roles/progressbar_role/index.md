@@ -1,6 +1,7 @@
 ---
 title: "ARIA: progressbar role"
 slug: Web/Accessibility/ARIA/Roles/progressbar_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#progressbar
 ---
 
@@ -107,6 +108,6 @@ It is recommended to use a native {{HTMLElement("progress")}} or [`<input type="
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

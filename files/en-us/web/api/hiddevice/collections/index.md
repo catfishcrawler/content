@@ -1,5 +1,6 @@
 ---
-title: HIDDevice.collections
+title: "HIDDevice: collections property"
+short-title: collections
 slug: Web/API/HIDDevice/collections
 page-type: web-api-instance-property
 status:
@@ -59,7 +60,7 @@ An array of report formats. Each entry contains the following:
 
 ## Examples
 
-The following example demonstrates how to access the various elements once the `collections` property has been returned. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+The following example demonstrates how to access the various elements once the `collections` property has been returned. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 for (const collection of device.collections) {

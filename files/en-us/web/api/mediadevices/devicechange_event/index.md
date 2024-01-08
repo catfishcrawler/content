@@ -1,5 +1,6 @@
 ---
 title: "MediaDevices: devicechange event"
+short-title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 page-type: web-api-event
 browser-compat: api.MediaDevices.devicechange_event
@@ -54,7 +55,10 @@ media device is attached to or removed from the device running the sample.
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -134,7 +138,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: MediaStreamAudioSourceNode()
+title: "MediaStreamAudioSourceNode: MediaStreamAudioSourceNode() constructor"
+short-title: MediaStreamAudioSourceNode()
 slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
 page-type: web-api-constructor
 browser-compat: api.MediaStreamAudioSourceNode.MediaStreamAudioSourceNode
@@ -63,7 +64,7 @@ if (navigator.mediaDevices.getUserMedia) {
       {
         audio: true,
         video: false,
-      }
+      },
     )
     .then((stream) => {
       const options = {

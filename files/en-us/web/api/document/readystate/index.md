@@ -1,5 +1,6 @@
 ---
-title: Document.readyState
+title: "Document: readyState property"
+short-title: readyState
 slug: Web/API/Document/readyState
 page-type: web-api-instance-property
 browser-compat: api.Document.readyState
@@ -44,7 +45,7 @@ switch (document.readyState) {
   case "complete":
     // The page is fully loaded.
     console.log(
-      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`
+      `The first CSS rule is: ${document.styleSheets[0].cssRules[0].cssText}`,
     );
     break;
 }

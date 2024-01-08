@@ -1,13 +1,14 @@
 ---
-title: File.lastModified
+title: "File: lastModified property"
+short-title: lastModified
 slug: Web/API/File/lastModified
 page-type: web-api-instance-property
 browser-compat: api.File.lastModified
 ---
 
-{{APIRef("File")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`File.lastModified`** read-only property provides the
+The **`lastModified`** read-only property of the {{domxref("File")}} interface provides the
 last modified date of the file as the number of milliseconds since the Unix
 epoch (January 1, 1970 at midnight). Files without a known last modified date return the
 current date.
@@ -79,7 +80,7 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of
+To offer protection against timing attacks and {{glossary("fingerprinting")}}, the precision of
 `someFile.lastModified` might get rounded depending on browser settings.
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by
 default and defaults to 20us in Firefox 59; in 60 it will be 2ms.

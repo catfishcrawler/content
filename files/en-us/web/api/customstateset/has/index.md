@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.has()
+title: "CustomStateSet: has() method"
+short-title: has()
 slug: Web/API/CustomStateSet/has
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.CustomStateSet.has
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`has()`** method of the {{domxref("CustomStateSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
 

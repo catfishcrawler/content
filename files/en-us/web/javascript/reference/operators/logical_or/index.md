@@ -19,13 +19,13 @@ non-Boolean value.
 ## Syntax
 
 ```js-nolint
-expr1 || expr2
+x || y
 ```
 
 ## Description
 
-If `expr1` can be converted to `true`, returns
-`expr1`; else, returns `expr2`.
+If `x` can be converted to `true`, returns
+`x`; else, returns `y`.
 
 If a value can be converted to `true`, the value is so-called
 {{Glossary("truthy")}}. If a value can be converted to `false`, the value is
@@ -43,8 +43,7 @@ Even though the `||` operator can be used with operands that are not Boolean
 values, it can still be considered a boolean operator since its return value can always
 be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
 To explicitly convert its return value (or any expression in general) to the
-corresponding boolean value, use a double {{JSxRef("Operators/Logical_NOT", "NOT
-operator", "", 1)}} or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
+corresponding boolean value, use a double {{jsxref("Operators/Logical_NOT", "NOT operator", "", 1)}} or the {{jsxref("Boolean/Boolean", "Boolean()")}}
 constructor.
 
 ### Short-circuit evaluation
@@ -80,9 +79,9 @@ console.log(B() || A());
 
 The following expressions might seem equivalent, but they are not, because the
 `&&` operator is executed before the `||` operator
-(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+(see [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-```js
+```js-nolint
 true || false && false; // returns true, because && is executed first
 (true || false) && false; // returns false, because grouping has the highest precedence
 ```
@@ -168,7 +167,7 @@ is always equal to:
 
 ## See also
 
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

@@ -1,5 +1,6 @@
 ---
-title: PerformanceObserver()
+title: "PerformanceObserver: PerformanceObserver() constructor"
+short-title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
 page-type: web-api-constructor
 browser-compat: api.PerformanceObserver.PerformanceObserver
@@ -64,7 +65,7 @@ function perfObserver(list, observer, droppedEntriesCount) {
   });
   if (droppedEntriesCount > 0) {
     console.warn(
-      `${droppedEntriesCount} entries got dropped due to the buffer being full.`
+      `${droppedEntriesCount} entries got dropped due to the buffer being full.`,
     );
   }
 }

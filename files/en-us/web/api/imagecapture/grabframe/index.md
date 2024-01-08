@@ -1,5 +1,6 @@
 ---
-title: ImageCapture.grabFrame()
+title: "ImageCapture: grabFrame() method"
+short-title: grabFrame()
 slug: Web/API/ImageCapture/grabFrame
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.grabFrame
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`grabFrame()`** method of the
 {{domxref("ImageCapture")}} interface takes a snapshot of the live video in a
@@ -27,6 +28,13 @@ None.
 ### Return value
 
 A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `UnknownError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
 
 ## Examples
 

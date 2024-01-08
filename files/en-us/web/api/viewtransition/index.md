@@ -2,7 +2,8 @@
 title: ViewTransition
 slug: Web/API/ViewTransition
 page-type: web-api-interface
-status: experimental
+status:
+  - experimental
 browser-compat: api.ViewTransition
 ---
 
@@ -50,7 +51,7 @@ function spaNavigate(data) {
   // Get the distance to the furthest corner
   const endRadius = Math.hypot(
     Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y)
+    Math.max(y, innerHeight - y),
   );
 
   // Create a transition:
@@ -73,7 +74,7 @@ function spaNavigate(data) {
         easing: "ease-in",
         // Specify which pseudo-element to animate
         pseudoElement: "::view-transition-new(root)",
-      }
+      },
     );
   });
 }

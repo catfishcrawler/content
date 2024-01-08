@@ -1,5 +1,6 @@
 ---
-title: Touch.pageY
+title: "Touch: pageY property"
+short-title: pageY
 slug: Web/API/Touch/pageY
 page-type: web-api-instance-property
 browser-compat: api.Touch.pageY
@@ -12,8 +13,8 @@ coordinate of the touch point relative to the viewport, including any scroll off
 
 ## Value
 
-A `long` value that represents the Y coordinate of the touch point relative
-to the viewport, including any scroll offset.
+A `double` floating point value representing the Y coordinate of the touch point
+relative to the viewport, including any scroll offset.
 
 ## Examples
 
@@ -44,7 +45,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
     }
   },
-  false
+  false,
 );
 ```
 

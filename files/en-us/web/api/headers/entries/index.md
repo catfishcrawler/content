@@ -1,11 +1,12 @@
 ---
-title: Headers.entries()
+title: "Headers: entries() method"
+short-title: entries()
 slug: Web/API/Headers/entries
 page-type: web-api-instance-method
 browser-compat: api.Headers.entries
 ---
 
-{{APIRef}}
+{{APIRef("Fetch API")}}
 
 The **`Headers.entries()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs
@@ -44,7 +45,7 @@ for (const pair of myHeaders.entries()) {
 
 The result is:
 
-```
+```plain
 content-type: text/xml
 vary: Accept-Language
 ```

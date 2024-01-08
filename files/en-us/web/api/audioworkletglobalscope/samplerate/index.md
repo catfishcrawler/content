@@ -1,5 +1,6 @@
 ---
-title: AudioWorkletGlobalScope.sampleRate
+title: "AudioWorkletGlobalScope: sampleRate property"
+short-title: sampleRate
 slug: Web/API/AudioWorkletGlobalScope/sampleRate
 page-type: web-api-instance-property
 browser-compat: api.AudioWorkletGlobalScope.sampleRate
@@ -49,7 +50,7 @@ console.log(usefulVariable);
 registerProcessor("test-processor", TestProcessor);
 ```
 
-The main script loads the processor, creates an instance of {{domxref("AudioWorkletNode")}}, passes the name of the processor to it, and connects the node to an audio graph. We should see the output of {{domxref("console.log()")}} calls in the console:
+The main script loads the processor, creates an instance of {{domxref("AudioWorkletNode")}}, passes the name of the processor to it, and connects the node to an audio graph. We should see the output of {{domxref("console/log_static", "console.log()")}} calls in the console:
 
 ```js
 const audioContext = new AudioContext();

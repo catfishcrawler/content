@@ -1,5 +1,6 @@
 ---
 title: "SpeechSynthesisUtterance: end event"
+short-title: end
 slug: Web/API/SpeechSynthesisUtterance/end_event
 page-type: web-api-event
 browser-compat: api.SpeechSynthesisUtterance.end_event
@@ -45,7 +46,7 @@ You can use the `end` event in an [`addEventListener`](/en-US/docs/Web/API/Event
 ```js
 utterThis.addEventListener("end", (event) => {
   console.log(
-    `Utterance has finished being spoken after ${event.elapsedTime} seconds.`
+    `Utterance has finished being spoken after ${event.elapsedTime} seconds.`,
   );
 });
 ```
@@ -55,7 +56,7 @@ Or use the `onend` event handler property:
 ```js
 utterThis.onend = (event) => {
   console.log(
-    `Utterance has finished being spoken after ${event.elapsedTime} seconds.`
+    `Utterance has finished being spoken after ${event.elapsedTime} seconds.`,
   );
 };
 ```

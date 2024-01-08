@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Permissions
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}} {{AvailableInWorkers}}
 
 The Permissions interface of the [Permissions API](/en-US/docs/Web/API/Permissions_API) provides the core Permission API functionality, such as methods for querying and revoking permissions
 
@@ -23,7 +23,7 @@ The Permissions interface of the [Permissions API](/en-US/docs/Web/API/Permissio
 ## Example
 
 ```js
-navigator.permissions.query({ name: " geolocation" }).then((result) => {
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
   if (result.state === "granted") {
     showLocalNewsWithGeolocation();
   } else if (result.state === "prompt") {
@@ -37,6 +37,6 @@ navigator.permissions.query({ name: " geolocation" }).then((result) => {
 
 {{Specifications}}
 
-## Browser Support
+## Browser compatibility
 
 {{Compat}}

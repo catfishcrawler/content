@@ -1,5 +1,6 @@
 ---
-title: NavigationPreloadManager.getState()
+title: "NavigationPreloadManager: getState() method"
+short-title: getState()
 slug: Web/API/NavigationPreloadManager/getState
 page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.getState
@@ -46,7 +47,7 @@ navigator.serviceWorker.ready
     console.log(state.headerValue); // string
   })
   .catch((e) =>
-    console.error(`NavigationPreloadManager not supported: ${e.message}`)
+    console.error(`NavigationPreloadManager not supported: ${e.message}`),
   );
 ```
 

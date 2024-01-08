@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: progress event"
+short-title: progress
 slug: Web/API/HTMLMediaElement/progress_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.progress_event
@@ -103,7 +104,7 @@ loadVideo.addEventListener("click", () => {
     source = document.createElement("source");
     source.setAttribute(
       "src",
-      "https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4"
+      "https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.mp4",
     );
     source.setAttribute("type", "video/mp4");
 

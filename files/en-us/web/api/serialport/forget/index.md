@@ -1,5 +1,6 @@
 ---
-title: SerialPort.forget()
+title: "SerialPort: forget() method"
+short-title: forget()
 slug: Web/API/SerialPort/forget
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.SerialPort.forget
 ---
 
-{{securecontext_header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
 
 The **`SerialPort.forget()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the serial port is closed and is forgotten.
 

@@ -1,5 +1,5 @@
 ---
-title: '<article>: The Article Contents element'
+title: "<article>: The Article Contents element"
 slug: Web/HTML/Element/article
 page-type: html-element
 browser-compat: html.elements.article
@@ -139,7 +139,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 ## Result
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples','','570')}}
 
 ## Specifications
 

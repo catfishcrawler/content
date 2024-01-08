@@ -1,5 +1,6 @@
 ---
-title: KHR_parallel_shader_compile
+title: KHR_parallel_shader_compile extension
+short-title: KHR_parallel_shader_compile
 slug: Web/API/KHR_parallel_shader_compile
 page-type: webgl-extension
 browser-compat: api.KHR_parallel_shader_compile
@@ -43,7 +44,7 @@ function* linkingProgress(programs) {
   while (todo.length) {
     if (ext) {
       todo = todo.filter(
-        (x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR)
+        (x) => !gl.getProgramParameter(x, ext.COMPLETION_STATUS_KHR),
       );
     } else {
       const x = todo.pop();

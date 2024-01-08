@@ -1,5 +1,5 @@
 ---
-title: '<time>: The (Date) Time element'
+title: "<time>: The (Date) Time element"
 slug: Web/HTML/Element/time
 page-type: html-element
 browser-compat: html.elements.time
@@ -85,7 +85,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 <p>The concert starts at <time datetime="2018-07-07T20:00:00">20:00</time>.</p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('Simple_example', 250, 80)}}
 
@@ -99,7 +99,7 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 </p>
 ```
 
-#### Output
+#### Result
 
 {{EmbedLiveSample('datetime_example', 250, 80)}}
 
@@ -146,8 +146,9 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">time</a
+          ></code
         >
       </td>
     </tr>

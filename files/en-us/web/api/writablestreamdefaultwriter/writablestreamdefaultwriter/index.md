@@ -1,5 +1,6 @@
 ---
-title: WritableStreamDefaultWriter()
+title: "WritableStreamDefaultWriter: WritableStreamDefaultWriter() constructor"
+short-title: WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 page-type: web-api-constructor
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
@@ -105,7 +106,7 @@ const writableStream = new WritableStream(
       console.log("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 sendMessage("Hello, world.", writableStream);

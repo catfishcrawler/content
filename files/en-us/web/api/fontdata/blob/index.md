@@ -1,5 +1,6 @@
 ---
-title: FontData.blob()
+title: "FontData: blob() method"
+short-title: blob()
 slug: Web/API/FontData/blob
 page-type: web-api-instance-method
 status:
@@ -71,5 +72,7 @@ async function computeOutlineFormat() {
 
 {{Compat}}
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+## See also
+
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}

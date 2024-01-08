@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.backgroundFetch
+title: "ServiceWorkerRegistration: backgroundFetch property"
+short-title: backgroundFetch
 slug: Web/API/ServiceWorkerRegistration/backgroundFetch
 page-type: web-api-instance-property
 status:
@@ -35,7 +36,7 @@ async function requestBackgroundFetch(movieData) {
       title: "Downloading my movie",
       downloadTotal: 60 * 1024 * 1024,
       label: "Downloading a show",
-    }
+    },
   );
   //...
 }

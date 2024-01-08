@@ -1,6 +1,7 @@
 ---
 title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -35,7 +36,7 @@ Highlights:
 
 ### JavaScript
 
-- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
+- The "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" for [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) declarations has been implemented. In conformance with ES2015 `let` semantics, the following situations now throw errors. See also this [newsgroup announcement](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) and [Firefox bug 1001090](https://bugzil.la/1001090).
 
   - Redeclaring existing variables or arguments using `let` within the same scope in function bodies is now a syntax error.
   - Using a variable declared using `let` in function bodies before the declaration is reached and evaluated is now a runtime error.
@@ -66,7 +67,7 @@ Highlights:
 - The internal, non-standard, `File.mozFullPath` property is no more visible from content ([Firefox bug 1048293](https://bugzil.la/1048293)).
 - The constructor of {{domxref("File")}} has been extended to match the specification ([Firefox bug 1047483](https://bugzil.la/1047483)).
 - An experimental implementation of `AbortablePromise`, a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([Firefox bug 1035060](https://bugzil.la/1035060)).
-- The non-standard {{domxref("Navigator.mozIsLocallyAvailable")}} property has been removed ([Firefox bug 1066826](https://bugzil.la/1066826)).
+- The non-standard `Navigator.mozIsLocallyAvailable` property has been removed ([Firefox bug 1066826](https://bugzil.la/1066826)).
 - The preference `network.websocket.enabled`, `true` by default, has been removed; [Websocket](/en-US/docs/Web/API/WebSockets_API) API cannot be deactivated anymore ([Firefox bug 1091016](https://bugzil.la/1091016)).
 - The non-standard methods and properties of {{domxref("Crypto")}} have been removed ([Firefox bug 1030963](https://bugzil.la/1030963)). Only methods and properties defined in the standard WebCrypto API are left.
 - Our experimental implementation of WebGL 2.0 is going forward!

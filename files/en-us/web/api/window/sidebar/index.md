@@ -1,5 +1,6 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
 page-type: web-api-instance-property
 status:
@@ -98,5 +99,5 @@ Mozilla-specific. Not part of any standard.
 
 ## Browser compatibility
 
-Moved behind preference in Firefox 102.
+Removed in Firefox 102.
 For more information see Firefox compatibility information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).

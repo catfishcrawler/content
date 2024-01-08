@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.screenX
+title: "MouseEvent: screenX property"
+short-title: screenX
 slug: Web/API/MouseEvent/screenX
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.screenX
@@ -7,7 +8,7 @@ browser-compat: api.MouseEvent.screenX
 
 {{APIRef("UI Events")}}
 
-The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
+The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
 
 > **Note:** In a multiscreen environment, screens aligned horizontally will be treated as a single device, and so the range of the `screenX` value will increase to the combined width of the screens.
 
@@ -70,3 +71,4 @@ function checkClickMap(e) {
 - {{ domxref("MouseEvent") }}
 - {{ domxref("MouseEvent.screenY","screenY") }}
 - {{ domxref("MouseEvent.clientX","clientX") }} / {{ domxref("MouseEvent.clientY", "clientY") }}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

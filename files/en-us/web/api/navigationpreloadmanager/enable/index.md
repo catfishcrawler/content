@@ -1,5 +1,6 @@
 ---
-title: NavigationPreloadManager.enable()
+title: "NavigationPreloadManager: enable() method"
+short-title: enable()
 slug: Web/API/NavigationPreloadManager/enable
 page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.enable
@@ -43,7 +44,7 @@ addEventListener("activate", (event) => {
         // Enable navigation preloads!
         await self.registration.navigationPreload.enable();
       }
-    })()
+    })(),
   );
 });
 ```

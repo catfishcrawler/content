@@ -1,5 +1,6 @@
 ---
-title: VRDisplayCapabilities.hasExternalDisplay
+title: "VRDisplayCapabilities: hasExternalDisplay property"
+short-title: hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 page-type: web-api-instance-property
 status:
@@ -36,5 +37,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

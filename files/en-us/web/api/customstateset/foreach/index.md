@@ -1,5 +1,6 @@
 ---
-title: CustomStateSet.forEach()
+title: "CustomStateSet: forEach() method"
+short-title: forEach()
 slug: Web/API/CustomStateSet/forEach
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.CustomStateSet.forEach
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}{{SeeCompatTable}}
 
 The **`forEach()`** method of the {{domxref("CustomStateSet")}} interface executes a provided function for each value in the `CustomStateSet` object.
 

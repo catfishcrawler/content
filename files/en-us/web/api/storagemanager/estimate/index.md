@@ -1,5 +1,6 @@
 ---
-title: StorageManager.estimate()
+title: "StorageManager: estimate() method"
+short-title: estimate()
 slug: Web/API/StorageManager/estimate
 page-type: web-api-instance-method
 browser-compat: api.StorageManager.estimate
@@ -10,6 +11,8 @@ browser-compat: api.StorageManager.estimate
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
 
 This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler is called with an object containing the usage and quota data.
+
+{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -40,20 +43,25 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
 
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
+
 ## Examples
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
-### HTML content
+### HTML
 
 ```html
 <label>
   You're currently using about <output id="percent"> </output>% of your
-  available storage.
+  estimated storage quota (<output id="quota"></output>).
 </label>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
 navigator.storage.estimate().then((estimate) => {
@@ -61,6 +69,8 @@ navigator.storage.estimate().then((estimate) => {
     (estimate.usage / estimate.quota) *
     100
   ).toFixed(2);
+  document.getElementById("quota").value =
+    (estimate.quota / 1024 / 1024).toFixed(2) + "MB";
 });
 ```
 
@@ -78,7 +88,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ## See also
 
-- Storage API
+- [Storage API](/en-US/docs/Web/API/Storage_API)
 - {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
 - {{domxref("StorageManager")}}
 - {{domxref("navigator.storage")}}

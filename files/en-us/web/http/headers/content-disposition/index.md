@@ -1,6 +1,7 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
+page-type: http-header
 browser-compat: http.headers.Content-Disposition
 ---
 
@@ -124,4 +125,4 @@ value2
 
 - [HTML Forms](/en-US/docs/Learn/Forms)
 - The {{HTTPHeader("Content-Type")}} defining the boundary of the multipart body.
-- The {{domxref("FormData")}} interface used to manipulate form data for use in the {{domxref("XMLHttpRequest")}} API.
+- The {{domxref("FormData")}} interface used to prepare form data for use in the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs.

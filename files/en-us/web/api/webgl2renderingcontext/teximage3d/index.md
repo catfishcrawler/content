@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.texImage3D()
+title: "WebGL2RenderingContext: texImage3D() method"
+short-title: texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texImage3D
@@ -141,7 +142,7 @@ gl.texImage3D(
   0, // border
   gl.RGBA, // format
   gl.UNSIGNED_BYTE, // type
-  new Uint8Array([0xff, 0x00, 0x00, 0x00])
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
 ); // data
 ```
 

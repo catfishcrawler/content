@@ -7,10 +7,7 @@ browser-compat: javascript.builtins.String.String
 
 {{JSRef}}
 
-The **`String`** constructor is used to create a new
-{{jsxref("String")}} object. When called instead as a function, it performs type
-conversion to a {{Glossary("string", "primitive string")}}, which is usually more
-useful.
+The **`String()`** constructor creates {{jsxref("String")}} objects. When called as a function, it returns primitive values of type String.
 
 ## Syntax
 
@@ -79,4 +76,4 @@ String(sym); // "Symbol(example)"
 
 ## See also
 
-- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide

@@ -1,5 +1,6 @@
 ---
-title: MouseEvent.clientY
+title: "MouseEvent: clientY property"
+short-title: clientY
 slug: Web/API/MouseEvent/clientY
 page-type: web-api-instance-property
 browser-compat: api.MouseEvent.clientY
@@ -55,5 +56,5 @@ function logKey(e) {
 
 - {{ domxref("MouseEvent") }}
 - {{domxref("MouseEvent.clientX","clientX")}}
-- {{domxref("MouseEvent.screenX","screenX")}} /
-  {{domxref("MouseEvent.screenY","screenY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

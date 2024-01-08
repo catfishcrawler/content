@@ -1,5 +1,6 @@
 ---
-title: Window.resizeBy()
+title: "Window: resizeBy() method"
+short-title: resizeBy()
 slug: Web/API/Window/resizeBy
 page-type: web-api-instance-method
 browser-compat: api.Window.resizeBy
@@ -53,7 +54,7 @@ default.** To make the window resizable, you must open it with the
 myExternalWindow = window.open(
   "https://example.com",
   "myWindowName",
-  "resizable"
+  "resizable",
 );
 
 // Resize window to 500x500

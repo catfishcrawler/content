@@ -1,5 +1,5 @@
 ---
-title: Performance API
+title: Performance APIs
 slug: Web/API/Performance_API
 page-type: web-api-overview
 spec-urls:
@@ -33,9 +33,13 @@ The main {{domxref("Performance")}} interface is available for each global using
 
 The {{domxref("PerformanceObserver")}} interface enables you to listen for various types of performance entry as they are recorded.
 
+For more conceptual information, see the [Performance API guides](#guides) below.
+
 ![UML diagram of Performance APIs](diagram.svg)
 
-## Interfaces
+## Reference
+
+The following interfaces are present in the Performance API:
 
 - {{domxref("EventCounts")}}
   - : A read-only map returned by {{domxref("performance.eventCounts")}} containing the number of events which have been dispatched per event type.
@@ -73,14 +77,19 @@ The {{domxref("PerformanceObserver")}} interface enables you to listen for vario
   - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
 - {{domxref("TaskAttributionTiming")}}
   - : Identifies the type of task and the container that is responsible for the long task.
+- {{domxref("VisibilityStateEntry")}}
+  - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
-## Guides and tutorials
+## Guides
 
-- [Using the Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_API)
-- [Using Performance Timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-- [Using the User Timing API](/en-US/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
-- [Using Navigation Timing](/en-US/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing)
-- [Using the Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+The following guides help you to understand key concepts of the Performance API and provide an overview about its abilities:
+
+- [Performance data](/en-US/docs/Web/API/Performance_API/Performance_data): Collecting, accessing, and working with performance data.
+- [High precision timing](/en-US/docs/Web/API/Performance_API/High_precision_timing): Measuring with high precision time and monotonic clocks.
+- [Resource timing](/en-US/docs/Web/API/Performance_API/Resource_timing): Measuring network timing for fetched resources, such as images, CSS, and JavaScript.
+- [Navigation timing](/en-US/docs/Web/API/Performance_API/Navigation_timing): Measuring navigation timing of a document.
+- [User timing](/en-US/docs/Web/API/Performance_API/User_timing): Measuring and recording performance data custom to your application.
+- [Server timing](/en-US/docs/Web/API/Performance_API/Server_timing): Collecting server-side metrics.
 
 ## Specifications
 

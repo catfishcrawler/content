@@ -1,5 +1,6 @@
 ---
-title: OVR_multiview2.framebufferTextureMultiviewOVR()
+title: "OVR_multiview2: framebufferTextureMultiviewOVR() method"
+short-title: framebufferTextureMultiviewOVR()
 slug: Web/API/OVR_multiview2/framebufferTextureMultiviewOVR
 page-type: webgl-extension-method
 browser-compat: api.OVR_multiview2.framebufferTextureMultiviewOVR
@@ -97,7 +98,7 @@ ext.framebufferTextureMultiviewOVR(
   colorTex,
   0,
   0,
-  2
+  2,
 );
 ```
 

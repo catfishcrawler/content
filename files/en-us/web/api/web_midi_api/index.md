@@ -2,11 +2,11 @@
 title: Web MIDI API
 slug: Web/API/Web_MIDI_API
 page-type: web-api-overview
-spec-urls: https://webaudio.github.io/web-midi-api/
 browser-compat:
   - api.Navigator.requestMIDIAccess
   - http.headers.Permissions-Policy.midi
   - api.Permissions.permission_midi
+spec-urls: https://webaudio.github.io/web-midi-api/
 ---
 
 {{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
@@ -40,7 +40,7 @@ Therefore, the API can be used for musical and non-musical uses, with any MIDI d
 Access to the API is requested using the {{domxref("navigator.requestMIDIAccess()")}} method.
 
 - The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
-- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Feature_Policy).
+- Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - The user must explicitly grant permission to use the API through a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
 
@@ -91,14 +91,14 @@ function listInputsAndOutputs(midiAccess) {
         ` id:'${input.id}'` +
         ` manufacturer:'${input.manufacturer}'` +
         ` name:'${input.name}'` +
-        ` version:'${input.version}'`
+        ` version:'${input.version}'`,
     );
   }
 
   for (const entry of midiAccess.outputs) {
     const output = entry[1];
     console.log(
-      `Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`
+      `Output port [type:'${output.type}'] id:'${output.id}' manufacturer:'${output.manufacturer}' name:'${output.name}' version:'${output.version}'`,
     );
   }
 }
@@ -106,7 +106,7 @@ function listInputsAndOutputs(midiAccess) {
 
 ### Handling MIDI Input
 
-This example prints incoming MIDI messages on a single port to the console.
+This example prints all MIDI input messages to the console.
 
 ```js
 function onMIDIMessage(event) {
@@ -117,7 +117,7 @@ function onMIDIMessage(event) {
   console.log(str);
 }
 
-function startLoggingMIDIInput(midiAccess, indexOfPort) {
+function startLoggingMIDIInput(midiAccess) {
   midiAccess.inputs.forEach((entry) => {
     entry.onmidimessage = onMIDIMessage;
   });

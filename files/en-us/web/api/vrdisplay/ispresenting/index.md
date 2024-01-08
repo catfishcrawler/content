@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.isPresenting
+title: "VRDisplay: isPresenting property"
+short-title: isPresenting
 slug: Web/API/VRDisplay/isPresenting
 page-type: web-api-instance-property
 status:
@@ -36,7 +37,7 @@ function onVRExitPresent() {
         errMsg += `<br/>${err.message}`;
       }
       VRSamplesUtil.addError(errMsg, 2000);
-    }
+    },
   );
 }
 ```
@@ -55,5 +56,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

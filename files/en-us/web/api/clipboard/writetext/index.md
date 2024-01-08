@@ -1,5 +1,6 @@
 ---
-title: Clipboard.writeText()
+title: "Clipboard: writeText() method"
+short-title: writeText()
 slug: Web/API/Clipboard/writeText
 page-type: web-api-instance-method
 browser-compat: api.Clipboard.writeText
@@ -46,7 +47,7 @@ navigator.clipboard.writeText("<empty clipboard>").then(
   },
   () => {
     /* clipboard write failed */
-  }
+  },
 );
 ```
 
@@ -61,5 +62,4 @@ navigator.clipboard.writeText("<empty clipboard>").then(
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

@@ -1,6 +1,7 @@
 ---
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
+page-type: http-header
 status:
   - non-standard
 ---
@@ -88,7 +89,7 @@ X-Forwarded-For: 203.0.113.195
 
 X-Forwarded-For: 203.0.113.195, 2001:db8:85a3:8d3:1319:8a2e:370:7348
 
-X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,150.172.238.178
+X-Forwarded-For: 203.0.113.195,2001:db8:85a3:8d3:1319:8a2e:370:7348,198.51.100.178
 ```
 
 ## Parsing

@@ -1,6 +1,7 @@
 ---
 title: id
 slug: Web/Manifest/id
+page-type: web-manifest-member
 browser-compat: html.manifest.id
 ---
 
@@ -11,10 +12,6 @@ browser-compat: html.manifest.id
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

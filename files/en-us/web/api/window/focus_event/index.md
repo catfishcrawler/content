@@ -1,5 +1,6 @@
 ---
 title: "Window: focus event"
+short-title: focus
 slug: Web/API/Window/focus_event
 page-type: web-api-event
 browser-compat: api.Window.focus_event
@@ -25,7 +26,7 @@ onfocus = (event) => {};
 
 ## Event type
 
-A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

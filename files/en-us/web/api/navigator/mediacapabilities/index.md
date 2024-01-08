@@ -1,5 +1,6 @@
 ---
-title: Navigator.mediaCapabilities
+title: "Navigator: mediaCapabilities property"
+short-title: mediaCapabilities
 slug: Web/API/Navigator/mediaCapabilities
 page-type: web-api-instance-property
 browser-compat: api.Navigator.mediaCapabilities
@@ -31,7 +32,7 @@ navigator.mediaCapabilities
   })
   .then((result) => {
     console.log(
-      `This configuration is ${result.supported ? "" : "not "}supported,`
+      `This configuration is ${result.supported ? "" : "not "}supported,`,
     );
     console.log(`${result.smooth ? "" : "not "}smooth, and`);
     console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);

@@ -1,6 +1,7 @@
 ---
 title: "ARIA: status role"
 slug: Web/Accessibility/ARIA/Roles/status_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#status
 ---
 
@@ -44,6 +45,6 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

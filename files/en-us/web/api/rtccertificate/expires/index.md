@@ -1,5 +1,6 @@
 ---
-title: RTCCertificate.expires
+title: "RTCCertificate: expires property"
+short-title: expires
 slug: Web/API/RTCCertificate/expires
 page-type: web-api-instance-property
 browser-compat: api.RTCCertificate.expires
@@ -41,4 +42,4 @@ RTCPeerConnection.generateCertificate({
 
 ## See also
 
-- {{domxref("RTCPeerConnection.generateCertificate()")}}
+- {{domxref("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}}

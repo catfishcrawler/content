@@ -1,13 +1,14 @@
 ---
 title: "FileReader: error event"
+short-title: error
 slug: Web/API/FileReader/error_event
 page-type: web-api-event
 browser-compat: api.FileReader.error_event
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `error` event is fired when the read failed due to an error (for example, because the file was not found or not readable).
+The **`error`** event is fired when the read failed due to an error (for example, because the file was not found or not readable).
 
 This event is not cancelable and does not bubble.
 

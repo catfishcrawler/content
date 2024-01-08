@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.set()
+title: "URLSearchParams: set() method"
+short-title: set()
 slug: Web/API/URLSearchParams/set
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.set
@@ -12,7 +13,7 @@ interface sets the value associated with a given search parameter to the given v
 If there were several matching values, this method deletes the others. If the search
 parameter doesn't exist, this method creates it.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

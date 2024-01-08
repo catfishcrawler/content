@@ -1,11 +1,12 @@
 ---
-title: RemotePlayback.watchAvailability()
+title: "RemotePlayback: watchAvailability() method"
+short-title: watchAvailability()
 slug: Web/API/RemotePlayback/watchAvailability
 page-type: web-api-instance-method
 browser-compat: api.RemotePlayback.watchAvailability
 ---
 
-{{DefaultAPISidebar("Remote Playback API")}}
+{{APIRef("Remote Playback API")}}
 
 The **`watchAvailability()`** method of the {{domxref("RemotePlayback")}} interface watches the list of available remote playback devices and returns a {{jsxref("Promise")}} that resolves with the `callbackId` of a remote playback device.
 

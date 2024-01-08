@@ -1,8 +1,9 @@
 ---
-title: RTCIceCandidatePairStats.bytesReceived
+title: "RTCIceCandidatePairStats: bytesReceived property"
+short-title: bytesReceived
 slug: Web/API/RTCIceCandidatePairStats/bytesReceived
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.bytesReceived
+browser-compat: api.RTCStatsReport.type_candidate-pair.bytesReceived
 ---
 
 {{APIRef("WebRTC")}}

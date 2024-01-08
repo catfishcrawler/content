@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.compressedTexImage[23]D()
+title: "WebGLRenderingContext: compressedTexImage[23]D() method"
+short-title: compressedTexImage[23]D()
 slug: Web/API/WebGLRenderingContext/compressedTexImage2D
 page-type: web-api-instance-method
 browser-compat:
@@ -184,7 +185,7 @@ gl.compressedTexImage2D(
   512,
   512,
   0,
-  textureData
+  textureData,
 );
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);

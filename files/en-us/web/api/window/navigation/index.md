@@ -1,5 +1,6 @@
 ---
-title: Window.navigation
+title: "Window: navigation property"
+short-title: navigation
 slug: Web/API/Window/navigation
 page-type: web-api-instance-property
 status:
@@ -7,11 +8,11 @@ status:
 browser-compat: api.Window.navigation
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The `navigation` read-only property of the {{domxref("Window")}} interface returns the current `window`'s associated {{domxref("Navigation")}} object.
+The **`navigation`** read-only property of the {{domxref("Window")}} interface returns the current `window`'s associated {{domxref("Navigation")}} object.
 
-The entry point for the {{domxref("Navigation API")}}.
+This is the entry point for the {{domxref("Navigation API", "", "", "nocode")}}.
 
 ## Value
 

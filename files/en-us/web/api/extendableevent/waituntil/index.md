@@ -1,5 +1,6 @@
 ---
-title: ExtendableEvent.waitUntil()
+title: "ExtendableEvent: waitUntil() method"
+short-title: waitUntil()
 slug: Web/API/ExtendableEvent/waitUntil
 page-type: web-api-instance-method
 browser-compat: api.ExtendableEvent.waitUntil
@@ -73,5 +74,3 @@ addEventListener("install", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}

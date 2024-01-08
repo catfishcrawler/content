@@ -1,5 +1,6 @@
 ---
-title: SVGMaskElement.maskContentUnits
+title: "SVGMaskElement: maskContentUnits property"
+short-title: maskContentUnits
 slug: Web/API/SVGMaskElement/maskContentUnits
 page-type: web-api-instance-property
 browser-compat: api.SVGMaskElement.maskContentUnits
@@ -61,12 +62,12 @@ svg {
     <rect id="r4" x="55" y="0" width="45" height="45" />
 
     <!-- The first 3 rect are masked with useSpaceOnUse units -->
-    <use mask="url(#mask1)" xlink:href="#r1" fill="blue" />
-    <use mask="url(#mask1)" xlink:href="#r2" fill="yellow" />
-    <use mask="url(#mask1)" xlink:href="#r3" fill="green" />
+    <use mask="url(#mask1)" href="#r1" fill="blue" />
+    <use mask="url(#mask1)" href="#r2" fill="yellow" />
+    <use mask="url(#mask1)" href="#r3" fill="green" />
 
     <!-- The last rect is masked with objectBoundingBox units -->
-    <use mask="url(#mask2)" xlink:href="#r4" fill="lightblue" />
+    <use mask="url(#mask2)" href="#r4" fill="lightblue" />
   </svg>
 </div>
 <pre id="log"></pre>

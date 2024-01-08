@@ -1,13 +1,12 @@
 ---
-title: window.cancelIdleCallback()
+title: "Window: cancelIdleCallback() method"
+short-title: cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 page-type: web-api-instance-method
 browser-compat: api.Window.cancelIdleCallback
 ---
 
 {{APIRef}}
-
-## Summary
 
 The **`window.cancelIdleCallback()`** method cancels a callback
 previously scheduled with {{domxref("window.requestIdleCallback()")}}.
@@ -40,7 +39,3 @@ in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [A polyfill](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

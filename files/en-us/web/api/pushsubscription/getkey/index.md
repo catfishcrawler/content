@@ -1,5 +1,6 @@
 ---
-title: PushSubscription.getKey()
+title: "PushSubscription: getKey() method"
+short-title: getKey()
 slug: Web/API/PushSubscription/getKey
 page-type: web-api-instance-method
 browser-compat: api.PushSubscription.getKey
@@ -33,7 +34,7 @@ getKey(name)
 
 ### Return value
 
-An {{jsxref("ArrayBuffer")}}.
+An {{jsxref("ArrayBuffer")}} or `null` if no public key can be found.
 
 ## Examples
 

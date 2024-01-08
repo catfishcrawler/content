@@ -1,13 +1,14 @@
 ---
 title: "FileReader: loadend event"
+short-title: loadend
 slug: Web/API/FileReader/loadend_event
 page-type: web-api-event
 browser-compat: api.FileReader.loadend_event
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `loadend` event is fired when a file read has completed, successfully or not.
+The **`loadend`** event is fired when a file read has completed, successfully or not.
 
 This event is not cancelable and does not bubble.
 

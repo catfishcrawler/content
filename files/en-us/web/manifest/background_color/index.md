@@ -1,6 +1,7 @@
 ---
 title: background_color
 slug: Web/Manifest/background_color
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.background_color
@@ -13,10 +14,6 @@ browser-compat: html.manifest.background_color
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

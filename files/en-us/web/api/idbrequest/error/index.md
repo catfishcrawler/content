@@ -1,5 +1,6 @@
 ---
-title: IDBRequest.error
+title: "IDBRequest: error property"
+short-title: error
 slug: Web/API/IDBRequest/error
 page-type: web-api-instance-property
 browser-compat: api.IDBRequest.error
@@ -79,7 +80,7 @@ objectStoreTitleRequest.onsuccess = () => {
 objectStoreTitleRequest.onerror = () => {
   // If an error occurs with the request, log what it is
   console.log(
-    `There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`
+    `There has been an error with retrieving your data: ${objectStoreTitleRequest.error}`,
   );
 };
 ```

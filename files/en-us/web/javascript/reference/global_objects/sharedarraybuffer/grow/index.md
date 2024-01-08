@@ -2,12 +2,10 @@
 title: SharedArrayBuffer.prototype.grow()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/grow
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.SharedArrayBuffer.grow
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`grow()`** method of {{jsxref("SharedArrayBuffer")}} instances grows the `SharedArrayBuffer` to the specified size, in bytes.
 
@@ -24,7 +22,7 @@ grow(newLength)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -35,7 +33,7 @@ grow(newLength)
 
 ## Description
 
-The `grow()` method grows a `SharedArrayBuffer` to the size specified by the `newLength` parameter, provided that the `SharedArrayBuffer` is [resizable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable) and the new size is less than or equal to the {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} of the `SharedArrayBuffer`. New bytes are initialized to 0.
+The `grow()` method grows a `SharedArrayBuffer` to the size specified by the `newLength` parameter, provided that the `SharedArrayBuffer` is [growable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/growable) and the new size is less than or equal to the {{jsxref("SharedArrayBuffer/maxByteLength", "maxByteLength")}} of the `SharedArrayBuffer`. New bytes are initialized to 0.
 
 ## Examples
 

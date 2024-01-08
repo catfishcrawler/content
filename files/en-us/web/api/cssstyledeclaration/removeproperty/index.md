@@ -1,5 +1,6 @@
 ---
-title: CSSStyleDeclaration.removeProperty()
+title: "CSSStyleDeclaration: removeProperty() method"
+short-title: removeProperty()
 slug: Web/API/CSSStyleDeclaration/removeProperty
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleDeclaration.removeProperty
@@ -19,7 +20,7 @@ removeProperty(property)
 ### Parameters
 
 - `property`
-  - A string representing the property name to be removed. Multi-word property names are hyphenated and not camel-cased.
+  - A string representing the property name to be removed. Multi-word property names are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) and not {{Glossary("camel_case", "camel-cased")}}.
 
 ### Return value
 

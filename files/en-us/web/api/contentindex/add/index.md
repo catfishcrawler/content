@@ -1,5 +1,6 @@
 ---
-title: ContentIndex.add()
+title: "ContentIndex: add() method"
+short-title: add()
 slug: Web/API/ContentIndex/add
 page-type: web-api-instance-method
 status:
@@ -28,9 +29,6 @@ add(contentDescription)
       - : A unique {{jsxref('String')}} identifier.
     - `title`
       - : A {{jsxref('String')}} title for the item. Used in
-        user-visible lists of content.
-    - `title`
-      - : A {{jsxref('String')}} title of the item. Used in
         user-visible lists of content.
     - `description`
       - : A {{jsxref('String')}} description of the item. Used
@@ -76,7 +74,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`
       contain a {{domxref('FetchEvent')}}.
     - The `id`, `title`, `description` or
       `url` are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
-    - The items referenced by `icons` are not of image type.
+    - One of the items in `icons` are not an image type, or fetching one of the items in `icons` failed with a network error.
 
 ## Examples
 
@@ -154,6 +152,6 @@ self.registration.index.add(item);
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

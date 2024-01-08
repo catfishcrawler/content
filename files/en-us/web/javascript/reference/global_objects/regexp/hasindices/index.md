@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.hasIndices
 
 {{JSRef}}
 
-The **`hasIndices`** accessor property indicates whether or not the `d` flag is used with the regular expression.
+The **`hasIndices`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `d` flag is used with this regular expression.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-hasindices.html")}}
 
@@ -21,7 +21,7 @@ The set accessor of `hasIndices` is `undefined`. You cannot change this property
 
 ## Examples
 
-There's a more detailed usage example at [Groups and backreferences > Using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences#using_groups_and_match_indices).
+There's a more detailed usage example at [Groups and backreferences > Using groups and match indices](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences#using_groups_and_match_indices).
 
 ### Using hasIndices
 
@@ -54,12 +54,12 @@ console.log(regex2.exec(str2).indices); // undefined
 
 ## See also
 
-- {{JSxRef("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.exec()")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

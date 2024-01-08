@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.removeStream()
+title: "RTCPeerConnection: removeStream() method"
+short-title: removeStream()
 slug: Web/API/RTCPeerConnection/removeStream
 page-type: web-api-instance-method
 status:
@@ -55,7 +56,7 @@ document.getElementById("closeButton").addEventListener(
     pc.removeStream(videoStream);
     pc.close();
   },
-  false
+  false,
 );
 ```
 

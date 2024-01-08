@@ -1,8 +1,8 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
-browser-compat: api.MediaStream
 page-type: web-api-overview
+browser-compat: api.MediaStream
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -44,7 +44,6 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("MediaStream/addtrack_event", "addtrack")}}
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
-- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
 

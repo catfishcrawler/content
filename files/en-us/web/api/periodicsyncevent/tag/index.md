@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncEvent.tag
+title: "PeriodicSyncEvent: tag property"
+short-title: tag
 slug: Web/API/PeriodicSyncEvent/tag
 page-type: web-api-instance-property
 status:
@@ -41,5 +42,5 @@ self.addEventListener("periodicsync", (event) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

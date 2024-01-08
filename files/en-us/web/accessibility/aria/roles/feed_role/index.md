@@ -1,6 +1,7 @@
 ---
 title: "ARIA: feed role"
 slug: Web/Accessibility/ARIA/Roles/feed_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#feed
 ---
 
@@ -69,7 +70,7 @@ Note: It is the author's responsibility to apply the "above" keyboard behavior.
 
 ## Examples
 
-[Example Implementation of Feed Pattern](https://w3c.github.io/aria-practices/examples/feed/feed.html)
+[Example Implementation of Feed Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/)
 
 ## Best practices
 
@@ -90,6 +91,6 @@ To ensure good user experience, avoid inserting or removing articles in the midd
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -1,5 +1,6 @@
 ---
-title: SubtleCrypto.generateKey()
+title: "SubtleCrypto: generateKey() method"
+short-title: generateKey()
 slug: Web/API/SubtleCrypto/generateKey
 page-type: web-api-instance-method
 browser-compat: api.SubtleCrypto.generateKey
@@ -85,7 +86,7 @@ let keyPair = await window.crypto.subtle.generateKey(
     hash: "SHA-256",
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 
@@ -101,7 +102,7 @@ let keyPair = await window.crypto.subtle.generateKey(
     namedCurve: "P-384",
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -117,7 +118,7 @@ let key = await window.crypto.subtle.generateKey(
     hash: { name: "SHA-512" },
   },
   true,
-  ["sign", "verify"]
+  ["sign", "verify"],
 );
 ```
 
@@ -133,7 +134,7 @@ let key = await window.crypto.subtle.generateKey(
     length: 256,
   },
   true,
-  ["encrypt", "decrypt"]
+  ["encrypt", "decrypt"],
 );
 ```
 

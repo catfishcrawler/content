@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: play event"
+short-title: play
 slug: Web/API/HTMLMediaElement/play_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.play_event
@@ -36,7 +37,7 @@ const video = document.querySelector("video");
 
 video.addEventListener("play", (event) => {
   console.log(
-    "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled."
+    "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled.",
   );
 });
 ```
@@ -48,7 +49,7 @@ const video = document.querySelector("video");
 
 video.onplay = (event) => {
   console.log(
-    "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled."
+    "The Boolean paused property is now 'false'. Either the play() method was called or the autoplay attribute was toggled.",
   );
 };
 ```

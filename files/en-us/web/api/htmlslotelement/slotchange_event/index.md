@@ -1,5 +1,6 @@
 ---
 title: "HTMLSlotElement: slotchange event"
+short-title: slotchange
 slug: Web/API/HTMLSlotElement/slotchange_event
 page-type: web-api-event
 browser-compat: api.HTMLSlotElement.slotchange_event
@@ -45,7 +46,7 @@ let slots = this.shadowRoot.querySelectorAll("slot");
 slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
   console.log(
-    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
   );
 });
 ```

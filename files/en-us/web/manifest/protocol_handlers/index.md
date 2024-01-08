@@ -1,6 +1,7 @@
 ---
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.protocol_handlers
@@ -13,10 +14,6 @@ browser-compat: html.manifest.protocol_handlers
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

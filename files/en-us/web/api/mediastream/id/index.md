@@ -1,5 +1,6 @@
 ---
-title: MediaStream.id
+title: "MediaStream: id property"
+short-title: id
 slug: Web/API/MediaStream/id
 page-type: web-api-instance-property
 browser-compat: api.MediaStream.id
@@ -7,7 +8,7 @@ browser-compat: api.MediaStream.id
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStream.id`** read-only property is a
+The **`id`** read-only property of the {{domxref("MediaStream")}} interface is a
 string containing 36 characters denoting a unique identifier (GUID)
 for the object.
 

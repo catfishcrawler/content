@@ -1,5 +1,6 @@
 ---
-title: Window.screenX
+title: "Window: screenX property"
+short-title: screenX
 slug: Web/API/Window/screenX
 page-type: web-api-instance-property
 browser-compat: api.Window.screenX
@@ -48,7 +49,7 @@ function positionElem() {
     50,
     degToRad(0),
     degToRad(360),
-    false
+    false,
   );
   ctx.fill();
 

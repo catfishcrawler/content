@@ -1,11 +1,12 @@
 ---
-title: createImageBitmap()
+title: createImageBitmap() global function
+short-title: createImageBitmap()
 slug: Web/API/createImageBitmap
 page-type: web-api-global-function
 browser-compat: api.createImageBitmap
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`createImageBitmap()`** method creates a bitmap from a
 given source, optionally cropped to contain only a portion of that source. The method

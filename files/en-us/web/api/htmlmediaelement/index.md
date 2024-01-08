@@ -69,12 +69,14 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : A boolean value that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio.
 - {{domxref("HTMLMediaElement.readyState")}} {{ReadOnlyInline}}
   - : Returns a `unsigned short` (enumeration) indicating the readiness state of the media.
+- {{domxref("HTMLMediaElement.remote")}} {{ReadOnlyInline}}
+  - : Return a {{domxref("RemotePlayback")}} object instance associated with the media element.
 - {{domxref("HTMLMediaElement.seekable")}} {{ReadOnlyInline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the time ranges that the user is able to seek to, if any.
 - {{domxref("HTMLMediaElement.seeking")}} {{ReadOnlyInline}}
   - : Returns a boolean that indicates whether the media is in the process of seeking to a new position.
-- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
+- {{domxref("HTMLMediaElement.sinkId")}} {{ReadOnlyInline}}
+  - : Returns a string that is the unique ID of the audio device delivering output, or an empty string if the user agent default audio device is being used.
 - {{domxref("HTMLMediaElement.src")}}
   - : A string that reflects the [`src`](/en-US/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
@@ -85,13 +87,6 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
   - : Returns a {{domxref('VideoTrackList')}} object containing the list of {{domxref("VideoTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.volume")}}
   - : A `double` indicating the audio volume, from 0.0 (silent) to 1.0 (loudest).
-
-### Event handlers
-
-- {{domxref("HTMLMediaElement.onencrypted")}}
-  - : Sets the event handler called when the media is encrypted.
-- {{domxref("HTMLMediaElement.onwaitingforkey")}}
-  - : Sets the event handler called when playback is blocked while waiting for an encryption key.
 
 ## Obsolete properties
 
@@ -140,11 +135,13 @@ _These methods are obsolete and should not be used, even if a browser still supp
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [loadedmetadata](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
+  - : Returns {{jsxref('Object')}}, which contains properties that represent metadata from the playing media resource as `{key: value}` pairs. A separate copy of the data is returned each time the method is called. This method must be called after the [`loadedmetadata`](/en-US/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires.
 
 ## Events
 
-_Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface.
+_Inherits events from its parent, {{domxref("HTMLElement")}}_.
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("HTMLMediaElement.abort_event", 'abort')}}
   - : Fired when the resource was not fully loaded, but not as the result of an error.
@@ -212,5 +209,5 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_. Listen to these 
 
 - [Web media technologies](/en-US/docs/Web/Media)
 - Learning area: [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
+- [Media type and format guide](/en-US/docs/Web/Media/Formats)
 - [Handling media support issues in web content](/en-US/docs/Web/Media/Formats/Support_issues)

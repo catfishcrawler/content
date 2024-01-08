@@ -1,6 +1,7 @@
 ---
 title: icons
 slug: Web/Manifest/icons
+page-type: web-manifest-member
 browser-compat: html.manifest.icons
 ---
 
@@ -11,10 +12,6 @@ browser-compat: html.manifest.icons
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>Yes</td>
     </tr>
   </tbody>
 </table>

@@ -1,5 +1,6 @@
 ---
-title: HTMLFormElement.reportValidity()
+title: "HTMLFormElement: reportValidity() method"
+short-title: reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
 page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.reportValidity
@@ -31,7 +32,7 @@ document.forms["myform"].addEventListener(
   () => {
     document.forms["myform"].reportValidity();
   },
-  false
+  false,
 );
 ```
 

@@ -1,11 +1,12 @@
 ---
-title: ProgressEvent.loaded
+title: "ProgressEvent: loaded property"
+short-title: loaded
 slug: Web/API/ProgressEvent/loaded
 page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.loaded
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`ProgressEvent.loaded`** read-only property is an integer
 representing the amount of work already performed by the underlying process. The ratio

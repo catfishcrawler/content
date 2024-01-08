@@ -1,5 +1,6 @@
 ---
-title: SerialPort.setSignals()
+title: "SerialPort: setSignals() method"
+short-title: setSignals()
 slug: Web/API/SerialPort/setSignals
 page-type: web-api-instance-method
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.SerialPort.setSignals
 ---
 
-{{SecureContext_Header}}{{APIRef("Serial API")}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}
 
 The **`setSignals()`** method of the {{domxref("SerialPort")}} interface sets control signals on the port and returns a {{jsxref("Promise")}} that resolves when they are set.
 

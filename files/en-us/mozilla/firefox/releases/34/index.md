@@ -1,6 +1,7 @@
 ---
 title: Firefox 34 for developers
 slug: Mozilla/Firefox/Releases/34
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -16,7 +17,7 @@ Highlights:
 - [Storage Inspector: a new tool enabling you to view data stored by web pages](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Performance tool: revamped Profiler UI and frame rate timeline](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)
 - [Frame switching: point the developer tools at a specific iframe in the page](https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html)
-- [console.table support](/en-US/docs/Web/API/console/table)
+- [console.table support](/en-US/docs/Web/API/console/table_static)
 - [jQuery events are visible in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_event_listeners/index.html)
 
 [All devtools bugs fixed between Firefox 33 and Firefox 34](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-09-02&chfield=resolution&query_format=advanced&chfieldfrom=2014-07-21&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
@@ -58,7 +59,7 @@ _No change._
 
 - The experimental {{jsxref("TypedArray.prototype.move()")}} method (only available in former Nightly and Aurora channels) has been replaced with the now implemented standard ES2015 {{jsxref("TypedArray.prototype.copyWithin()")}} method ([Firefox bug 1021379](https://bugzil.la/1021379)).
 - In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), setting a [duplicate property name in object literals](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#duplicate_property_names) will no longer throw a `SyntaxError` as per ES2015 specification ([Firefox bug 1041128](https://bugzil.la/1041128)).
-- In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see [Firefox bug 369778](https://bugzil.la/369778) and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#gecko_specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ([Firefox bug 1053944](https://bugzil.la/1053944)).
+- In regular expressions (including `String.replace`), the matched text for a capturing group is now `undefined` instead of the empty string when that capturing group didn't get consulted because quantifiers prevented its exercise (see [Firefox bug 369778](https://bugzil.la/369778) and [this example code](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#firefox-specific_notes)). Note that due to web compatibility, RegExp.$N will still return an empty string ([Firefox bug 1053944](https://bugzil.la/1053944)).
 - The ES2015 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) is now supported in [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) ([Firefox bug 933276](https://bugzil.la/933276)).
 - [Destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) now uses iterator protocol instead of array-like protocol ([Firefox bug 933276](https://bugzil.la/933276)).
 - {{jsxref("Proxy.revocable()")}} has been implemented ([Firefox bug 978279](https://bugzil.la/978279)).
@@ -100,7 +101,7 @@ _No change._
 ## Security and Networking
 
 - SSLv3 is now disabled by default ([Firefox bug 1030963](https://bugzil.la/1030963)).
-- A warning is sent to the console when a Web site use the CSS `reflected-xss` directive ([Firefox bug 1045902](https://bugzil.la/1045902)).
+- A warning is sent to the console when a website use the CSS `reflected-xss` directive ([Firefox bug 1045902](https://bugzil.la/1045902)).
 
 ## Changes for add-on and Mozilla developers
 

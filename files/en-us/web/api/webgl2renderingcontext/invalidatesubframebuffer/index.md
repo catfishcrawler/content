@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.invalidateSubFramebuffer()
+title: "WebGL2RenderingContext: invalidateSubFramebuffer() method"
+short-title: invalidateSubFramebuffer()
 slug: Web/API/WebGL2RenderingContext/invalidateSubFramebuffer
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.invalidateSubFramebuffer
@@ -72,7 +73,7 @@ gl.invalidateSubFramebuffer(
   0,
   0,
   256,
-  256
+  256,
 );
 ```
 

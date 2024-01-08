@@ -1,6 +1,7 @@
 ---
 title: aria-roledescription
 slug: Web/Accessibility/ARIA/Attributes/aria-roledescription
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-roledescription
 ---
 
@@ -52,7 +53,7 @@ In the previous examples, a screen reader user may hear "Quarterly Report, slide
 - `<string>`
   - : A non-empty string, an unconstrained value type, containing more than just white space.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaRoleDescription")}}
   - : The [`ariaRoleDescription`](/en-US/docs/Web/API/Element/ariaRoleDescription) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-roledescription` attribute.

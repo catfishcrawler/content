@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.update()
+title: "ServiceWorkerRegistration: update() method"
+short-title: update()
 slug: Web/API/ServiceWorkerRegistration/update
 page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.update
@@ -65,6 +66,4 @@ if ("serviceWorker" in navigator) {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

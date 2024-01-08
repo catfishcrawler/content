@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.isPrimary
+title: "PointerEvent: isPrimary property"
+short-title: isPrimary
 slug: Web/API/PointerEvent/isPrimary
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.isPrimary
@@ -53,7 +54,7 @@ target.addEventListener(
       process_secondary_pointer(event);
     }
   },
-  false
+  false,
 );
 ```
 

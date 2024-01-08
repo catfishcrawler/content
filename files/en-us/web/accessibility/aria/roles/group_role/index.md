@@ -1,6 +1,7 @@
 ---
 title: "ARIA: group role"
 slug: Web/Accessibility/ARIA/Roles/group_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#group
 ---
 
@@ -18,7 +19,7 @@ When used in the context of a [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Rol
 
 `Group` elements may be nested.
 
-The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#landmark_roles).
+The `group` role should not be used for major perceivable sections of a page. If a section is significant enough that it should be included in the page's table of contents, use the `region` role or a standard [landmark role](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles).
 
 When the role is added to an element, the browser will send out an accessible group event to assistive technology products, which can then notify the user about it.
 
@@ -100,6 +101,6 @@ This menu could be constructed using {{HTMLElement('select')}} and {{HTMLElement
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

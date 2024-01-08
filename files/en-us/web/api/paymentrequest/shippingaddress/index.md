@@ -1,5 +1,6 @@
 ---
-title: PaymentRequest.shippingAddress
+title: "PaymentRequest: shippingAddress property"
+short-title: shippingAddress
 slug: Web/API/PaymentRequest/shippingAddress
 page-type: web-api-instance-property
 status:
@@ -38,7 +39,7 @@ payment.addEventListener("shippingaddresschange", (evt) => {
   evt.updateWith(
     new Promise((resolve) => {
       updateDetails(details, request.shippingAddress, resolve);
-    })
+    }),
   );
 });
 

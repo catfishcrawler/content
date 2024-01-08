@@ -1,6 +1,7 @@
 ---
 title: Firefox 36 for developers
 slug: Mozilla/Firefox/Releases/36
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -64,8 +65,8 @@ Highlights:
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").
 
 - The ES2016 method {{jsxref("Array.prototype.includes")}} has been implemented, but for now, it is only enabled in Nightly builds ([Firefox bug 1069063](https://bugzil.la/1069063)).
-- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator now triggers the "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" when using with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) ([Firefox bug 1074571](https://bugzil.la/1074571)).
-- The non-standard [`let` blocks and `let` expressions](/en-US/docs/Web/JavaScript/Reference/Statements/let#non-standard_let_extensions) are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.
+- The [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator now triggers the "[temporal dead zone](/en-US/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)" when using with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) ([Firefox bug 1074571](https://bugzil.la/1074571)).
+- The non-standard [`let` blocks and `let` expressions](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements_2) are deprecated and will now log a warning in the console. Do not use them anymore, they will be removed in the future.
 - [WeakMap](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) constructor now handles optional iterable argument ([Firefox bug 1092537](https://bugzil.la/1092537)).
 
 ### Interfaces/APIs/DOM
@@ -119,14 +120,14 @@ _No change._
 
 #### Highlights
 
-- The [`sdk/test/httpd`](/en-US/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed, use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
-- Add badges to [`sdk/ui`](/en-US/Add-ons/SDK/High-Level_APIs/ui) buttons ([Firefox bug 994280](https://bugzil.la/994280)).
+- The [`sdk/test/httpd`](/en-US/docs/Mozilla/Add-ons/SDK/Low-Level_APIs/test_httpd) module was removed, use the [addon-httpd](https://www.npmjs.com/package/addon-httpd) npm module instead.
+- Add badges to [`sdk/ui`](/en-US/docs/Mozilla/Add-ons/SDK/High-Level_APIs/ui) buttons ([Firefox bug 994280](https://bugzil.la/994280)).
 - Implemented global `require` function to access sdk modules anywhere ([Firefox bug 1070927](https://bugzil.la/1070927)), using:
 
   ```js
   var { require } = Cu.import(
     "resource://gre/modules/commonjs/toolkit/require.js",
-    {}
+    {},
   );
   ```
 
@@ -137,7 +138,7 @@ _No change._
 ### JavaScript code modules
 
 - `PromiseUtils.resolveOrTimeout` is implemented ([Firefox bug 1080466](https://bugzil.la/1080466)).
-- [PromiseUtils.defer](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.html#defer()>) (a replacement for `Promise.defer()`) is implemented ([Firefox bug 1093021](https://bugzil.la/1093021)).
+- `PromiseUtils.defer` (a replacement for `Promise.defer()`) is implemented ([Firefox bug 1093021](https://bugzil.la/1093021)).
 
 ### Interfaces
 

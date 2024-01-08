@@ -1,5 +1,6 @@
 ---
 title: "Element: DOMActivate event"
+short-title: DOMActivate
 slug: Web/API/Element/DOMActivate_event
 page-type: web-api-event
 status:
@@ -23,7 +24,7 @@ onDOMActivate = (event) => {};
 
 ## Event type
 
-A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 

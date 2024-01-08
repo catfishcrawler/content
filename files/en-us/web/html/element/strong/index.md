@@ -1,5 +1,5 @@
 ---
-title: '<strong>: The Strong Importance element'
+title: "<strong>: The Strong Importance element"
 slug: Web/HTML/Element/strong
 page-type: html-element
 browser-compat: html.elements.strong
@@ -49,7 +49,7 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 </p>
 ```
 
-The resulting output:
+#### Result
 
 {{EmbedLiveSample("Basic_example", 650, 80)}}
 
@@ -62,7 +62,7 @@ The resulting output:
 </p>
 ```
 
-This results in:
+#### Result
 
 {{EmbedLiveSample("Labeling_warnings", 650, 80)}}
 
@@ -112,8 +112,9 @@ This results in:
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">strong</a
+          ></code
         >
       </td>
     </tr>

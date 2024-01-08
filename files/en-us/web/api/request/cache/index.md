@@ -1,11 +1,12 @@
 ---
-title: Request.cache
+title: "Request: cache property"
+short-title: cache
 slug: Web/API/Request/cache
 page-type: web-api-instance-property
 browser-compat: api.Request.cache
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}
 
 The **`cache`** read-only property of the {{domxref("Request")}} interface contains the cache mode of the request. It controls how the request will interact with the browser's [HTTP cache](/en-US/docs/Web/HTTP/Caching).
 
@@ -82,7 +83,7 @@ fetch("some.json", {
   .catch((e) =>
     e instanceof TypeError && e.message === "Failed to fetch"
       ? { status: 504 } // Workaround for chrome; which fails with a TypeError
-      : Promise.reject(e)
+      : Promise.reject(e),
   )
   .then((res) => {
     if (res.status === 504) {
@@ -117,7 +118,7 @@ fetch("some.json", {
     /* consume the (possibly stale) response */
   })
   .catch((error) => {
-    /* Can be an AbortError/DOMError or a TypeError */
+    /* Can be an AbortError/DOMException or a TypeError */
   });
 ```
 

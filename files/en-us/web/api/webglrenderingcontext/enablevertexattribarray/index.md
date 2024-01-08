@@ -1,5 +1,6 @@
 ---
-title: WebGLRenderingContext.enableVertexAttribArray()
+title: "WebGLRenderingContext: enableVertexAttribArray() method"
+short-title: enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
 page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.enableVertexAttribArray
@@ -74,7 +75,7 @@ gl.vertexAttribPointer(
   gl.FLOAT,
   false,
   0,
-  0
+  0,
 );
 
 gl.drawArrays(gl.TRIANGLES, 0, vertexCount);

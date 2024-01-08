@@ -1,5 +1,6 @@
 ---
-title: URLSearchParams.get()
+title: "URLSearchParams: get() method"
+short-title: get()
 slug: Web/API/URLSearchParams/get
 page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.get
@@ -10,7 +11,7 @@ browser-compat: api.URLSearchParams.get
 The **`get()`** method of the {{domxref("URLSearchParams")}}
 interface returns the first value associated to the given search parameter.
 
-{{availableinworkers}}
+{{AvailableInWorkers}}
 
 ## Syntax
 

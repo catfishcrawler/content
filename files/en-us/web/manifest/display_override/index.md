@@ -1,6 +1,7 @@
 ---
 title: display_override
 slug: Web/Manifest/display_override
+page-type: web-manifest-member
 status:
   - experimental
 browser-compat: html.manifest.display_override
@@ -13,10 +14,6 @@ browser-compat: html.manifest.display_override
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -104,5 +101,5 @@ In the example below, the browser will consider the following display-mode fallb
 
 ## See also
 
-- [Preparing for the display modes of tomorrow](https://web.dev/display-override/)
-- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
+- [Preparing for the display modes of tomorrow](https://developer.chrome.com/docs/capabilities/display-override)
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)

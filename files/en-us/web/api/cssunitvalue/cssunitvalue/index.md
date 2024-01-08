@@ -1,5 +1,6 @@
 ---
-title: CSSUnitValue()
+title: "CSSUnitValue: CSSUnitValue() constructor"
+short-title: CSSUnitValue()
 slug: Web/API/CSSUnitValue/CSSUnitValue
 page-type: web-api-constructor
 browser-compat: api.CSSUnitValue.CSSUnitValue
@@ -33,7 +34,7 @@ individual `CSSUnitValue` constructors.
 ```js
 let pos = new CSSPositionValue(
   new CSSUnitValue(5, "px"),
-  new CSSUnitValue(10, "px")
+  new CSSUnitValue(10, "px"),
 );
 ```
 

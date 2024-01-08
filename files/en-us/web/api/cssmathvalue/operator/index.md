@@ -1,5 +1,6 @@
 ---
-title: CSSMathValue.operator
+title: "CSSMathValue: operator property"
+short-title: operator
 slug: Web/API/CSSMathValue/operator
 page-type: web-api-instance-property
 browser-compat: api.CSSMathValue.operator
@@ -31,7 +32,7 @@ A {{jsxref('String')}}.
 
 We create an element with a [`width`](/en-US/docs/Web/CSS/width)
 determined using a [`calc()`](/en-US/docs/Web/CSS/calc) function,
-then {{DOMxRef("console.log()")}} the
+then {{domxref("console/log_static", "console.log()")}} the
 `operator`.
 
 ```html

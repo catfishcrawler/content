@@ -1,5 +1,6 @@
 ---
-title: MutationEvent.attrChange
+title: "MutationEvent: attrChange property"
+short-title: attrChange
 slug: Web/API/MutationEvent/attrChange
 page-type: web-api-instance-property
 status:
@@ -23,7 +24,7 @@ element.addEventListener(
   (event) => {
     console.log(event.attrChange);
   },
-  false
+  false,
 );
 ```
 

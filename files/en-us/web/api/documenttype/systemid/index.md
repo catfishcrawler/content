@@ -1,5 +1,6 @@
 ---
-title: DocumentType.systemId
+title: "DocumentType: systemId property"
+short-title: systemId
 slug: Web/API/DocumentType/systemId
 page-type: web-api-instance-property
 browser-compat: api.DocumentType.systemId
@@ -23,10 +24,10 @@ A string.
 const docType = document.implementation.createDocumentType(
   "svg",
   "",
-  "http://www.w3.org/2000/svg"
+  "http://www.w3.org/2000/svg",
 );
 
-console.log(docType.publicId); // Displays "http://www.w3.org/2000/svg"
+console.log(docType.systemId); // Displays "http://www.w3.org/2000/svg"
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
-title: OffscreenCanvasRenderingContext2D.commit()
+title: "OffscreenCanvasRenderingContext2D: commit() method"
+short-title: commit()
 slug: Web/API/OffscreenCanvasRenderingContext2D/commit
 page-type: web-api-instance-method
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
@@ -20,7 +21,7 @@ commit()
 
 ## Examples
 
-```javascript
+```js
 const placeholder = document.createElement("canvas");
 const offscreen = placeholder.transferControlToOffscreen();
 const ctx = offscreenCanvas.getContext("2d");

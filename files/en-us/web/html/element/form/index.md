@@ -1,5 +1,5 @@
 ---
-title: '<form>: The Form element'
+title: "<form>: The Form element"
 slug: Web/HTML/Element/form
 page-type: html-element
 browser-compat: html.elements.form
@@ -24,16 +24,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     > **Note:** **This attribute has been deprecated and should not be used.** Instead, use the [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute on `<input type=file>` elements.
 
 - `accept-charset`
+
   - : Space-separated {{Glossary("character encoding", "character encodings")}} the server accepts. The browser uses them in the order in which they are listed. The default value means [the same encoding as the page](/en-US/docs/Web/HTTP/Headers/Content-Encoding).
     (In previous versions of HTML, character encodings could also be delimited by commas.)
-- `autocapitalize` {{non-standard_inline}}
 
-  - : A nonstandard attribute used by iOS Safari that controls how textual form elements should be automatically capitalized. `autocapitalize` attributes on a form elements override it on `<form>`. Possible values:
+- `autocapitalize`
 
-    - `none`: No automatic capitalization.
-    - `sentences` (default): Capitalize the first letter of each sentence.
-    - `words`: Capitalize the first letter of each word.
-    - `characters`: Capitalize all characters — that is, uppercase.
+  - : Controls whether inputted text is automatically capitalized and, if so, in what manner. See the [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize) global attribute page for more information.
 
 - `autocomplete`
 
@@ -43,6 +40,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `on`: The browser may automatically complete entries.
 
 - `name`
+
   - : The name of the form. The value must not be the empty string, and must be unique among the `form` elements in the forms collection that it is in, if any.
 
 - `rel`
@@ -71,7 +69,7 @@ The following attributes control behavior during form submission.
 
     - `post`: The {{HTTPMethod("POST")}} method; form data sent as the [request body](/en-US/docs/Web/API/Request/body).
     - `get` (default): The {{HTTPMethod("GET")}}; form data appended to the `action` URL with a `?` separator. Use this method when the form [has no side effects](/en-US/docs/Glossary/Idempotent).
-    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and throws a submit event on submission without submitting data or clearing the form.
+    - `dialog`: When the form is inside a {{HTMLElement("dialog")}}, closes the dialog and causes a `submit` event to be fired on submission, without submitting data or clearing the form.
 
     This value is overridden by [`formmethod`](/en-US/docs/Web/HTML/Element/button#formmethod) attributes on {{HTMLElement("button")}}, [`<input type="submit">`](/en-US/docs/Web/HTML/Element/input/submit), or [`<input type="image">`](/en-US/docs/Web/HTML/Element/input/image) elements.
 
@@ -93,7 +91,8 @@ The following attributes control behavior during form submission.
 ```html
 <!-- Form which will send a GET request to the current URL -->
 <form method="get">
-  <label>Name:
+  <label>
+    Name:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
@@ -101,7 +100,8 @@ The following attributes control behavior during form submission.
 
 <!-- Form which will send a POST request to the current URL -->
 <form method="post">
-  <label>Name:
+  <label>
+    Name:
     <input name="submitted-name" autocomplete="name" />
   </label>
   <button>Save</button>
@@ -117,31 +117,27 @@ The following attributes control behavior during form submission.
 </form>
 ```
 
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
 ## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content"
-          >palpable content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, but not containing <code>&#x3C;form></code> elements
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, but not containing <code>&#x3C;form></code> elements
       </td>
     </tr>
     <tr>
@@ -152,35 +148,21 @@ The following attributes control behavior during form submission.
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >flow content</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">flow content</a>
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role"
-            >form</a
-          ></code
-        > if the form has an
-        <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name"
-          >accessible name</a
-        >, otherwise
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >no corresponding role</a
-        >
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/form_role">form</a></code>
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
-        <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role"
-            >search</a
-          ></code
-        >, <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/search_role">search</a></code>,
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+         or <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>

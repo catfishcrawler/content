@@ -1,5 +1,6 @@
 ---
-title: IDBIndex.objectStore
+title: "IDBIndex: objectStore property"
+short-title: objectStore
 slug: Web/API/IDBIndex/objectStore
 page-type: web-api-instance-property
 browser-compat: api.IDBIndex.objectStore
@@ -8,7 +9,7 @@ browser-compat: api.IDBIndex.objectStore
 {{ APIRef("IndexedDB") }}
 
 The **`objectStore`** property of the {{domxref("IDBIndex")}}
-interface returns the name of the object store referenced by the current index.
+interface returns the object store referenced by the current index.
 
 {{AvailableInWorkers}}
 

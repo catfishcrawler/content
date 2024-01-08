@@ -1,6 +1,7 @@
 ---
 title: 226 IM Used
 slug: Web/HTTP/Status/226
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 ---
 
@@ -16,7 +17,7 @@ IM stands for _instance manipulations_ the term used to describe an algorithm ge
 
 ## Status
 
-```
+```plain
 226 IM Used
 ```
 

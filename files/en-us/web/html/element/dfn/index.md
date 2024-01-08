@@ -1,5 +1,5 @@
 ---
-title: '<dfn>: The Definition element'
+title: "<dfn>: The Definition element"
 slug: Web/HTML/Element/dfn
 page-type: html-element
 browser-compat: html.elements.dfn
@@ -48,17 +48,16 @@ This example uses a plain `<dfn>` element to identify the location of a term wit
 #### HTML
 
 ```html
-<p>The <strong>HTML Definition element</strong>
-(<strong><dfn>&lt;dfn&gt;</dfn></strong>) is used to indicate the
-term being defined within the context of a definition phrase or
-sentence.</p>
+<p>
+  The <strong>HTML Definition element (<dfn>&lt;dfn&gt;</dfn>)</strong> is used
+  to indicate the term being defined within the context of a definition phrase
+  or sentence.
+</p>
 ```
 
 Since the `<dfn>` element has no `title`, the text contents of the `<dfn>` element itself are used as the term being defined.
 
 #### Result
-
-This looks like this rendered in your browser:
 
 {{EmbedLiveSample("Basic_identification_of_a_term", 650, 120)}}
 
@@ -68,11 +67,13 @@ To add links to the definitions, you create the link the same way you always do,
 
 #### HTML
 
-```html
-<p>The <strong>HTML Definition element</strong>
-(<strong><dfn id="definition-dfn">&lt;dfn&gt;</dfn></strong>) is
-used to indicate the term being defined within the context of a
-definition phrase or sentence.</p>
+```html-nolint
+<p>
+  The
+  <strong>HTML Definition element (<dfn id="definition-dfn">&lt;dfn&gt;</dfn>)</strong>
+  is used to indicate the term being defined within the context of a definition
+  phrase or sentence.
+</p>
 
 <p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Graece donan, Latine
@@ -81,26 +82,15 @@ definition phrase or sentence.</p>
 </p>
 
 <p>
-  Negare non possum. Dat enim intervalla et relaxat. Quonam modo? Equidem e Cn.
-  Quid de Pythagora? In schola desinis.
+  Because of all of that, we decided to use the
+  <code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for this
+  project.
 </p>
-
-<p>
-  Ubi ut eam caperet aut quando? Cur iustitia laudatur? Aperiendum est igitur,
-  quid sit voluptas; Quid enim? Non est igitur voluptas bonum. Urgent tamen et
-  nihil remittunt. Quid enim possumus hoc agere divinius?
-</p>
-
-<p>Because of all of that, we decided to use the
-<code><a href="#definition-dfn">&lt;dfn&gt;</a></code> element for
-this project.</p>
 ```
 
 Here we see the definition — now with an [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute, `"definition-dfn"`, which can be used as the target of a link. Later on, a link is created using `<a>` with the [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute set to `"#definition-dfn"` to set up the link back to the definition.
 
 #### Result
-
-The resulting content looks like this:
 
 {{EmbedLiveSample("Links_to_definitions", 650, 300)}}
 
@@ -128,8 +118,6 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
 
 #### Result
 
-The output of the above code looks like this:
-
 {{EmbedLiveSample("Using_abbreviations_and_definitions_together", 650, 200)}}
 
 ## Technical summary
@@ -138,25 +126,18 @@ The output of the above code looks like this:
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >Phrasing content</a
-        >, but no {{HTMLElement("dfn")}} element must be a descendant.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>,
+        but no {{HTMLElement("dfn")}} element must be a descendant.
       </td>
     </tr>
     <tr>
@@ -167,9 +148,7 @@ The output of the above code looks like this:
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
-          >phrasing content</a
-        >.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>.
       </td>
     </tr>
     <tr>

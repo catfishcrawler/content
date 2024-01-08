@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: iceconnectionstatechange event"
+short-title: iceconnectionstatechange
 slug: Web/API/RTCPeerConnection/iceconnectionstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.iceconnectionstatechange_event
@@ -53,7 +54,7 @@ pc.addEventListener(
     let stateElem = document.querySelector("#call-state");
     stateElem.className = `${pc.iceConnectionState}-state`;
   },
-  false
+  false,
 );
 ```
 

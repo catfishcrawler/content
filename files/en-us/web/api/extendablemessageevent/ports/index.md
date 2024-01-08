@@ -1,5 +1,6 @@
 ---
-title: ExtendableMessageEvent.ports
+title: "ExtendableMessageEvent: ports property"
+short-title: ports
 slug: Web/API/ExtendableMessageEvent/ports
 page-type: web-api-instance-property
 browser-compat: api.ExtendableMessageEvent.ports
@@ -53,5 +54,4 @@ self.onmessage = (e) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Channel Messaging](/en-US/docs/Web/API/Channel_Messaging_API)

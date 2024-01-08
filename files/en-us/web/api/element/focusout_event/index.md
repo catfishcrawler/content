@@ -1,5 +1,6 @@
 ---
 title: "Element: focusout event"
+short-title: focusout
 slug: Web/API/Element/focusout_event
 page-type: web-api-event
 browser-compat: api.Element.focusout_event
@@ -23,7 +24,7 @@ addEventListener("focusout", (event) => {});
 
 ## Event type
 
-A {{domxref("FocusEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
 

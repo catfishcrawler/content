@@ -1,13 +1,14 @@
 ---
 title: "FileReader: progress event"
+short-title: progress
 slug: Web/API/FileReader/progress_event
 page-type: web-api-event
 browser-compat: api.FileReader.progress_event
 ---
 
-{{APIRef}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The `progress` event is fired periodically as the `FileReader` reads data.
+The **`progress`** event is fired periodically as the `FileReader` reads data.
 
 This event is not cancelable and does not bubble.
 

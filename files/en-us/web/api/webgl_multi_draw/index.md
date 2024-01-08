@@ -1,5 +1,6 @@
 ---
-title: WEBGL_multi_draw
+title: WEBGL_multi_draw extension
+short-title: WEBGL_multi_draw
 slug: Web/API/WEBGL_multi_draw
 page-type: webgl-extension
 browser-compat: api.WEBGL_multi_draw
@@ -100,7 +101,7 @@ ext.multiDrawArraysInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  firsts.length
+  firsts.length,
 );
 ```
 
@@ -123,7 +124,7 @@ ext.multiDrawElementsWEBGL(
   gl.UNSIGNED_SHORT,
   offsets,
   0,
-  counts.length
+  counts.length,
 );
 ```
 
@@ -141,7 +142,7 @@ ext.multiDrawElementsInstancedWEBGL(
   0,
   instanceCounts,
   0,
-  counts.length
+  counts.length,
 );
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: reportError()
+title: reportError() global function
+short-title: reportError()
 slug: Web/API/reportError
 page-type: web-api-global-function
 browser-compat: api.reportError
@@ -78,4 +79,4 @@ self.addEventListener("error", (error) => {
 
 - [`Window`](/en-US/docs/Web/API/Window#methods_implemented_from_elsewhere)
 - [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#methods_implemented_from_elsewhere)
-- [error](/en-US/docs/Web/API/Element/error_event) event
+- [error](/en-US/docs/Web/API/HTMLElement/error_event) event

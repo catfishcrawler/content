@@ -1,5 +1,6 @@
 ---
-title: GeolocationCoordinates.speed
+title: "GeolocationCoordinates: speed property"
+short-title: speed
 slug: Web/API/GeolocationCoordinates/speed
 page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.speed
@@ -7,9 +8,7 @@ browser-compat: api.GeolocationCoordinates.speed
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-The **`GeolocationCoordinates.speed`** read-only property is a
-`double` representing the velocity of the device in meters per second. This
-value is `null` if the implementation is not able to measure it.
+The **`speed`** read-only property of the {{domxref("GeolocationCoordinates")}} interface is a `double` representing the velocity of the device in meters per second. This value is `null` if the implementation is not able to measure it.
 
 ## Value
 

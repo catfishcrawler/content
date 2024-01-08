@@ -1,6 +1,7 @@
 ---
 title: "ARIA: marquee role"
 slug: Web/Accessibility/ARIA/Roles/marquee_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#marquee
 ---
 
@@ -40,6 +41,6 @@ The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

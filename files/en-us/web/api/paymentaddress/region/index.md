@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.region
+title: "PaymentAddress: region property"
+short-title: region
 slug: Web/API/PaymentAddress/region
 page-type: web-api-instance-property
 status:
@@ -8,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.region
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`region`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the top-level

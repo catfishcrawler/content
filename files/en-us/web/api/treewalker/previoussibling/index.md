@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.previousSibling()
+title: "TreeWalker: previousSibling() method"
+short-title: previousSibling()
 slug: Web/API/TreeWalker/previousSibling
 page-type: web-api-instance-method
 browser-compat: api.TreeWalker.previousSibling
@@ -36,7 +37,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 const node = treeWalker.previousSibling(); // returns null as there is no previous sibling
 ```

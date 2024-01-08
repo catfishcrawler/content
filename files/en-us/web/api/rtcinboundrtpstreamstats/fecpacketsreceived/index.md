@@ -1,8 +1,9 @@
 ---
-title: RTCInboundRtpStreamStats.fecPacketsReceived
+title: "RTCInboundRtpStreamStats: fecPacketsReceived property"
+short-title: fecPacketsReceived
 slug: Web/API/RTCInboundRtpStreamStats/fecPacketsReceived
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.fecPacketsReceived
+browser-compat: api.RTCStatsReport.type_inbound-rtp.fecPacketsReceived
 ---
 
 {{APIRef("WebRTC")}}

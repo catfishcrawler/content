@@ -1,6 +1,7 @@
 ---
 title: HTTP Client hints
 slug: Web/HTTP/Client_hints
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -43,7 +44,7 @@ Vary: Accept, Width, ECT
 
 You may prefer to omit specifying {{HTTPHeader("Vary")}} or use some other strategy for client hint headers where the value changes a lot, as this effectively makes the resource uncacheable. (A new cache entry is created for every unique value.)
 This applies in particular to network client hints like {{HTTPHeader("Downlink")}} and {{HTTPHeader("RTT")}}.
-For more information see [HTTP Caching > Varying responses](/en-US/docs/Web/HTTP/Caching#varying_responses).
+For more information see [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary).
 
 ## Hint life-time
 
@@ -55,6 +56,8 @@ In other words, the request for a specific set of hints does not expire until th
 A server can replace the set of client hints it is interested in receiving by resending the `Accept-CH` response header with a new list.
 For example, to stop requesting any hints it would send `Accept-CH` with an empty list.
 
+> **Note:** The client hints set for a particular origin can also be cleared by sending a {{httpheader("Clear-Site-Data", "Clear-Site-Data: \"clientHints\"")}} response header for a URL inside that origin.
+
 ## Low entropy hints
 
 Client hints are broadly divided into high and low entropy hints.
@@ -63,7 +66,7 @@ The low entropy hints are those that don't give away much information that might
 They may be sent by default on every client request, irrespective of the server `Accept-CH` response header, depending on the permission policy.
 These hints include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Sec-CH-UA")}}, {{HTTPHeader("Sec-CH-UA-Mobile")}}, {{HTTPHeader("Sec-CH-UA-Platform")}}.
 
-The high entropy hints are those that have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision as to whether to provide them.
+The high entropy hints are those that have the potential to give away more information that can be used for user fingerprinting, and therefore are gated in such a way that the user agent can make a decision whether to provide them.
 The decision might be based on user preferences, a permission request, or the permission policy.
 All client hints that are not low entropy hints are considered high entropy hints.
 
@@ -131,4 +134,4 @@ Headers include: {{HTTPHeader("Save-Data")}}, {{HTTPHeader("Downlink")}}, {{HTTP
 - [`Vary` HTTP Header](/en-US/docs/Web/HTTP/Headers/Vary)
 - [Client Hints Infrastructure](https://wicg.github.io/client-hints-infrastructure/)
 - [User Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

@@ -94,7 +94,7 @@ The reasons to use a `with` statement include saving one temporary variable and 
 
 ### Using the with statement
 
-The following `with` statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the `with` statement refer to the {{jsxref("Math.PI", "PI")}} property and the {{jsxref("Math.cos", "cos")}} and {{jsxref("Math.sin", "sin")}} methods, without specifying an object. JavaScript assumes the `Math` object for these references.
+The following `with` statement specifies that the {{jsxref("Math")}} object is the default object. The statements following the `with` statement refer to the {{jsxref("Math/PI", "PI")}} property and the {{jsxref("Math/cos", "cos")}} and {{jsxref("Math/sin", "sin")}} methods, without specifying an object. JavaScript assumes the `Math` object for these references.
 
 ```js
 let a, x, y;
@@ -120,6 +120,18 @@ const r = 10;
   a = PI * r * r;
   x = r * cos(PI);
   y = r * sin(PI / 2);
+}
+```
+
+### Avoiding the with statement by using an IIFE
+
+If you're producing an expression that must reuse a long-named reference multiple times, and your goal is to eliminate that lengthy name within your expression, you can wrap the expression in an [IIFE](/en-US/docs/Glossary/IIFE) and provide the long name as an argument.
+
+```js
+const objectHavingAnEspeciallyLengthyName = { foo: true, bar: false };
+
+if (((o) => o.foo && !o.bar)(objectHavingAnEspeciallyLengthyName)) {
+  // This branch runs.
 }
 ```
 
@@ -163,4 +175,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}

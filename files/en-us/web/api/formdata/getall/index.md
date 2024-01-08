@@ -1,11 +1,12 @@
 ---
-title: FormData.getAll()
+title: "FormData: getAll() method"
+short-title: getAll()
 slug: Web/API/FormData/getAll
 page-type: web-api-instance-method
 browser-compat: api.FormData.getAll
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`getAll()`** method of the {{domxref("FormData")}} interface returns all the values associated with a given key from within a `FormData` object.
 
@@ -51,5 +52,5 @@ formData.getAll("username"); // Returns ["Chris", "Bob"]
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,6 +1,7 @@
 ---
 title: start_url
 slug: Web/Manifest/start_url
+page-type: web-manifest-member
 browser-compat: html.manifest.start_url
 ---
 
@@ -11,10 +12,6 @@ browser-compat: html.manifest.start_url
     <tr>
       <th scope="row">Type</th>
       <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

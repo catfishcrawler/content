@@ -1,5 +1,5 @@
 ---
-title: '<s>: The Strikethrough element'
+title: "<s>: The Strikethrough element"
 slug: Web/HTML/Element/s
 page-type: html-element
 browser-compat: html.elements.s
@@ -52,8 +52,9 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">deletion</a
+          ></code
         >
       </td>
     </tr>
@@ -84,6 +85,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 <s>Today's Special: Salmon</s> SOLD OUT<br />
 <span class="sold-out">Today's Special: Salmon</span> SOLD OUT
 ```
+
+### Result
 
 {{EmbedLiveSample("Examples")}}
 
@@ -127,6 +130,6 @@ Some people who use screen readers deliberately disable announcing content that 
 
 ## See also
 
-- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element is obsolete and should not be used on websites anymore.
+- The {{HTMLElement("strike")}} element, alter ego of the {{HTMLElement("s")}} element, is obsolete and should not be used on websites anymore.
 - The {{HTMLElement("del")}} element is to be used instead if the data has been _deleted_.
 - The CSS {{cssxref("text-decoration-line")}} property is to be used to achieve the former visual aspect of the {{HTMLElement("s")}} element.

@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.samplerParameter[if]()
+title: "WebGL2RenderingContext: samplerParameter[if]() method"
+short-title: samplerParameter[if]()
 slug: Web/API/WebGL2RenderingContext/samplerParameter
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.samplerParameteri
@@ -69,7 +70,7 @@ const sampler = gl.createSampler();
 gl.samplerParameteri(sampler, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
 ```
 
-## Specifications
+## Browser compatibility
 
 {{Compat}}
 

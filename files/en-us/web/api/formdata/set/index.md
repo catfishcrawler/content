@@ -1,11 +1,12 @@
 ---
-title: FormData.set()
+title: "FormData: set() method"
+short-title: set()
 slug: Web/API/FormData/set
 page-type: web-api-instance-method
 browser-compat: api.FormData.set
 ---
 
-{{APIRef("XMLHttpRequest")}}
+{{APIRef("XMLHttpRequest API")}}
 
 The **`set()`** method of the {{domxref("FormData")}} interface sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 
@@ -64,5 +65,5 @@ formData.get("name"); // "72"
 
 ## See also
 
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

@@ -1,6 +1,7 @@
 ---
 title: 207 Multi-Status
 slug: Web/HTTP/Status/207
+page-type: http-status-code
 spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 ---
 
@@ -15,7 +16,7 @@ The response body is a `text/xml` or `application/xml` HTTP entity with a `multi
 
 ## Status
 
-```
+```plain
 207 Multi-Status
 ```
 

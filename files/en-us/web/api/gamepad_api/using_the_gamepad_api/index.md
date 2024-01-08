@@ -26,7 +26,7 @@ window.addEventListener("gamepadconnected", (e) => {
     e.gamepad.index,
     e.gamepad.id,
     e.gamepad.buttons.length,
-    e.gamepad.axes.length
+    e.gamepad.axes.length,
   );
 });
 ```
@@ -42,7 +42,7 @@ window.addEventListener("gamepaddisconnected", (e) => {
   console.log(
     "Gamepad disconnected from index %d: %s",
     e.gamepad.index,
-    e.gamepad.id
+    e.gamepad.id,
   );
 });
 ```
@@ -52,12 +52,12 @@ The gamepad's {{domxref("Gamepad.index", "index")}} property will be unique per-
 ```js
 const gamepads = {};
 
-function gamepadHandler(event, connecting) {
+function gamepadHandler(event, connected) {
   const gamepad = event.gamepad;
   // Note:
   // gamepad === navigator.getGamepads()[gamepad.index]
 
-  if (connecting) {
+  if (connected) {
     gamepads[gamepad.index] = gamepad;
   } else {
     delete gamepads[gamepad.index];
@@ -69,14 +69,14 @@ window.addEventListener(
   (e) => {
     gamepadHandler(e, true);
   },
-  false
+  false,
 );
 window.addEventListener(
   "gamepaddisconnected",
   (e) => {
     gamepadHandler(e, false);
   },
-  false
+  false,
 );
 ```
 
@@ -88,7 +88,7 @@ As you can see, the **gamepad** events discussed above include a `gamepad` prope
 
 Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("Window.requestAnimationFrame","requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.
 
-The {{domxref("Navigator.getGamepads()")}} method returns an array of all devices currently visible to the webpage, as {{ domxref("Gamepad") }} objects (the first value is always `null`, so `null` will be returned if there are no gamepads connected.) This can then be used to get the same information. For example, the first code example above you be rewritten as shown below:
+The {{domxref("Navigator.getGamepads()")}} method returns an array of all devices currently visible to the webpage, as {{ domxref("Gamepad") }} objects (the first value is always `null`, so `null` will be returned if there are no gamepads connected.) This can then be used to get the same information. For example, the first code example above could be rewritten as shown below:
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
@@ -98,7 +98,7 @@ window.addEventListener("gamepadconnected", (e) => {
     gp.index,
     gp.id,
     gp.buttons.length,
-    gp.axes.length
+    gp.axes.length,
   );
 });
 ```
@@ -150,7 +150,7 @@ Now we use the {{domxref("Window/gamepaddisconnected_event", "gamepaddisconnecte
 window.addEventListener("gamepaddisconnected", (e) => {
   gamepadInfo.textContent = "Waiting for gamepad.";
 
-  cancelRequestAnimationFrame(start);
+  cancelAnimationFrame(start);
 });
 ```
 
@@ -233,12 +233,12 @@ function addgamepad(gamepad) {
   t.textContent = `gamepad: ${gamepad.id}`;
   d.appendChild(t);
 
-  const b = document.createElement("div");
+  const b = document.createElement("ul");
   b.className = "buttons";
   gamepad.buttons.forEach((button, i) => {
-    const e = document.createElement("span");
+    const e = document.createElement("li");
     e.className = "button";
-    e.textContent = i;
+    e.textContent = `Button ${i}`;
     b.appendChild(e);
   });
 
@@ -283,7 +283,7 @@ function updateStatus() {
     scangamepads();
   }
 
-  controllers.forEach((controller, i) => {
+  Object.entries(controllers).forEach(([i, controller]) => {
     const d = document.getElementById(`controller${i}`);
     const buttons = d.getElementsByClassName("button");
 
@@ -299,14 +299,16 @@ function updateStatus() {
 
       const pct = `${Math.round(val * 100)}%`;
       b.style.backgroundSize = `${pct} ${pct}`;
+      b.textContent = pressed ? `Button ${i} [PRESSED]` : `Button ${i}`;
+      b.style.color = pressed ? "#42f593" : "#2e2d33";
       b.className = pressed ? "button pressed" : "button";
     });
 
     const axes = d.getElementsByClassName("axis");
     controller.axes.forEach((axis, i) => {
       const a = axes[i];
-      a.textContent = `${i}: ${controller.axis.toFixed(4)}`;
-      a.setAttribute("value", controller.axis + 1);
+      a.textContent = `${i}: ${axis.toFixed(4)}`;
+      a.setAttribute("value", axis + 1);
     });
   });
 
@@ -315,6 +317,10 @@ function updateStatus() {
 
 function scangamepads() {
   const gamepads = navigator.getGamepads();
+  document.querySelector("#noDevices").style.display = gamepads.filter(Boolean)
+    .length
+    ? "none"
+    : "block";
   for (const gamepad of gamepads) {
     if (gamepad) {
       // Can be null if disconnected during the session

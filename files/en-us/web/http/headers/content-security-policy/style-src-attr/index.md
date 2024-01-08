@@ -1,6 +1,7 @@
 ---
 title: "CSP: style-src-attr"
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
+page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.style-src-attr
 ---
 
@@ -65,7 +66,7 @@ Given this CSP header:
 Content-Security-Policy: style-src-attr 'none'
 ```
 
-…the inline style applied to the element below not be applied:
+…the inline style applied to the element below will not be applied:
 
 ```html
 <div style="display:none">Foo</div>

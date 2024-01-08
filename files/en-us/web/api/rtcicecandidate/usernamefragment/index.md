@@ -1,5 +1,6 @@
 ---
-title: RTCIceCandidate.usernameFragment
+title: "RTCIceCandidate: usernameFragment property"
+short-title: usernameFragment
 slug: Web/API/RTCIceCandidate/usernameFragment
 page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.usernameFragment
@@ -72,13 +73,13 @@ const ssNewCandidate = (signalMsg) => {
   let candidate = new RTCIceCandidate(signalMsg.candidate);
   let receivers = pc.getReceivers();
 
-  receivers.forEach((receiver) => {
+  for (const receiver of receivers) {
     let parameters = receiver.transport.getParameters();
 
     if (parameters.usernameFragment === candidate.usernameFragment) {
       return;
     }
-  });
+  }
 
   pc.addIceCandidate(candidate).catch(reportError);
 };

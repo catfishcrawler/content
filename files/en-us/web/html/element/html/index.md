@@ -1,5 +1,5 @@
 ---
-title: '<html>: The HTML Document / Root element'
+title: "<html>: The HTML Document / Root element"
 slug: Web/HTML/Element/html
 page-type: html-element
 browser-compat: html.elements.html
@@ -72,7 +72,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Example
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- … -->

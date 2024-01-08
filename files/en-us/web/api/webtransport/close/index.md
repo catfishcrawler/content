@@ -1,13 +1,12 @@
 ---
-title: WebTransport.close()
+title: "WebTransport: close() method"
+short-title: close()
 slug: Web/API/WebTransport/close
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.WebTransport.close
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}
 
 The **`close()`** method of the {{domxref("WebTransport")}} interface closes an ongoing WebTransport session.
 
@@ -15,8 +14,8 @@ The **`close()`** method of the {{domxref("WebTransport")}} interface closes an 
 
 ## Syntax
 
-```js
-close(info);
+```js-nolint
+close(info)
 ```
 
 ### Parameters
@@ -62,7 +61,7 @@ transport.close({
 
 ## See also
 
-- [Using WebTransport](https://web.dev/webtransport/)
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("WebSockets API", "WebSockets API", "", "nocode")}}
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
 - [WebTransport over HTTP/3](https://datatracker.ietf.org/doc/html/draft-ietf-webtrans-http3/)

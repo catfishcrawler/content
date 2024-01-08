@@ -1,5 +1,6 @@
 ---
-title: HTMLLinkElement.relList
+title: "HTMLLinkElement: relList property"
+short-title: relList
 slug: Web/API/HTMLLinkElement/relList
 page-type: web-api-instance-property
 browser-compat: api.HTMLLinkElement.relList
@@ -21,11 +22,9 @@ A live {{domxref("DOMTokenList")}} of strings.
 
 ```js
 const links = document.getElementsByTagName("link");
-const length = links.length;
 for (const link of links) {
-  const listLength = list.length;
   console.log("New link found.");
-  relList.forEach((relEntry) => {
+  link.relList.forEach((relEntry) => {
     console.log(relEntry);
   });
 }

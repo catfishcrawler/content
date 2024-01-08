@@ -1,5 +1,6 @@
 ---
-title: PointerEvent.pointerId
+title: "PointerEvent: pointerId property"
+short-title: pointerId
 slug: Web/API/PointerEvent/pointerId
 page-type: web-api-instance-property
 browser-compat: api.PointerEvent.pointerId
@@ -32,7 +33,7 @@ target.addEventListener(
     // to current event's ID and handle accordingly
     if (id === event.pointerId) process_event(event);
   },
-  false
+  false,
 );
 ```
 

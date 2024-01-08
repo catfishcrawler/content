@@ -1,11 +1,12 @@
 ---
-title: FileSystemDirectoryHandle.resolve()
+title: "FileSystemDirectoryHandle: resolve() method"
+short-title: resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
 page-type: web-api-instance-method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
 
-{{securecontext_header}}{{APIRef("File System Access API")}}
+{{securecontext_header}}{{APIRef("File System API")}}
 
 The **`resolve()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of
@@ -71,5 +72,5 @@ async function returnPathDirectories(directoryHandle) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

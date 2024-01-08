@@ -7,7 +7,9 @@ browser-compat: api.MediaStreamTrack
 
 {{APIRef("Media Capture and Streams")}}
 
-The **`MediaStreamTrack`** interface represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
+The **`MediaStreamTrack`** interface of the {{domxref("Media Capture and Streams API", "", "", "nocode")}} represents a single media track within a stream; typically, these are audio or video tracks, but other track types may exist as well.
+
+Some user agents subclass this interface to provide more precise information or functionality, such as {{domxref("CanvasCaptureMediaStreamTrack")}}.
 
 {{InheritanceDiagram}}
 
@@ -37,7 +39,7 @@ In addition to the properties listed below, `MediaStreamTrack` has constrainable
 
 - {{domxref("MediaStreamTrack.readyState")}} {{ReadOnlyInline}}
 
-  - : Returns an enumerated value giving the status of the track. This will be one of the following values:
+  - : Returns an enumerated string giving the status of the track. This will be one of the following values:
 
     - `"live"` which indicates that an input is connected and does its best-effort in providing real-time data. In that case, the output of data can be switched on or off using the {{domxref("MediaStreamTrack.enabled", "enabled")}} attribute.
     - `"ended"` which indicates that the input is not giving any more data and will never provide new data.
@@ -65,8 +67,6 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Sent when playback of the track ends (when the value {{domxref("MediaStreamTrack.readyState", "readyState")}} changes to `ended`).
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
   - : Sent to the `MediaStreamTrack` when the value of the {{domxref("MediaStreamTrack.muted", "muted")}} property is changed to `true`, indicating that the track is unable to provide data temporarily (such as when the network is experiencing a service malfunction).
-- {{domxref("MediaStreamTrack/overconstrained_event", "overconstrained")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : Sent when the constraints specified for the track cause the track to be incompatible and therefore to not be used.
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
   - : Sent to the track when data becomes available again, ending the `muted` state.
 

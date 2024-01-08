@@ -1,5 +1,6 @@
 ---
-title: URLPattern.password
+title: "URLPattern: password property"
+short-title: password
 slug: Web/API/URLPattern/password
 page-type: web-api-instance-property
 status:
@@ -9,7 +10,7 @@ browser-compat: api.URLPattern.password
 
 {{APIRef("URL Pattern API")}}{{SeeCompatTable}}
 
-The **`password`** property of the {{domxref("URLPattern")}} interface is a
+The **`password`** read-only property of the {{domxref("URLPattern")}} interface is a
 string containing the pattern used to match the password part
 of a URL. This value may differ from the input to the constructor due to
 normalization.

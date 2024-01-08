@@ -1,5 +1,6 @@
 ---
-title: WebGL2RenderingContext.compressedTexSubImage3D()
+title: "WebGL2RenderingContext: compressedTexSubImage3D() method"
+short-title: compressedTexSubImage3D()
 slug: Web/API/WebGL2RenderingContext/compressedTexSubImage3D
 page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.compressedTexSubImage3D
@@ -87,7 +88,7 @@ gl.compressedTexSubImage3D(
   512,
   512,
   gl.COMPRESSED_R11_EAC,
-  textureData
+  textureData,
 );
 ```
 

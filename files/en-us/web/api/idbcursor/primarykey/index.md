@@ -1,5 +1,6 @@
 ---
-title: IDBCursor.primaryKey
+title: "IDBCursor: primaryKey property"
+short-title: primaryKey
 slug: Web/API/IDBCursor/primaryKey
 page-type: web-api-instance-property
 browser-compat: api.IDBCursor.primaryKey
@@ -25,7 +26,7 @@ cursor to iterate through all the records in the object store. Within each itera
 log the primary key of the cursor to the console, something like this (its the album
 title in each case, which is our primarykey):
 
-```
+```plain
 Hemispheres
 ```
 

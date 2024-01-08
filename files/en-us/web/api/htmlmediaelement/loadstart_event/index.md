@@ -1,5 +1,6 @@
 ---
 title: "HTMLMediaElement: loadstart event"
+short-title: loadstart
 slug: Web/API/HTMLMediaElement/loadstart_event
 page-type: web-api-event
 browser-compat: api.HTMLMediaElement.loadstart_event
@@ -101,7 +102,7 @@ loadVideo.addEventListener("click", () => {
     source = document.createElement("source");
     source.setAttribute(
       "src",
-      "https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm"
+      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm",
     );
     source.setAttribute("type", "video/webm");
 

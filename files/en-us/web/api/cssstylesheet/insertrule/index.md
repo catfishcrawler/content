@@ -1,5 +1,6 @@
 ---
-title: CSSStyleSheet.insertRule()
+title: "CSSStyleSheet: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 page-type: web-api-instance-method
 browser-compat: api.CSSStyleSheet.insertRule
@@ -118,7 +119,7 @@ function addStylesheetRules(rules) {
     // Insert CSS Rule
     styleSheet.insertRule(
       `${selector}{${propStr}}`,
-      styleSheet.cssRules.length
+      styleSheet.cssRules.length,
     );
   }
 }
@@ -135,4 +136,4 @@ function addStylesheetRules(rules) {
 ## See also
 
 - {{domxref("CSSStyleSheet.deleteRule")}}
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)

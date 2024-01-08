@@ -1,5 +1,6 @@
 ---
-title: MediaTrackSupportedConstraints.noiseSuppression
+title: "MediaTrackSupportedConstraints: noiseSuppression property"
+short-title: noiseSuppression
 slug: Web/API/MediaTrackSupportedConstraints/noiseSuppression
 page-type: web-api-instance-property
 browser-compat: api.MediaTrackSupportedConstraints.noiseSuppression
@@ -42,7 +43,9 @@ This example displays whether or not your browser supports the
 
 ```css hidden
 #result {
-  font: 14px "Arial", sans-serif;
+  font:
+    14px "Arial",
+    sans-serif;
 }
 ```
 

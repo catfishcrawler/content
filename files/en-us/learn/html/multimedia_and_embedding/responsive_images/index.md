@@ -1,6 +1,7 @@
 ---
 title: Responsive images
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -24,7 +25,7 @@ In this article, we'll learn about the concept of responsive images — images t
       <th scope="row">Objective:</th>
       <td>
         Learn how to use features like
-         <a href="en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
+         <a href="/en-US/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a> and the
         {{htmlelement("picture")}} element to implement responsive
         image solutions on websites.
       </td>
@@ -109,7 +110,7 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 
 So, with these attributes in place, the browser will:
 
-1. Look at its device width.
+1. Look at screen size, pixel density, zoom level, screen orientation, and network speed.
 2. Work out which media condition in the `sizes` list is the first one to be true.
 3. Look at the slot size given to that media query.
 4. Load the image referenced in the `srcset` list that has the same size as the slot or, if there isn't one, the first image that is bigger than the chosen slot size.
@@ -178,26 +179,6 @@ This code allows us to display a suitable image on both wide screen and narrow s
 ### Why can't we just do this using CSS or JavaScript?
 
 When the browser starts to load a page, it starts to download (preload) any images before the main parser has started to load and interpret the page's CSS and JavaScript. That mechanism is useful in general for reducing page load times, but it is not helpful for responsive images — hence the need to implement solutions like `srcset`. For example, you couldn't load the {{htmlelement("img")}} element, then detect the viewport width with JavaScript, and then dynamically change the source image to a smaller one if desired. By then, the original image would already have been loaded, and you would load the small image as well, which is even worse in responsive image terms.
-
-### Use modern image formats boldly
-
-New image formats like [WebP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) can maintain a low file size and high quality at the same time. These formats now have relatively broad browser support but little "historical depth".
-
-`<picture>` lets us continue catering to older browsers. You can supply MIME types inside `type` attributes so the browser can immediately reject unsupported file types:
-
-```html
-<picture>
-  <source type="image/svg+xml" srcset="pyramid.svg" />
-  <source type="image/webp" srcset="pyramid.webp" />
-  <img
-    src="pyramid.png"
-    alt="regular pyramid built from four equilateral triangles" />
-</picture>
-```
-
-- Do _not_ use the `media` attribute, unless you also need art direction.
-- In a `<source>` element, you can only refer to images of the type declared in `type`.
-- Use comma-separated lists with `srcset` and `sizes`, as needed.
 
 ## Active learning: Implementing your own responsive images
 

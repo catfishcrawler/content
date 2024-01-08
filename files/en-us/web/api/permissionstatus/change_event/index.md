@@ -1,5 +1,6 @@
 ---
 title: "PermissionStatus: change event"
+short-title: change
 slug: Web/API/PermissionStatus/change_event
 page-type: web-api-event
 browser-compat: api.PermissionStatus.change_event
@@ -32,7 +33,7 @@ navigator.permissions
     console.log(`geolocation permission state is ${permissionStatus.state}`);
     permissionStatus.onchange = () => {
       console.log(
-        `geolocation permission state has changed to ${permissionStatus.state}`
+        `geolocation permission state has changed to ${permissionStatus.state}`,
       );
     };
   });

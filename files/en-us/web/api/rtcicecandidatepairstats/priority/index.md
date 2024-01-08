@@ -1,10 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.priority
+title: "RTCIceCandidatePairStats: priority property"
+short-title: priority
 slug: Web/API/RTCIceCandidatePairStats/priority
 page-type: web-api-instance-property
 status:
   - deprecated
-browser-compat: api.RTCIceCandidatePairStats.priority
+browser-compat: api.RTCStatsReport.type_candidate-pair.priority
 ---
 
 {{APIRef("WebRTC")}}{{deprecated_header}}

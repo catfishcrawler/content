@@ -1,5 +1,6 @@
 ---
-title: NavigatorUAData.mobile
+title: "NavigatorUAData: mobile property"
+short-title: mobile
 slug: Web/API/NavigatorUAData/mobile
 page-type: web-api-instance-property
 status:
@@ -7,7 +8,7 @@ status:
 browser-compat: api.NavigatorUAData.mobile
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`mobile`** read-only property of the {{domxref("NavigatorUAData")}} interface returns a value indicating whether the device is a mobile device.
 

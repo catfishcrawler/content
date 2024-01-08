@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: push event"
+short-title: push
 slug: Web/API/ServiceWorkerGlobalScope/push_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.push_event
@@ -53,7 +54,7 @@ self.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: dragstart event"
+short-title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.dragstart_event
@@ -8,6 +9,8 @@ browser-compat: api.HTMLElement.dragstart_event
 {{APIRef}}
 
 The `dragstart` event is fired when the user starts dragging an element or text selection.
+
+This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ## Syntax
 
@@ -30,7 +33,7 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
 - {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
+  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
@@ -38,9 +41,9 @@ _In addition to the properties listed below, properties from the parent interfac
 
 In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
-We listen for the `dragstart` event to make the element half transparent while it is being dragged.
+We listen for the `dragstart` event to make the element half transparent while dragged.
 
-For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
+For a complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
 
 #### HTML
 
@@ -55,7 +58,7 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
@@ -113,9 +116,3 @@ source.addEventListener("dragend", (event) => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragstart_event", "dragstart")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragstart_event", "dragstart")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragstart_event", "dragstart")}} event

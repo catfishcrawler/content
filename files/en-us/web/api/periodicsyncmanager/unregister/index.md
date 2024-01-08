@@ -1,5 +1,6 @@
 ---
-title: PeriodicSyncManager.unregister()
+title: "PeriodicSyncManager: unregister() method"
+short-title: unregister()
 slug: Web/API/PeriodicSyncManager/unregister
 page-type: web-api-instance-method
 status:
@@ -54,5 +55,5 @@ navigator.serviceWorker.ready.then((registration) => {
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

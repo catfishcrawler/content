@@ -1,5 +1,6 @@
 ---
-title: NDEFReadingEvent.message
+title: "NDEFReadingEvent: message property"
+short-title: message
 slug: Web/API/NDEFReadingEvent/message
 page-type: web-api-instance-property
 status:
@@ -32,7 +33,7 @@ function read() {
         ctlr.abort();
         resolve(event);
       },
-      { once: true }
+      { once: true },
     );
     ndefReader.scan({ signal: ctlr.signal }).catch((err) => reject(err));
   });

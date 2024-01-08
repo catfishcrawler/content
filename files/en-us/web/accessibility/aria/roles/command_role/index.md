@@ -1,6 +1,7 @@
 ---
 title: "ARIA: command role"
 slug: Web/Accessibility/ARIA/Roles/command_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#command
 ---
 
@@ -31,6 +32,6 @@ Do not use.
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

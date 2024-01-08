@@ -1,6 +1,7 @@
 ---
 title: "ARIA: mark role"
 slug: Web/Accessibility/ARIA/Roles/mark_role
+page-type: aria-role
 ---
 
 The `mark` role denotes content which is marked or highlighted for reference or notation purposes, due to the content's relevance in the enclosing context.
@@ -56,6 +57,6 @@ Will be part of [WAI-ARIA 1.3](https://w3c.github.io/aria/#mark), which is still
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

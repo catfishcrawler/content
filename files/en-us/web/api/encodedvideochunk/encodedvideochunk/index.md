@@ -1,5 +1,6 @@
 ---
-title: EncodedVideoChunk()
+title: "EncodedVideoChunk: EncodedVideoChunk() constructor"
+short-title: EncodedVideoChunk()
 slug: Web/API/EncodedVideoChunk/EncodedVideoChunk
 page-type: web-api-constructor
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
@@ -43,7 +44,7 @@ const init = {
   timestamp: 23000000,
   duration: 2000000,
 };
-chunk = EncodedVideoChunk(init);
+chunk = new EncodedVideoChunk(init);
 ```
 
 ## Specifications

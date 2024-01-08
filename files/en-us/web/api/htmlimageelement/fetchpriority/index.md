@@ -1,13 +1,12 @@
 ---
-title: HTMLImageElement.fetchPriority
+title: "HTMLImageElement: fetchPriority property"
+short-title: fetchPriority
 slug: Web/API/HTMLImageElement/fetchPriority
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLImageElement.fetchPriority
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`fetchPriority`** property of the
 {{domxref("HTMLImageElement")}} interface represents a hint given to the browser on how

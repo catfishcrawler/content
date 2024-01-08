@@ -1,6 +1,7 @@
 ---
 title: "ARIA: math role"
 slug: Web/Accessibility/ARIA/Roles/math_role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#math
 ---
 
@@ -50,6 +51,6 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
 
 </section>

@@ -1,5 +1,6 @@
 ---
-title: PerformanceEntry.duration
+title: "PerformanceEntry: duration property"
+short-title: duration
 slug: Web/API/PerformanceEntry/duration
 page-type: web-api-instance-property
 browser-compat: api.PerformanceEntry.duration
@@ -36,6 +37,7 @@ For the following entry types, `duration` is not applicable, and in this case th
 - `mark`
 - `paint`
 - `taskattribution`
+- `visibility-state`
 
 ## Examples
 

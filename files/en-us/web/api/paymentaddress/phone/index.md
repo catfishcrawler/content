@@ -1,5 +1,6 @@
 ---
-title: PaymentAddress.phone
+title: "PaymentAddress: phone property"
+short-title: phone
 slug: Web/API/PaymentAddress/phone
 page-type: web-api-instance-property
 status:
@@ -8,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.phone
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The read-only **`phone`** property of the
 {{domxref('PaymentAddress')}} interface returns a string containing the telephone number

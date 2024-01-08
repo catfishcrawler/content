@@ -1,5 +1,6 @@
 ---
-title: NetworkInformation.downlinkMax
+title: "NetworkInformation: downlinkMax property"
+short-title: downlinkMax
 slug: Web/API/NetworkInformation/downlinkMax
 page-type: web-api-instance-property
 status:
@@ -38,7 +39,7 @@ function logConnectionType() {
   }
 
   console.log(
-    `Current connection type: ${connectionType} (downlink max: ${downlinkMax})`
+    `Current connection type: ${connectionType} (downlink max: ${downlinkMax})`,
   );
 }
 

@@ -1,5 +1,6 @@
 ---
-title: location.ancestorOrigins
+title: "Location: ancestorOrigins property"
+short-title: ancestorOrigins
 slug: Web/API/Location/ancestorOrigins
 page-type: web-api-instance-property
 browser-compat: api.Location.ancestorOrigins

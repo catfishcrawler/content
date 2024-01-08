@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.srcset
+title: "HTMLImageElement: srcset property"
+short-title: srcset
 slug: Web/API/HTMLImageElement/srcset
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.srcset
@@ -95,9 +96,9 @@ a `2x` descriptor) should be used for 2x displays.
 ```html
 <div class="box">
   <img
-    src="/en-us/web/html/element/img/clock-demo-200px.png"
+    src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
     alt="Clock"
-    srcset="/en-us/web/html/element/img/clock-demo-400px.png 2x" />
+    srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 2x" />
 </div>
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: "RTCPeerConnection: icegatheringstatechange event"
+short-title: icegatheringstatechange
 slug: Web/API/RTCPeerConnection/icegatheringstatechange_event
 page-type: web-api-event
 browser-compat: api.RTCPeerConnection.icegatheringstatechange_event
@@ -66,7 +67,7 @@ pc.addEventListener(
         break;
     }
   },
-  false
+  false,
 );
 ```
 

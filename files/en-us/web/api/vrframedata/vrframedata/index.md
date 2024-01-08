@@ -1,5 +1,6 @@
 ---
-title: VRFrameData()
+title: "VRFrameData: VRFrameData() constructor"
+short-title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
 page-type: web-api-constructor
 status:
@@ -40,5 +41,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

@@ -1,7 +1,7 @@
 ---
 title: Getting started with Svelte
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -52,9 +52,9 @@ Svelte sticks closely to the classic web development model of HTML, CSS, and JS,
 
 Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also fewer job opportunities. But its advantages should be enough to make you interested to explore it.
 
-> **Note:** recently Svelte has added [official TypeScript support](https://svelte.dev/blog/svelte-and-typescript), one of its most requested features. We'll look at it later on in this tutorial series.
+> **Note:** Svelte has [official TypeScript support](https://svelte.dev/docs/typescript). We'll look at it later on in this tutorial series.
 
-We encourage you to go through the [Svelte tutorial](https://svelte.dev/tutorial/basics) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
+We encourage you to go through the [Svelte tutorial](https://learn.svelte.dev/) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
 
 ## Use cases
 
@@ -66,7 +66,11 @@ Nevertheless, Svelte is particularly appropriate to tackle the following situati
 - Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.
 - Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.
 
-Moreover, with the help of [Sapper](https://sapper.svelte.dev/) (a framework based on Svelte), you can also develop applications with advanced features like server-side rendering, code splitting, file-based routing and offline support. And then there's also [Svelte Native](https://svelte-native.technology/), which lets you build native mobile applications.
+The Svelte team launched [SvelteKit](https://kit.svelte.dev), a framework for building web applications using Svelte. It contains features found in modern web frameworks, such as filesystem-based routing, server-side rendering (SSR), page-specific rendering modes, offline support, and more. For more information about SvelteKit, see the [official tutorial](https://learn.svelte.dev) and [documentation](https://kit.svelte.dev/docs).
+
+> **Note:** SvelteKit is designed to replace [Sapper](https://sapper.svelte.dev/) as the recommended Svelte framework for building web applications.
+
+Svelte is also available for mobile development via [Svelte Native](https://svelte-native.technology).
 
 ## How does Svelte work?
 
@@ -84,15 +88,14 @@ Since Svelte is a compiler, you can't just add a `<script src="svelte.js">` tag 
 
 ### Requirements
 
-In order to work with Svelte, you need to have [Node.js](https://nodejs.org/en/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
+In order to work with Svelte, you need to have [Node.js](https://nodejs.org/) installed. It's recommended that you use the long-term support (LTS) version. Node includes npm (the node package manager), and npx (the node package runner). Note that you can also use the Yarn package manager in place of npm, but we'll assume you are using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
 If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. Gitbash (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also see the following for more information:
 
-- ["What is npm"](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/) on nodejs.org
+- ["About npm"](https://docs.npmjs.com/about-npm) on the npm documentation
 - ["Introducing npx"](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner) on the npm blog
-- ["The easiest way to get started with Svelte"](https://svelte.dev/blog/the-easiest-way-to-get-started) on the Svelte blog
 
 ### Creating your first Svelte app
 
@@ -117,7 +120,7 @@ After running `npm run dev`, Svelte will compile and build your application. It 
 
 The starter template comes with the following structure:
 
-```
+```plain
 moz-todo-svelte
 ├── README.md
 ├── package.json
@@ -142,7 +145,7 @@ moz-todo-svelte
 
 The contents are as follows:
 
-- `package.json` and `package-lock.json`: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more about it, you can read [What is the file `package.json`](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)? on NodeJS.org; we also talk about it in our [Package management basics tutorial](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+- `package.json` and `package-lock.json`: Contains information about the project that Node.js/npm uses to keep it organized. You don't need to understand this file at all to complete this tutorial, however, if you'd like to learn more, you can read about [`package.json` handling](https://docs.npmjs.com/cli/configuring-npm/package-json) on npmjs.com; we also talk about it in our [Package management basics tutorial](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
 - `node_modules`: This is where node saves the project dependencies. These dependencies won't be sent to production, they are just used for development purposes.
 - `.gitignore`: Tells git which files or folder to ignore from the project — useful if you decide to include your app in a git repo.
 - `rollup.config.js`: Svelte uses [rollup.js](https://rollupjs.org/) as a module bundler. This configuration file tells rollup how to compile and build your app. If you prefer [webpack](https://webpack.js.org/), you can create your starter project with `npx degit sveltejs/template-webpack svelte-app` instead.
@@ -183,7 +186,7 @@ All three sections — `<script>`, `<style>`, and markup — are optional, and c
 <!-- markup (zero or more HTML elements) goes here -->
 ```
 
-> **Note:** For more information on the component format, have a look at the [Svelte documentation](https://svelte.dev/docs#Component_format).
+> **Note:** For more information on the component format, have a look at the [Svelte Components documentation](https://svelte.dev/docs/svelte-components).
 
 With this in mind, let's have a look at the `src/App.svelte` file that came with the starter template. You should see something like the following:
 
@@ -195,7 +198,7 @@ With this in mind, let's have a look at the `src/App.svelte` file that came with
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -237,13 +240,13 @@ Svelte uses the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/expor
 
 ### The markup section
 
-In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly brackets (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
+In the markup section you can insert any HTML you like, and in addition you can insert valid JavaScript expressions inside single curly braces (`{}`). In this case we are embedding the value of the `name` prop right after the `Hello` text.
 
 ```html
 <main>
   <h1>Hello {name}!</h1>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -289,7 +292,7 @@ You can see this in action by opening `localhost:8080` in a new browser tab, rig
 
 When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-1tky8bj`, and then modifies every `<h1>` element in our component to `<h1 class="svelte-1tky8bj">`, so that it picks up the styles as required.
 
-> **Note:** You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs#style) for more information).
+> **Note:** You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs/svelte-components#style) for more information).
 
 ## Making a couple of changes
 
@@ -327,7 +330,7 @@ Try updating your `<script>` and markup sections like so:
   <h1>Hello {name}!</h1>
   <button on:click="{toggleName}">Toggle name</button>
   <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    Visit the <a href="https://learn.svelte.dev/">Svelte tutorial</a> to learn
     how to build Svelte apps.
   </p>
 </main>
@@ -372,7 +375,7 @@ It also compiles the markup and `<script>` section of every component and stores
 Finally the file `public/index.html` includes the generated `bundle.css` and `bundle.js` files:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

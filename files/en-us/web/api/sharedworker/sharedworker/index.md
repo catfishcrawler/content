@@ -1,5 +1,6 @@
 ---
-title: SharedWorker()
+title: "SharedWorker: SharedWorker() constructor"
+short-title: SharedWorker()
 slug: Web/API/SharedWorker/SharedWorker
 page-type: web-api-constructor
 browser-compat: api.SharedWorker.SharedWorker
@@ -31,8 +32,7 @@ new SharedWorker(aURL, options)
     execute. It must obey the same-origin policy.
 - `name` {{optional_inline}}
   - : A string specifying an identifying name for the
-    {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is
-    mainly useful for debugging purposes.
+    {{domxref("SharedWorkerGlobalScope")}} representing the scope of the worker, which is useful for creating new instances of the same SharedWorker and debugging.
 - `options` {{optional_inline}}
 
   - : An object containing option properties that can set when creating the object

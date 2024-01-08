@@ -1,5 +1,6 @@
 ---
 title: "MediaStreamTrack: unmute event"
+short-title: unmute
 slug: Web/API/MediaStreamTrack/unmute_event
 page-type: web-api-event
 browser-compat: api.MediaStreamTrack.unmute_event
@@ -39,7 +40,7 @@ musicTrack.addEventListener(
   (event) => {
     document.getElementById("timeline-widget").style.backgroundColor = "#aaa";
   },
-  false
+  false,
 );
 
 musicTrack.addEventListener(
@@ -47,7 +48,7 @@ musicTrack.addEventListener(
   (event) => {
     document.getElementById("timeline-widget").style.backgroundColor = "#fff";
   },
-  false
+  false,
 );
 ```
 

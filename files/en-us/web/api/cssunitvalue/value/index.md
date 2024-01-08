@@ -1,5 +1,6 @@
 ---
-title: CSSUnitValue.value
+title: "CSSUnitValue: value property"
+short-title: value
 slug: Web/API/CSSUnitValue/value
 page-type: web-api-instance-property
 browser-compat: api.CSSUnitValue.value
@@ -23,7 +24,7 @@ The following creates a {{domxref('CSSPositionValue')}} from individual
 ```js
 const pos = new CSSPositionValue(
   new CSSUnitValue(5, "px"),
-  new CSSUnitValue(10, "px")
+  new CSSUnitValue(10, "px"),
 );
 
 console.log(pos.x.value); // 5

@@ -1,5 +1,6 @@
 ---
-title: TreeWalker.root
+title: "TreeWalker: root property"
+short-title: root
 slug: Web/API/TreeWalker/root
 page-type: web-api-instance-property
 browser-compat: api.TreeWalker.root
@@ -25,7 +26,7 @@ const treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 root = treeWalker.root; // document.body in this case
 ```

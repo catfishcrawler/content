@@ -1,5 +1,5 @@
 ---
-title: '<dt>: The Description Term element'
+title: "<dt>: The Description Term element"
 slug: Web/HTML/Element/dt
 page-type: html-element
 browser-compat: html.elements.dt
@@ -65,7 +65,11 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
